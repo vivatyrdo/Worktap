@@ -647,6 +647,10 @@ img {
     .freelancer-card__rating {
         justify-content: center;
     }
+
+    .author__stars {
+        justify-content: flex-start;
+    }
 }
 
 @media (max-width: 600px) {
@@ -1363,3 +1367,174 @@ img {
         line-height: 1.6;
     }
 }
+
+/* --- Hero Exchange Transformer --- */
+.hero-exchange {
+    padding: 60px 0 40px;
+    background-color: #f5f6fa;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Компактное состояние при скролле */
+.hero-exchange--compact {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 500;
+    padding: 15px 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    background-color: #fff;
+}
+
+.hero-exchange--compact .hero-exchange__full-content,
+.hero-exchange--compact .hero-exchange__scroll-hint,
+.hero-exchange--compact .hero-exchange__blob {
+    display: none;
+}
+
+.hero-exchange--compact .hero-exchange__bar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero-exchange--compact .hero-exchange__filters {
+    display: flex; /* Показываем фильтры цен в компактном виде */
+}
+
+/* --- Elements --- */
+.hero-exchange__title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.hero-exchange__bar {
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    transition: all 0.3s ease;
+}
+
+.hero-exchange__filters {
+    display: none; /* Скрыты по умолчанию в большой версии как на макете */
+    align-items: center;
+    gap: 20px;
+}
+
+.filters__price {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 5px 15px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.filters__input {
+    border: none;
+    outline: none;
+    width: 140px;
+    font-size: 13px;
+    font-family: inherit;
+}
+
+/* Стилизация карточек заказов */
+.order-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border: 1px solid #f0f0f0;
+    transition: transform 0.2s ease;
+}
+
+.order-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.order-card__title {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.order-card__meta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-card__user {
+    display: flex;
+    gap: 15px;
+}
+
+.order-card__avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #eee;
+    overflow: hidden;
+}
+
+.order-card__user-name {
+    display: block;
+    font-weight: 600;
+}
+
+.order-card__user-stats {
+    font-size: 12px;
+    color: #7a7a7a;
+}
+
+.order-card__pricing {
+    text-align: right;
+}
+
+.order-card__price {
+    display: block;
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.order-card__time {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.order-card__footer {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #f8f8f8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Кнопка загрузить еще */
+.orders__load-more {
+    display: block;
+    margin: 40px auto;
+    background: transparent;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 12px 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Декор */
+.hero-exchange__blob {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 0;
+    filter: blur(40px);
+    opacity: 0.4;
+}
+.hero-exchange__blob--1 { width: 200px; height: 200px; background: #ffe8d4; top: 10%; left: 5%; }
+.hero-exchange__blob--2 { width: 150px; height: 150px; background: #d4ffeb; bottom: 10%; right: 10%; }

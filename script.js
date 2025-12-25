@@ -73,3 +73,45 @@ window.addEventListener('click', (e) => {
         document.body.style.overflow = '';
     }
 });
+
+/* EXCHANGE PAGE INTERACTIVITY */
+
+const heroExchange = document.querySelector('.js-hero-exchange');
+const ordersList = document.querySelector('.js-orders-list');
+const loadMoreBtn = document.querySelector('.js-load-more');
+
+// 1. Scroll Transformation
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+        heroExchange.classList.add('hero-exchange--compact');
+    } else {
+        heroExchange.classList.remove('hero-exchange--compact');
+    }
+});
+
+// 2. Load More Logic
+const createOrder = () => {
+    const card = document.querySelector('.order-card').cloneNode(true);
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    return card;
+};
+
+loadMoreBtn.addEventListener('click', () => {
+    loadMoreBtn.textContent = 'Загружаем...';
+    
+    setTimeout(() => {
+        for (let i = 0; i < 5; i++) {
+            const newOrder = createOrder();
+            ordersList.appendChild(newOrder);
+            
+            // Анимированное появление
+            setTimeout(() => {
+                newOrder.style.transition = 'all 0.4s ease';
+                newOrder.style.opacity = '1';
+                newOrder.style.transform = 'translateY(0)';
+            }, i * 100);
+        }
+        loadMoreBtn.textContent = 'Загрузить еще';
+    }, 800);
+});
