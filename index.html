@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worktap</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADER SECTION -->
+<header class="header">
+    <div class="header__container">
+        <a href="#" class="header__logo">
+            <img src="images/logo.png" alt="Worktap" class="header__logo-img">
+        </a>
+
+        <nav class="header__nav nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#" class="nav__link">Биржа</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Ворки</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Конкурсы</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Создать ворк</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Создать заказ</a></li>
+            </ul>
+        </nav>
+
+        <div class="header__actions">
+            <button class="header__btn header__btn--reg">Регистрация</button>
+            <button class="header__btn header__btn--login">Войти</button>
+        </div>
+
+        <button class="header__burger burger" aria-label="Открыть меню">
+            <span class="burger__line"></span>
+        </button>
+    </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero__container">
+        <div class="hero__content">
+            <h1 class="hero__title">
+                Покупайте фриланс-услуги <br> 
+                <span class="hero__title--accent">в два клика</span>
+            </h1>
+            <p class="hero__subtitle">
+                Ворк — единица работы продавца, которую можно купить как товар в магазине
+            </p>
+
+            <form class="hero__search search">
+                <input type="text" class="search__input" placeholder="Что нужно сделать?">
+                <button type="submit" class="search__btn">Найти</button>
+            </form>
+
+            <div class="hero__categories">
+                <p class="hero__categories-label">Выберите рубрику, чтобы начать</p>
+                <div class="hero__tags">
+                    <a href="#" class="hero__tag">Тексты и переводы</a>
+                    <a href="#" class="hero__tag">Разработка</a>
+                    <a href="#" class="hero__tag">Дизайн</a>
+                    <a href="#" class="hero__tag">Аудио, видео монтаж</a>
+                    <a href="#" class="hero__tag">SEO и оптимизация</a>
+                    <a href="#" class="hero__tag">Бизнес и жизнь</a>
+                    <a href="#" class="hero__tag">Соцсети и реклама</a>
+                    <a href="#" class="hero__tag hero__tag--all">Все категории</a>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</section>
+
+<!-- ACTUAL WORKS SECTION -->
+<section class="works">
+    <div class="works__container">
+        <h2 class="works__title">Актуальные ворки</h2>
+
+        <div class="works__grid">
+            
+            <!-- Work Card 1 -->
+            <article class="work-card">
+                <div class="work-card__header">
+                    <div class="work-card__avatar">
+                        <img src="images/work-card1.png" alt="Аватарка человека" class="work-card__img">
+                    </div>
+                    <h3 class="work-card__subject">Сделать дизайн интернет-магазина</h3>
+                </div>
+                <p class="work-card__description">
+                    Нужен современный дизайн для магазина кроссовок. Важно проработать главную страницу, каталог и карточку товара в минималистичном стиле для бренда.
+                </p>
+                <button class="work-card__btn">Посмотреть</button>
+            </article>
+
+            <!-- Work Card 2 (Featured) -->
+            <article class="work-card">
+                <div class="work-card__header">
+                    <div class="work-card__avatar">
+                        <img src="images/work-card2.png" alt="Аватарка человека" class="work-card__img">
+                    </div>
+                    <h3 class="work-card__subject">Верстка landing page</h3>
+                </div>
+                <p class="work-card__description">
+                    Необходимо сверстать адаптивный лендинг по готовому макету из Figma. Использование чистого HTML/CSS/JS, без тяжелых библиотек и фреймворков.
+                </p>
+                <button class="work-card__btn work-card__btn--filled">Посмотреть</button>
+            </article>
+
+            <!-- Work Card 3 -->
+            <article class="work-card">
+                <div class="work-card__header">
+                    <div class="work-card__avatar">
+                        <img src="images/work-card3.png" alt="Аватарка человека" class="work-card__img">
+                    </div>
+                    <h3 class="work-card__subject">Сделать дизайн сайта-каталога и посадить на какую нибудь ко...</h3>
+                </div>
+                <p class="work-card__description">
+                    Ищем дизайнера для создания структуры каталога запчастей. Нужно отрисовать 10 страниц и помочь с переносом дизайна на конструктор или CMS.
+                </p>
+                <button class="work-card__btn">Посмотреть</button>
+            </article>
+
+            <!-- Work Card 4 -->
+            <article class="work-card">
+                <div class="work-card__header">
+                    <div class="work-card__avatar">
+                        <img src="images/work-card4.png" alt="Аватарка человека" class="work-card__img">
+                    </div>
+                    <h3 class="work-card__subject">Продвижение instagram</h3>
+                </div>
+                <p class="work-card__description">
+                    Требуется специалист для комплексного ведения профиля. Составление контент-плана, работа со сторис и настройка таргетированной рекламы на месяц.
+                </p>
+                <button class="work-card__btn">Посмотреть</button>
+            </article>
+
+            <!-- Work Card 5 -->
+            <article class="work-card">
+                <div class="work-card__header">
+                    <div class="work-card__avatar">
+                        <img src="images/work-card5.png" alt="Аватарка человека" class="work-card__img">
+                    </div>
+                    <h3 class="work-card__subject">Срочно! Нужен веб дизайнер!</h3>
+                </div>
+                <p class="work-card__description">
+                    Горит проект по редизайну личного кабинета. Нужно быстро внести правки в текущий макет и подготовить его к передаче в разработку уже сегодня.
+                </p>
+                <button class="work-card__btn">Посмотреть</button>
+            </article>
+
+            <!-- All Works Link -->
+            <a href="#" class="works__all-link">
+                <span>Смотреть все ворки</span>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- TOP FREELANCERS SECTION -->
+<section class="freelancers">
+    <div class="freelancers__container">
+        <h2 class="freelancers__title">Топ фрилансеров</h2>
+
+        <div class="freelancers__grid">
+            
+            <!-- Freelancer Card 1 -->
+            <article class="freelancer-card">
+                <div class="freelancer-card__content">
+                    <div class="freelancer-card__avatar-wrapper">
+                        <img src="images/top-freelancer1.png" alt="Марина Королёва" class="freelancer-card__avatar">
+                        <span class="freelancer-card__status freelancer-card__status--online"></span>
+                    </div>
+                    <div class="freelancer-card__info">
+                        <h3 class="freelancer-card__name">Марина Королёва</h3>
+                        <p class="freelancer-card__job">Разработчик PHP</p>
+                        <p class="freelancer-card__projects">Выполнено проектов: 65</p>
+                        <div class="freelancer-card__rating">
+                            <!-- Звезды рейтинга -->
+                            <span class="freelancer-card__star freelancer-card__star--full"></span>
+                            <span class="freelancer-card__star freelancer-card__star--full"></span>
+                            <span class="freelancer-card__star freelancer-card__star--full"></span>
+                            <span class="freelancer-card__star freelancer-card__star--full"></span>
+                            <span class="freelancer-card__star freelancer-card__star--half"></span>
+                        </div>
+                    </div>
+                </div>
+                <button class="freelancer-card__btn freelancer-card__btn--filled">Написать</button>
+            </article>
+
+            <!-- Freelancer Card 2 -->
+            <article class="freelancer-card">
+                <div class="freelancer-card__content">
+                    <div class="freelancer-card__avatar-wrapper">
+                        <img src="images/top-freelancer2.png" alt="Семён Сергеев" class="freelancer-card__avatar">
+                        <span class="freelancer-card__status freelancer-card__status--online"></span>
+                    </div>
+                    <div class="freelancer-card__info">
+                        <h3 class="freelancer-card__name">Семён Сергеев</h3>
+                        <p class="freelancer-card__job">Копирайтер</p>
+                        <p class="freelancer-card__projects">Выполнено проектов: 104</p>
+                        <div class="freelancer-card__rating">
+                            <span class="freelancer-card__star freelancer-card__star--full"></span>
+                            <span class="freelancer-card__star freelancer-card__star--full"></span>
+                            <span class="freelancer-card__star freelancer-card__star--full"></span>
+                            <span class="freelancer-card__star freelancer-card__star--full"></span>
+                            <span class="freelancer-card__star"></span>
+                        </div>
+                    </div>
+                </div>
+                <button class="freelancer-card__btn">Написать</button>
+            </article>
+
+            <!-- Freelancer Card 3 -->
+            <article class="freelancer-card">
+                <div class="freelancer-card__content">
+                    <div class="freelancer-card__avatar-wrapper">
+                        <img src="images/top-freelancer3.png" alt="Ангелина Сорокина" class="freelancer-card__avatar">
+                        <span class="freelancer-card__status freelancer-card__status--offline"></span>
+                    </div>
+                    <div class="freelancer-card__info">
+                        <h3 class="freelancer-card__name">Ангелина Сорокина</h3>
+                        <p class="freelancer-card__job">Дизайнер сайтов</p>
+                        <p class="freelancer-card__projects">Выполнено проектов: 25</p>
+                        <div class="freelancer-card__rating">
+                            <span class="freelancer-card__star freelancer-card__star--full"></span>
+                            <span class="freelancer-card__star freelancer-card__star--full"></span>
+                            <span class="freelancer-card__star freelancer-card__star--full"></span>
+                            <span class="freelancer-card__star freelancer-card__star--full"></span>
+                            <span class="freelancer-card__star freelancer-card__star--full"></span>
+                        </div>
+                    </div>
+                </div>
+                <button class="freelancer-card__btn">Написать</button>
+            </article>
+
+            <!-- Freelancer Card 4 -->
+            <article class="freelancer-card">
+                <div class="freelancer-card__content">
+                    <div class="freelancer-card__avatar-wrapper">
+                        <img src="images/top-freelancer4.png" alt="Никита Зайцев" class="freelancer-card__avatar">
+                        <span class="freelancer-card__status freelancer-card__status--online"></span>
+                    </div>
+                    <div class="freelancer-card__info">
+                        <h3 class="freelancer-card__name">Никита Зайцев</h3>
+                        <p class="freelancer-card__job">Маркетолог</p>
+                        <p class="freelancer-card__projects">Выполнено проектов: 144</p>
+                        <div class="freelancer-card__rating">
+                            <span class="freelancer-card__star freelancer-card__star--full"></span>
+                            <span class="freelancer-card__star freelancer-card__star--full"></span>
+                            <span class="freelancer-card__star freelancer-card__star--full"></span>
+                            <span class="freelancer-card__star freelancer-card__star--full"></span>
+                            <span class="freelancer-card__star"></span>
+                        </div>
+                    </div>
+                </div>
+                <button class="freelancer-card__btn">Написать</button>
+            </article>
+
+            <!-- Freelancer Card 5 -->
+            <article class="freelancer-card">
+                <div class="freelancer-card__content">
+                    <div class="freelancer-card__avatar-wrapper">
+                        <img src="images/top-freelancer5.png" alt="Наталья Захарова" class="freelancer-card__avatar">
+                        <span class="freelancer-card__status freelancer-card__status--offline"></span>
+                    </div>
+                    <div class="freelancer-card__info">
+                        <h3 class="freelancer-card__name">Наталья Захарова</h3>
+                        <p class="freelancer-card__job">Motion дизайнер</p>
+                        <p class="freelancer-card__projects">Выполнено проектов: 71</p>
+                        <div class="freelancer-card__rating">
+                            <span class="freelancer-card__star freelancer-card__star--full"></span>
+                            <span class="freelancer-card__star freelancer-card__star--full"></span>
+                            <span class="freelancer-card__star freelancer-card__star--full"></span>
+                            <span class="freelancer-card__star freelancer-card__star--full"></span>
+                            <span class="freelancer-card__star freelancer-card__star--full"></span>
+                        </div>
+                    </div>
+                </div>
+                <button class="freelancer-card__btn">Написать</button>
+            </article>
+
+            <!-- All Freelancers Link Card -->
+            <a href="#" class="freelancers__all-link">
+                <span>Посмотреть всех ТОП фрилансеров</span>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS SECTION -->
+<section class="steps">
+    <div class="steps__container">
+        <div class="steps__header">
+            <h2 class="steps__title">Как решать задачи на WorkTap?</h2>
+            <p class="steps__subtitle">Идеально подходит для бизнеса и частных лиц</p>
+        </div>
+
+        <div class="steps__grid">
+            
+            <!-- Step 1 -->
+            <div class="steps__item">
+                <div class="steps__icon-wrapper">
+                    <img src="images/steps-icon1.svg" alt="Иконка" class="steps__icon">
+                </div>
+                <h3 class="steps__item-title">Выберите услугу</h3>
+                <p class="steps__item-text">
+                    В супермаркете WorkTap представлен широкий выбор услуг от квалифицированных специалистов.
+                </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="steps__item">
+                <div class="steps__icon-wrapper">
+                    <img src="images/steps-icon2.svg" alt="Иконка" class="steps__icon">
+                </div>
+                <h3 class="steps__item-title">Оплатите</h3>
+                <p class="steps__item-text">
+                    Деньги будут перечислены продавцу после того, как он выполнит работу, и вы её одобрите.
+                </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="steps__item">
+                <div class="steps__icon-wrapper">
+                    <img src="images/steps-icon3.svg" alt="Иконка" class="steps__icon">
+                </div>
+                <h3 class="steps__item-title">Получите результат</h3>
+                <p class="steps__item-text">
+                    Наш супермаркет гарантирует вам возврат средств в полном объёме в случае невыполнения заказа.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- BUSINESS BENEFITS SECTION -->
+<section class="business">
+    <!-- Фоновое изображение (1-я картинка) -->
+    <img src="images/background-img1.jpg" alt="Фоновое изображение" class="business__bg">
+
+    <div class="business__container">
+        <div class="business__content">
+            <h2 class="business__title">Как WorkTap помогает бизнесу?</h2>
+
+            <div class="business__list">
+                <!-- Benefit Item 1 -->
+                <div class="business__card">
+                    <div class="business__card-icon-box">
+                        <img src="images/credit-card 1.svg" alt="Иконка кредитной карты" class="business__card-icon"> <!-- 2-я картинка -->
+                    </div>
+                    <p class="business__card-text">Оплачивайте с р/с или карты компании</p>
+                </div>
+
+                <!-- Benefit Item 2 -->
+                <div class="business__card">
+                    <div class="business__card-icon-box">
+                        <img src="images/money (1) 1.svg" alt="Иконка денег" class="business__card-icon"> <!-- 3-я картинка -->
+                    </div>
+                    <p class="business__card-text">Экономьте до 87% бюджета на фрилансе</p>
+                </div>
+
+                <!-- Benefit Item 3 -->
+                <div class="business__card">
+                    <div class="business__card-icon-box">
+                        <img src="images/clock 1.svg" alt="Иконка часов" class="business__card-icon"> <!-- 4-я картинка -->
+                    </div>
+                    <p class="business__card-text">Экономьте до 75% времени на решении фриланс задач</p>
+                </div>
+            </div>
+
+            <p class="business__tagline">WorkTap — быстро, просто и безопасно!</p>
+            
+            <button class="business__btn">Начать!</button>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER SECTION -->
+<footer class="footer">
+    <div class="footer__container">
+        <div class="footer__grid">
+            
+            <!-- Column 1 -->
+            <div class="footer__col">
+                <h4 class="footer__caption">Топ категории</h4>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#" class="footer__link">Тексты и переводы</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Разработка</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Дизайн</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Аудио, видео монтаж</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Соцсети и реклама</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Бизнес и жизнь</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">SEO и оптимизация</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="footer__col">
+                <h4 class="footer__caption">О Проекте</h4>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#" data-modal="modal-about" class="footer__link">О Нас</a></li>
+                    <li class="footer__item"><a href="#" data-modal="modal-how" class="footer__link">Как Это Работает</a></li>
+                    <li class="footer__item"><a href="#" data-modal="modal-rules" class="footer__link">Политика Приватности</a></li>
+                    <li class="footer__item"><a href="#" data-modal="modal-security" class="footer__link">Правила Пользования</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="footer__col">
+                <h4 class="footer__caption">Поддержка</h4>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#" class="footer__link">Контакты</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Политика Безопасности</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="footer__col">
+                <h4 class="footer__caption">Follow</h4>
+                <div class="footer__socials">
+                    <a href="#" class="footer__social-link">
+                        <img src="images/facebook-icon.svg" alt="Facebook">
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <img src="images/twitter-icon.svg" alt="Twitter">
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <img src="images/instagram-icon.svg" alt="Instagram">
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <img src="images/linkedin-icon.svg" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer__bottom">
+            <p class="footer__copy">Copyright @ 2021 | WorkTap – Worktap.KZ. All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Modal: О нас -->
+<div class="modal" id="modal-about">
+    <div class="modal__overlay">
+        <div class="modal__card modal__card--about">
+            <button class="modal__close">
+                <img src="images/Vector.png" alt="Закрыть">
+            </button>
+            
+            <div class="modal__about-header">
+                <h2 class="modal__title">О нас</h2>
+                <p class="modal__about-text">
+                    WorkTap — онлайн сервис поиска частных специалистов для решения бизнес задач в кратчайшие сроки. 
+                    Наша платформа объединяет заказчиков услуг, которым необходимо выполнить какую-либо работу, 
+                    и компетентных специалистов, ищущих подработку или дополнительный заработок.
+                </p>
+            </div>
+
+            <div class="modal__about-image">
+                <img src="images/about-img.png" alt="О нас" class="modal__img">
+            </div>
+            
+            <div class="modal__footer">
+                <button class="modal__btn-primary js-modal-close">Понятно</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL WINDOWS SYSTEM -->
+
+<!-- Modal: Как это работает -->
+<div class="modal" id="modal-how">
+    <div class="modal__overlay">
+        <div class="modal__card modal__card--wide">
+            <button class="modal__close">
+                <img src="images/Vector.png" alt="Закрыть"> 
+            </button>
+            <h2 class="modal__title">Как это работает</h2>
+            
+            <div class="modal__steps-grid">
+                <div class="modal__step">
+                    <div class="modal__step-icon"><img src="images/how-it-works-img1.png" alt="Укажите вид работы и категорию"></div>
+                    <h4 class="modal__step-title">Укажите вид работы и категорию</h4>
+                </div>
+                <div class="modal__step">
+                    <div class="modal__step-icon"><img src="images/how-it-works-img2.png" alt="Выберите специалиста"></div>
+                    <h4 class="modal__step-title">Выберите специалиста</h4>
+                    <p class="modal__step-text">Каждый специалист перед началом работы проходит тщательную проверку, имеет рейтинг и отзывы предыдущих заказчиков.</p>
+                </div>
+                <div class="modal__step">
+                    <div class="modal__step-icon"><img src="images/how-it-works-img3.png" alt="Оплатите услугу"></div>
+                    <h4 class="modal__step-title">Оплатите услугу</h4>
+                </div>
+                <div class="modal__step">
+                    <div class="modal__step-icon"><img src="images/how-it-works-img4.png" alt="Специалист выполняет работу"></div>
+                    <h4 class="modal__step-title">Специалист выполняет работу</h4>
+                    <p class="modal__step-text">После выполнения заказа у вас будет возможность поставить специалисту оценку и написать отзыв.</p>
+                </div>
+            </div>
+
+            <div class="modal__footer">
+                <button class="modal__btn-primary js-modal-close">Понятно</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: Правила сервиса -->
+<div class="modal" id="modal-rules">
+    <div class="modal__overlay">
+        <div class="modal__card">
+            <button class="modal__close">
+                <img src="images/Vector.png" alt="Закрыть">
+            </button>
+            <h2 class="modal__title">ПРАВИЛА СЕРВИСА</h2>
+            
+            <div class="modal__scroll-content">
+                <h5 class="modal__content-subtitle">Правила сайта</h5>
+                <ol class="modal__rules-list">
+                    <li>Пользоваться сервисом worktap.kz может любой человек, достигший совершеннолетия. Для создания или заказа ворка необходима регистрация с помощью email.</li>
+                    <li>У одного человека может быть только один аккаунт. Администрация оставляет за собой право удалить дублирующие аккаунты.</li>
+                    <li>При регистрации пользователь самостоятельно выбирает логин...</li>
+                    <!-- Здесь будет остальной текст из макета -->
+                    <li>Ответственность за всю размещенную пользователем информацию (тексты, иллюстрации, видео и т.д.) несет сам пользователь.</li>
+                    <li>На сайте запрещена ненормативная лексика, грубое общение, несанкционированная реклама.</li>
+                </ol>
+            </div>
+
+            <div class="modal__footer">
+                <button class="modal__btn-primary js-modal-close">Понятно</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: Политика безопасности -->
+<div class="modal" id="modal-security">
+    <div class="modal__overlay">
+        <div class="modal__card">
+            <button class="modal__close">
+                <img src="images/Vector.png" alt="Закрыть">
+            </button>
+            <h2 class="modal__title">Политика безопасности</h2>
+            
+            <div class="modal__scroll-content">
+                <h5 class="modal__content-subtitle">БЕЗОПАСНОСТЬ ОНЛАЙН ПЛАТЕЖЕЙ</h5>
+                <p class="modal__description-text">
+                    Наш сайт подключен к интернет-эквайрингу, и Вы можете оплатить Услугу банковской картой Visa или Mastercard. 
+                    После подтверждения выбранного Товара либо услуги откроется защищенное окно с платежной страницей...
+                </p>
+                <!-- Текст про CloudPayments и PCI DSS из макета -->
+            </div>
+
+            <div class="modal__footer modal__footer--row">
+                <button class="modal__btn-primary js-modal-close">Понятно</button>
+                <button class="modal__btn-outline">
+                    Скачать документ <img src="images/download-img.png" alt="icon">
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
