@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worktap | Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="exchange.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- AUTH SECTION -->
+<!-- PASSWORD RECOVERY SECTION -->
+<main class="auth">
+    
+        
+        <!-- Left Side: Recovery Form -->
+        <div class="auth__left">
+            <div class="auth__content-wrapper">
+                <a href="index.html" class="auth__logo">
+                    <img src="images/logo.png" alt="Worktap" class="auth__logo-img">
+                </a>
+
+                <div class="auth__header">
+                    <p class="auth__subtitle">Мы отправим Вам код для восстановления пароля</p>
+                    <h1 class="auth__title">Заполните поле ниже</h1>
+                </div>
+
+                <form class="auth__form form js-recovery-form">
+                    <div class="form__group">
+                        <label for="recovery-email" class="form__label">E-mail</label>
+                        <input type="email" id="recovery-email" class="form__input js-input-email" placeholder="E-mail">
+                    </div>
+
+                    <div class="form__group">
+                        <label for="recovery-code" class="form__label">Код</label>
+                        <input type="text" id="recovery-code" class="form__input js-input-code" placeholder="Код из почты">
+                    </div>
+
+                    <button type="button" class="form__btn-submit js-btn-recovery">Отправить код</button>
+                </form>
+
+                <p class="auth__footer-text">
+                    Вспомнили пароль? <a href="login.html" class="auth__footer-link">Войдите</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Right Side: Visual -->
+        <div class="auth__right">
+            <img src="images/recovery-img.jpg" alt="" class="auth__main-img">
+        </div>
+
+    
+</main>
+
+
+
+
+
+
+
+<script src="script.js"></script>  
+</body>
+</html>

@@ -80,6 +80,7 @@ img {
     cursor: pointer;
     border: none;
     transition: var(--transition);
+    text-decoration: none;
 }
 
 .header__btn--reg {

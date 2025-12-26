@@ -534,3 +534,298 @@
     }
 }
 
+/* --- Auth Layout --- */
+.auth {
+    min-height: 100vh;
+    display: flex;
+}
+
+.auth__container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* Left Content Section */
+.auth__left {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: #fff;
+}
+
+.auth__content-wrapper {
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth__logo {
+    display: inline-block;
+    margin-bottom: 80px;
+}
+
+.auth__logo-img {
+    height: 35px;
+}
+
+.auth__header {
+    margin-bottom: 40px;
+}
+
+.auth__subtitle {
+    font-size: 14px;
+    color: var(--color-text-light);
+    margin-bottom: 8px;
+}
+
+.auth__title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+/* --- Form Styles --- */
+.form__group {
+    margin-bottom: 25px;
+}
+
+.form__label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 1px;
+    color: var(--color-text);
+}
+
+.form__input {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form__input:focus {
+    border-color: var(--color-primary);
+}
+
+.form__input::placeholder {
+    color: #ccc;
+    font-size: 13px;
+}
+
+.form__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    font-size: 13px;
+}
+
+/* Custom Checkbox */
+.form__checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: var(--color-text-light);
+}
+
+.form__checkbox {
+    display: none;
+}
+
+.form__checkbox-custom {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    position: relative;
+}
+
+.form__checkbox:checked + .form__checkbox-custom {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+}
+
+.form__link {
+    text-decoration: none;
+    color: var(--color-secondary);
+}
+
+/* Buttons */
+.form__btn-submit {
+    width: 100%;
+    background-color: var(--color-primary);
+    color: #fff;
+    border: none;
+    padding: 16px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: var(--transition);
+}
+
+.form__btn-submit:hover {
+    background-color: #18a362;
+}
+
+.form__btn-google {
+    width: 100%;
+    background-color: #2d3446;
+    color: #fff;
+    border: none;
+    padding: 16px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.form__google-icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* Auth Footer */
+.auth__footer-text {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--color-text-light);
+}
+
+.auth__footer-link {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Right Side Image */
+.auth__right {
+    flex: 0 0 50%;
+    height: 100vh;
+}
+
+.auth__main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+    .auth__right {
+        display: none; /* Скрываем картинку на планшетах и мобилках */
+    }
+    .auth__left {
+        flex: 0 0 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth__left {
+        padding: 20px;
+    }
+    .auth__logo {
+        margin-bottom: 40px;
+    }
+    .auth__title {
+        font-size: 24px;
+    }
+}
+
+/* --- Registration Specific Styles --- */
+
+/* Контейнер для регистрации может быть чуть выше из-за количества полей */
+.auth__content-wrapper--reg {
+    max-width: 450px;
+    padding: 20px 0;
+}
+
+.auth__content-wrapper--reg .auth__logo {
+    margin-bottom: 40px;
+}
+
+/* Переключатели ролей */
+.form__roles {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 35px;
+    margin-top: 10px;
+}
+
+.form__radio-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--color-text-light);
+    transition: var(--transition);
+}
+
+.form__radio {
+    display: none;
+}
+
+.form__radio-custom {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    position: relative;
+    transition: var(--transition);
+}
+
+.form__radio:checked + .form__radio-custom {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+}
+
+/* Точка внутри радиокнопки (опционально, для акцента как на макете) */
+.form__radio:checked + .form__radio-custom::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+/* Адаптив для формы регистрации */
+@media (max-height: 900px) and (min-width: 993px) {
+    .auth__left {
+        justify-content: flex-start;
+        overflow-y: auto;
+        padding-top: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    .form__roles {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Состояние кнопки после получения кода */
+.form__btn-submit--login {
+    background-color: var(--color-primary);
+}

@@ -115,3 +115,58 @@ loadMoreBtn.addEventListener('click', () => {
         loadMoreBtn.textContent = 'Загрузить еще';
     }, 800);
 });
+
+/* PASSWORD RECOVERY LOGIC */
+
+// Оборачиваем в проверку, чтобы код не падал на других страницах
+const recoveryBtn = document.querySelector('.js-btn-recovery');
+const emailInput = document.querySelector('.js-input-email');
+const codeInput = document.querySelector('.js-input-code');
+
+if (recoveryBtn && emailInput && codeInput) {
+    let isCodeSent = false;
+
+    recoveryBtn.addEventListener('click', () => {
+        // 1. Проверяем, заполнено ли поле E-mail
+        if (emailInput.value.trim() === "") {
+            emailInput.style.borderColor = 'red'; // Визуальная подсказка
+            alert("Пожалуйста, введите E-mail");
+            return;
+        } else {
+            emailInput.style.borderColor = '';
+        }
+
+        if (!isCodeSent) {
+            // --- ЭТАП 1: Генерация кода ---
+            
+            // Генерируем код
+            const randomCode = Math.floor(1000 + Math.random() * 9000);
+            
+            // Вставляем в поле
+            codeInput.value = randomCode;
+            
+            // Меняем кнопку
+            recoveryBtn.textContent = "Войти";
+            recoveryBtn.style.backgroundColor = "#1dbf73"; // Зеленый из макета
+            
+            isCodeSent = true;
+            console.log("Код сгенерирован:", randomCode);
+        } else {
+            // --- ЭТАП 2: Вход ---
+            if (codeInput.value.trim() !== "") {
+                localStorage.setItem('worktap_logged_in', 'true');
+                window.location.href = 'exchange.html';
+            } else {
+                alert("Поле кода не может быть пустым");
+            }
+        }
+    });
+
+    // Живая проверка ввода кода
+    codeInput.addEventListener('input', () => {
+        if (emailInput.value.trim() !== "" && codeInput.value.length >= 4) {
+            recoveryBtn.textContent = "Войти";
+            isCodeSent = true;
+        }
+    });
+}
