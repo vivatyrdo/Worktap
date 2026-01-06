@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worktap</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- HEADER SECTION -->
+<header class="header">
+    <div class="header__container">
+        <a href="index.html" class="header__logo">
+            <img src="images/logo.png" alt="Worktap" class="header__logo-img">
+        </a>
+
+        <nav class="header__nav nav js-nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="exchange.html" class="nav__link">Биржа</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Ворки</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Конкурсы</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Создать заказ</a></li>
+            </ul>
+        </nav>
+
+        <div class="header__user-panel">
+            <div class="header__actions-icons">
+                <button class="header__icon-btn"><img src="" alt=""></button>
+                <button class="header__icon-btn"><img src="" alt=""></button>
+                <button class="header__icon-btn"><img src="" alt=""></button>
+            </div>
+            
+            <div class="header__profile profile-meta js-profile-trigger">
+    <span class="profile-meta__name">Ернар Ибрагимов</span>
+    <div class="profile-meta__avatar">
+        <img src="images/profile.png" alt="">
+    </div>
+    <div class="profile-meta__arrow-box js-profile-arrow">
+        <img src="images/chevron-down.svg" alt="" class="profile-meta__arrow">
+    </div>
+
+    <!-- ВЫПАДАЮЩЕЕ МЕНЮ -->
+    <div class="profile-dropdown js-profile-dropdown">
+        <div class="profile-dropdown__user">
+            <div class="profile-dropdown__info">
+                <span class="profile-dropdown__name">Ернар Ибрагимов</span>
+            </div>
+            <div class="profile-dropdown__avatar">
+                <img src="images/profile.png" alt="">
+            </div>
+        </div>
+
+        <div class="profile-dropdown__roles">
+            <button class="profile-dropdown__role profile-dropdown__role--active">Я заказчик</button>
+            <button class="profile-dropdown__role">Я исполнитель</button>
+        </div>
+
+        <ul class="profile-dropdown__list">
+            <li class="profile-dropdown__item"><a href="profile.html" class="profile-dropdown__link">Мой кабинет</a></li>
+            <li class="profile-dropdown__item"><a href="orders.html" class="profile-dropdown__link">Мои заказы</a></li>
+            <li class="profile-dropdown__item"><a href="history.html" class="profile-dropdown__link">История</a></li>
+            <li class="profile-dropdown__item"><a href="wallet.html" class="profile-dropdown__link">Мой кошелек</a></li>
+        </ul>
+
+        <button class="profile-dropdown__logout js-logout">Выйти из аккаунта</button>
+    </div>
+</div>
+
+            <button class="burger js-burger" aria-label="Открыть меню">
+                <span class="burger__line"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main class="profile-page">
+    <!-- Табы (Только мобильная версия) -->
+    <div class="profile-tabs">
+        <div class="profile-tabs__container">
+            <button class="profile-tabs__btn profile-tabs__btn--active">Обо мне</button>
+            <button class="profile-tabs__btn">Мои ворки</button>
+            <button class="profile-tabs__btn">Отзывы</button>
+        </div>
+    </div>
+
+    <!-- Боковая кнопка поиска (Только десктоп) -->
+    <button class="btn-quick-search btn-quick-search--side">
+        <span>Быстрый поиск ворков</span>
+        <div class="btn-quick-search__arrow"></div>
+    </button>
+
+    <div class="profile-hero">
+        <div class="profile-hero__container">
+            
+            <!-- Левая часть: Инфо -->
+            <div class="profile-hero__content">
+                <div class="profile-hero__head">
+                    <p class="profile-hero__label">Дизайнер</p>
+                    <h1 class="profile-hero__name"><span class="accent">Ернар</span> Ибрагимов</h1>
+                </div>
+
+                <p class="profile-hero__bio">
+                    Работаю дизайнером с 1999 года. <br>
+                    Был опыт в газетах, журналах, типографиях, рекламных агентствах, издательских домах... Порядка 8 лет занимаюсь логотипами и фирменными стилями.
+                </p>
+
+                <div class="profile-hero__tags tags">
+                    <span class="tags__item">Figma</span>
+                    <span class="tags__item">Adobe photoshop</span>
+                    
+                    <!-- Кнопка поиска внутри тегов (Только мобильная версия) -->
+                    <button class="btn-quick-search btn-quick-search--inline">
+                        Быстрый поиск ворков
+                    </button>
+
+                    <span class="tags__item">Adobe illustrator</span>
+                    <span class="tags__item">Corel draw</span>
+                    <span class="tags__item">Adobe After Effects</span>
+                    <span class="tags__item">HTML/CSS</span>
+                </div>
+
+                <!-- Раскрывающийся блок информации -->
+                <div class="details-card js-details-card">
+                    <button class="details-card__header js-details-toggle">
+                        <span>Скрыть подробную информацию</span>
+                        <div class="details-card__arrow"></div>
+                    </button>
+                    <div class="details-card__body">
+                        <div class="details-card__row">
+                            <span class="details-card__label">Страна:</span>
+                            <span class="details-card__value">Казахстан, Алматы</span>
+                        </div>
+                        <div class="details-card__row">
+                            <span class="details-card__label">На сайте:</span>
+                            <span class="details-card__value">3 года</span>
+                        </div>
+                        <div class="details-card__row">
+                            <span class="details-card__label">Образование:</span>
+                            <div class="details-card__value">
+                                <p>1. Казахстан, КазНУ, Бакалавр</p>
+                                <p>2. Казахстан, КБТУ, Магистратура</p>
+                            </div>
+                        </div>
+                        <div class="details-card__row">
+                            <span class="details-card__label">Знание языков:</span>
+                            <div class="details-card__value">
+                                <p>1. Казахский</p>
+                                <p>2. Русский</p>
+                            </div>
+                        </div>
+                        <div class="details-card__row">
+                            <span class="details-card__label">Сертификаты:</span>
+                            <div class="details-card__value">
+                                <p>1. Сертификат 1, 2020 года</p>
+                                <p>2. Сертификат 2, 2021 года</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Правая часть: Визуал (Фото) -->
+            <div class="profile-hero__visual visual">
+
+                <div class="visual__container">
+
+                    <div class="visual__badge visual__badge--status">
+                            <span class="dot"></span> В сети
+                    </div>
+
+                    <div class="visual__photo-wrapper">
+
+                        <img src="images/profile-main.png" alt="Ернар Ибрагимов" class="visual__img">
+
+                        <div class="visual__badge visual__badge--rating rating">
+                            <div class="rating__stars">
+                                <span class="star star--full"></span>
+                                <span class="star star--full"></span>
+                                <span class="star star--full"></span>
+                                <span class="star star--full"></span>
+                                <span class="star"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Декоративные элементы фона -->
+                    
+                    <div class="visual__deco visual__deco--dots"></div>
+                    <div class="visual__deco visual__deco--waves"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- MY WORKS SECTION -->
+<section class="my-works">
+    <div class="my-works__container">
+        <h2 class="my-works__title">Мои ворки</h2>
+        
+        <div class="my-works__grid js-works-grid">
+            <!-- Кнопка создания (всегда первая) -->
+            <div class="work-card work-card--create">
+                <div class="work-card__create-content">
+                    <div class="work-card__plus-icon"></div>
+                    <span class="work-card__create-text">Создать ворк</span>
+                </div>
+            </div>
+
+            <!-- Карточка ворка -->
+            <article class="work-card">
+                <div class="work-card__image">
+                    <img src="images/work-profile.png" alt="">
+                </div>
+                <div class="work-card__content">
+                    <h3 class="work-card__name">Дизайн сайта</h3>
+                    <p class="work-card__price">50 000 тенге</p>
+                </div>
+            </article>
+
+            <!-- Повторяющиеся карточки для примера -->
+            <article class="work-card">
+                <div class="work-card__image">
+                    <img src="images/work-profile.png" alt="">
+                </div>
+                <div class="work-card__content">
+                    <h3 class="work-card__name">Дизайн сайта</h3>
+                    <p class="work-card__price">50 000 тенге</p>
+                </div>
+            </article>
+
+            <article class="work-card">
+                <div class="work-card__image">
+                    <img src="images/work-profile.png" alt="">
+                </div>
+                <div class="work-card__content">
+                    <h3 class="work-card__name">Дизайн сайта</h3>
+                    <p class="work-card__price">50 000 тенге</p>
+                </div>
+            </article>
+        </div>
+
+        <button class="btn-load-more js-load-works">Загрузить еще</button>
+    </div>
+</section>
+
+<!-- REVIEWS SECTION -->
+<section class="reviews">
+    <div class="reviews__container">
+        <h2 class="reviews__title">Отзывы</h2>
+        
+        <div class="reviews__filters">
+            <button class="reviews__filter-btn reviews__filter-btn--active" data-filter="positive">Положительные (65)</button>
+            <button class="reviews__filter-btn" data-filter="negative">Отрицательные (10)</button>
+        </div>
+
+        <div class="reviews__grid js-reviews-grid">
+            <!-- Положительные отзывы (по умолчанию видны) -->
+            <div class="review-card js-review-item" data-type="positive">
+                <div class="review-card__header">
+                    <div class="review-card__avatar"><img src="" alt=""></div>
+                    <div class="review-card__info">
+                        <h4 class="review-card__user">Никита Евреев</h4>
+                        <div class="rating__stars">
+                            <span class="star star--full"></span><span class="star star--full"></span><span class="star star--full"></span><span class="star star--full"></span><span class="star"></span>
+                        </div>
+                    </div>
+                </div>
+                <p class="review-card__text">Отличная работа! Все выполнено в срок и согласно ТЗ. Очень доволен результатом сотрудничества.</p>
+            </div>
+
+            <!-- Отрицательные отзывы (по умолчанию скрыты в CSS) -->
+            <div class="review-card js-review-item review-card--hidden" data-type="negative">
+                <div class="review-card__header">
+                    <div class="review-card__avatar"><img src="" alt=""></div>
+                    <div class="review-card__info">
+                        <h4 class="review-card__user">Антон Павлов</h4>
+                        <div class="rating__stars">
+                            <span class="star star--full"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span>
+                        </div>
+                    </div>
+                </div>
+                <p class="review-card__text">К сожалению, работа не была закончена вовремя. Пришлось доделывать самому. Не рекомендую.</p>
+            </div>
+        </div>
+
+        <button class="btn-load-more js-load-reviews">Загрузить еще</button>
+    </div>
+</section>
+</main>
+
+<!-- FOOTER SECTION -->
+<footer class="footer">
+    <div class="footer__container">
+        <div class="footer__grid">
+            
+            <!-- Column 1 -->
+            <div class="footer__col">
+                <h4 class="footer__caption">Топ категории</h4>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#" class="footer__link">Тексты и переводы</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Разработка</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Дизайн</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Аудио, видео монтаж</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Соцсети и реклама</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Бизнес и жизнь</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">SEO и оптимизация</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="footer__col">
+                <h4 class="footer__caption">О Проекте</h4>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#" data-modal="modal-about" class="footer__link">О Нас</a></li>
+                    <li class="footer__item"><a href="#" data-modal="modal-how" class="footer__link">Как Это Работает</a></li>
+                    <li class="footer__item"><a href="#" data-modal="modal-rules" class="footer__link">Политика Приватности</a></li>
+                    <li class="footer__item"><a href="#" data-modal="modal-security" class="footer__link">Правила Пользования</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="footer__col">
+                <h4 class="footer__caption">Поддержка</h4>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#" class="footer__link">Контакты</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Политика Безопасности</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="footer__col">
+                <h4 class="footer__caption">Follow</h4>
+                <div class="footer__socials">
+                    <a href="#" class="footer__social-link">
+                        <img src="images/facebook-icon.svg" alt="Facebook">
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <img src="images/twitter-icon.svg" alt="Twitter">
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <img src="images/instagram-icon.svg" alt="Instagram">
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <img src="images/linkedin-icon.svg" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer__bottom">
+            <p class="footer__copy">Copyright @ 2021 | WorkTap – Worktap.KZ. All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Modal: О нас -->
+<div class="modal" id="modal-about">
+    <div class="modal__overlay">
+        <div class="modal__card modal__card--about">
+            <button class="modal__close">
+                <img src="images/Vector.png" alt="Закрыть">
+            </button>
+            
+            <div class="modal__about-header">
+                <h2 class="modal__title">О нас</h2>
+                <p class="modal__about-text">
+                    WorkTap — онлайн сервис поиска частных специалистов для решения бизнес задач в кратчайшие сроки. 
+                    Наша платформа объединяет заказчиков услуг, которым необходимо выполнить какую-либо работу, 
+                    и компетентных специалистов, ищущих подработку или дополнительный заработок.
+                </p>
+            </div>
+
+            <div class="modal__about-image">
+                <img src="images/about-img.png" alt="О нас" class="modal__img">
+            </div>
+            
+            <div class="modal__footer">
+                <button class="modal__btn-primary js-modal-close">Понятно</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL WINDOWS SYSTEM -->
+
+<!-- Modal: Как это работает -->
+<div class="modal" id="modal-how">
+    <div class="modal__overlay">
+        <div class="modal__card modal__card--wide">
+            <button class="modal__close">
+                <img src="images/Vector.png" alt="Закрыть"> 
+            </button>
+            <h2 class="modal__title">Как это работает</h2>
+            
+            <div class="modal__steps-grid">
+                <div class="modal__step">
+                    <div class="modal__step-icon"><img src="images/how-it-works-img1.png" alt="Укажите вид работы и категорию"></div>
+                    <h4 class="modal__step-title">Укажите вид работы и категорию</h4>
+                </div>
+                <div class="modal__step">
+                    <div class="modal__step-icon"><img src="images/how-it-works-img2.png" alt="Выберите специалиста"></div>
+                    <h4 class="modal__step-title">Выберите специалиста</h4>
+                    <p class="modal__step-text">Каждый специалист перед началом работы проходит тщательную проверку, имеет рейтинг и отзывы предыдущих заказчиков.</p>
+                </div>
+                <div class="modal__step">
+                    <div class="modal__step-icon"><img src="images/how-it-works-img3.png" alt="Оплатите услугу"></div>
+                    <h4 class="modal__step-title">Оплатите услугу</h4>
+                </div>
+                <div class="modal__step">
+                    <div class="modal__step-icon"><img src="images/how-it-works-img4.png" alt="Специалист выполняет работу"></div>
+                    <h4 class="modal__step-title">Специалист выполняет работу</h4>
+                    <p class="modal__step-text">После выполнения заказа у вас будет возможность поставить специалисту оценку и написать отзыв.</p>
+                </div>
+            </div>
+
+            <div class="modal__footer">
+                <button class="modal__btn-primary js-modal-close">Понятно</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: Правила сервиса -->
+<div class="modal" id="modal-rules">
+    <div class="modal__overlay">
+        <div class="modal__card">
+            <button class="modal__close">
+                <img src="images/Vector.png" alt="Закрыть">
+            </button>
+            <h2 class="modal__title">ПРАВИЛА СЕРВИСА</h2>
+            
+            <div class="modal__scroll-content">
+                <h5 class="modal__content-subtitle">Правила сайта</h5>
+                <ol class="modal__rules-list">
+                    <li>Пользоваться сервисом worktap.kz может любой человек, достигший совершеннолетия. Для создания или заказа ворка необходима регистрация с помощью email.</li>
+                    <li>У одного человека может быть только один аккаунт. Администрация оставляет за собой право удалить дублирующие аккаунты.</li>
+                    <li>При регистрации пользователь самостоятельно выбирает логин...</li>
+                    <!-- Здесь будет остальной текст из макета -->
+                    <li>Ответственность за всю размещенную пользователем информацию (тексты, иллюстрации, видео и т.д.) несет сам пользователь.</li>
+                    <li>На сайте запрещена ненормативная лексика, грубое общение, несанкционированная реклама.</li>
+                </ol>
+            </div>
+
+            <div class="modal__footer">
+                <button class="modal__btn-primary js-modal-close">Понятно</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: Политика безопасности -->
+<div class="modal" id="modal-security">
+    <div class="modal__overlay">
+        <div class="modal__card">
+            <button class="modal__close">
+                <img src="images/Vector.png" alt="Закрыть">
+            </button>
+            <h2 class="modal__title">Политика безопасности</h2>
+            
+            <div class="modal__scroll-content">
+                <h5 class="modal__content-subtitle">БЕЗОПАСНОСТЬ ОНЛАЙН ПЛАТЕЖЕЙ</h5>
+                <p class="modal__description-text">
+                    Наш сайт подключен к интернет-эквайрингу, и Вы можете оплатить Услугу банковской картой Visa или Mastercard. 
+                    После подтверждения выбранного Товара либо услуги откроется защищенное окно с платежной страницей...
+                </p>
+                <!-- Текст про CloudPayments и PCI DSS из макета -->
+            </div>
+
+            <div class="modal__footer modal__footer--row">
+                <button class="modal__btn-primary js-modal-close">Понятно</button>
+                <button class="modal__btn-outline">
+                    Скачать документ <img src="images/download-img.png" alt="icon">
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QUICK SEARCH MODAL -->
+<div class="modal-search js-modal-search">
+    <div class="modal-search__container">
+        
+        <!-- Кнопка закрытия -->
+        <button class="modal-search__close js-close-search">
+            <span class="modal-search__close-icon">×</span>
+            <span class="modal-search__close-text">Закрыть быстрый поиск</span>
+        </button>
+
+        <div class="modal-search__content">
+            <h2 class="modal-search__title">
+                Ищите и находите подходящую работу среди <br>
+                <span class="modal-search__title--accent">10,000+</span> проектов и покажите на что Вы способны!
+            </h2>
+
+            <form action="works.html" class="modal-search__form search-form">
+                <input type="text" class="search-form__input" placeholder="Что нужно сделать?">
+                <button type="submit" class="search-form__btn">Найти</button>
+            </form>
+
+            <div class="modal-search__tags tags-cloud">
+                <a href="#" class="tags-cloud__item">Тексты и переводы</a>
+                <a href="#" class="tags-cloud__item">Разработка</a>
+                <a href="#" class="tags-cloud__item">Дизайн</a>
+                <a href="#" class="tags-cloud__item">Аудио, видео монтаж</a>
+                <a href="#" class="tags-cloud__item">SEO и оптимизация</a>
+                <a href="#" class="tags-cloud__item">Бизнес и жизнь</a>
+                <a href="#" class="tags-cloud__item">Соцсети и реклама</a>
+                <a href="#" class="tags-cloud__item tags-cloud__item--all">Все категории</a>
+            </div>
+        </div>
+
+        <!-- Декоративные фоновые круги -->
+        <div class="modal-search__blob modal-search__blob--1"></div>
+        <div class="modal-search__blob modal-search__blob--2"></div>
+        <div class="modal-search__blob modal-search__blob--3"></div>
+        <div class="modal-search__blob modal-search__blob--4"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script src="profile.js"></script>
+</body>
+</html>

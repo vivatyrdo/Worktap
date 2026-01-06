@@ -662,6 +662,8 @@
 /* Buttons */
 .form__btn-submit {
     width: 100%;
+    display: inline-block;
+    text-align: center;
     background-color: var(--color-primary);
     color: #fff;
     border: none;
@@ -672,6 +674,7 @@
     cursor: pointer;
     margin-bottom: 15px;
     transition: var(--transition);
+    text-decoration: none;
 }
 
 .form__btn-submit:hover {
