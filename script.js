@@ -1,3 +1,20 @@
+/* AUTH CHECK (GLOBAL) */
+function updateHeaderState() {
+    const header = document.querySelector('.js-header');
+    const isLoggedIn = localStorage.getItem('worktap_logged_in');
+
+    if (header) {
+        if (isLoggedIn === 'true') {
+            header.classList.add('header--logged');
+            header.classList.remove('header--guest');
+        } else {
+            header.classList.add('header--guest');
+            header.classList.remove('header--logged');
+        }
+    }
+}
+document.addEventListener('DOMContentLoaded', updateHeaderState);
+
 /* MOBILE MENU LOGIC */
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.header__nav');
@@ -161,6 +178,8 @@ if (recoveryBtn && emailInput && codeInput) {
             }
         }
     });
+
+    
 
     // Живая проверка ввода кода
     codeInput.addEventListener('input', () => {

@@ -1539,3 +1539,87 @@ img {
 }
 .hero-exchange__blob--1 { width: 200px; height: 200px; background: #ffe8d4; top: 10%; left: 5%; }
 .hero-exchange__blob--2 { width: 150px; height: 150px; background: #d4ffeb; bottom: 10%; right: 10%; }
+
+/* По умолчанию скрываем оба блока, чтобы не было "мигания" при загрузке */
+.js-header-guest,
+.js-header-user {
+    display: none;
+}
+
+/* Если гость (нет метки в localStorage) */
+.header--guest .js-header-guest {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Если авторизован (есть метка) */
+.header--logged .js-header-user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Дополнительно: чтобы бургер не ломал логику на мобилках */
+@media (max-width: 768px) {
+    .header--logged .profile-meta__name {
+        display: none; /* Скрываем имя на мобилках в хедере */
+    }
+}
+
+/* --- Catalog Layout --- */
+.works-catalog { padding: 60px 0; background-color: var(--color-bg-light); }
+.works-catalog__title { text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 40px; }
+.works-catalog__title .accent { color: var(--color-orange); }
+
+.works-catalog__header { margin-bottom: 50px; }
+
+/* --- Full Work Card Style --- */
+.work-card-full {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+}
+
+.work-card-full:hover { transform: translateY(-5px); }
+
+.work-card-full__image { height: 200px; background: #eee; }
+.work-card-full__image img { width: 100%; height: 100%; object-fit: cover; }
+
+.work-card-full__content { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
+
+.work-card-full__author { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; }
+.work-card-full__avatar { width: 30px; height: 30px; border-radius: 50%; overflow: hidden; background: #ddd; }
+.work-card-full__name { font-size: 13px; font-weight: 600; color: #7a7a7a; }
+
+.work-card-full__title { font-size: 15px; font-weight: 700; line-height: 1.4; margin-bottom: 15px; flex-grow: 1; }
+
+.work-card-full__rating { display: flex; align-items: center; gap: 8px; margin-bottom: 20px; }
+.rating__count { font-size: 12px; color: #b9b9c9; }
+
+.work-card-full__footer { 
+    display: flex; justify-content: space-between; align-items: center; 
+    padding-top: 15px; border-top: 1px solid #f8f8f8; 
+}
+.work-card-full__price { font-weight: 700; color: var(--color-primary); font-size: 16px; }
+
+.work-card-full__btn {
+    padding: 8px 20px; border-radius: 50px; border: 1px solid var(--color-primary);
+    background: transparent; color: var(--color-primary); font-weight: 700; font-size: 12px; cursor: pointer;
+}
+.work-card-full__btn:hover { background: var(--color-primary); color: #fff; }
+
+/* Сетка (используем уже имеющуюся логику) */
+.works__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+@media (max-width: 1100px) { .works__grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 800px) { .works__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 500px) { .works__grid { grid-template-columns: 1fr; } }

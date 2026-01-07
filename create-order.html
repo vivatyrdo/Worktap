@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Worktap</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="create-order.css">
     <link rel="stylesheet" href="profile.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <header class="header">
     <div class="header__container">
         <a href="index.html" class="header__logo">
@@ -22,6 +24,7 @@
                 <li class="nav__item"><a href="exchange.html" class="nav__link">Биржа</a></li>
                 <li class="nav__item"><a href="works.html" class="nav__link">Ворки</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Конкурсы</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Создать ворк</a></li>
                 <li class="nav__item"><a href="create-order.html" class="nav__link">Создать заказ</a></li>
             </ul>
         </nav>
@@ -76,107 +79,82 @@
     </div>
 </header>
 
-    <!-- WALLET SECTION -->
-<main class="wallet">
-    <div class="wallet__container">
-        <h1 class="wallet__title">Мой <span class="accent">кошелек</span></h1>
+<!-- CREATE ORDER SECTION -->
+<main class="create-order">
+    <div class="create-order__container">
+        <h1 class="create-order__title">Опубликуйте ваш <span class="accent">заказ</span></h1>
 
-        <div class="wallet__top">
-            <!-- Сетка маленьких карточек -->
-            <div class="wallet__stats">
-                <div class="wallet__card">
-                    <p class="wallet__card-label">Чистый доход</p>
-                    <p class="wallet__card-value">1 000 000 тенге</p>
+        <form class="create-order__form form-order">
+            <!-- Название -->
+            <div class="form-order__group">
+                <label class="form-order__label">Название</label>
+                <input type="text" class="form-order__input" placeholder="Например: Нужно создать дизайн лендинга">
+            </div>
+
+            <!-- Описание -->
+            <div class="form-order__group">
+                <label class="form-order__label">Описание</label>
+                <textarea class="form-order__textarea" placeholder="Кратко опишите свой ворк"></textarea>
+            </div>
+
+            <!-- Категории -->
+            <div class="form-order__row">
+                <div class="form-order__group">
+                    <label class="form-order__label">Категория</label>
+                    <select class="form-order__select">
+                        <option value="" disabled selected>Выберите категорию</option>
+                        <option value="design">Дизайн</option>
+                        <option value="dev">Разработка</option>
+                        <option value="text">Тексты и переводы</option>
+                    </select>
                 </div>
-                <div class="wallet__card">
-                    <p class="wallet__card-label">Выведено</p>
-                    <p class="wallet__card-value">500 000 тенге</p>
-                </div>
-                <div class="wallet__card">
-                    <p class="wallet__card-label">Куплено</p>
-                    <p class="wallet__card-value">40 000 тенге</p>
-                </div>
-                <div class="wallet__card">
-                    <p class="wallet__card-label">Ожидает разрешения</p>
-                    <p class="wallet__card-value">50 000 тенге</p>
+                <div class="form-order__group">
+                    <label class="form-order__label">Подкатегория</label>
+                    <select class="form-order__select">
+                        <option value="" disabled selected>Выберите подкатегорию</option>
+                        <option value="web">Веб-дизайн</option>
+                        <option value="logo">Логотипы</option>
+                        <option value="mobile">Мобильные приложения</option>
+                    </select>
                 </div>
             </div>
 
-            <!-- Карточка вывода средств -->
-            <div class="wallet__withdraw withdraw-card">
-                <p class="withdraw-card__label">Доступна сумма для вывода</p>
-                <p class="withdraw-card__value">250 000 тенге</p>
-                
-                <p class="withdraw-card__method-label">Вывести средства на</p>
-                <div class="withdraw-card__methods">
-                    <button class="withdraw-card__method">
-                        <img src="images/qiwi-img.png" alt="QIWI">
-                    </button>
-                    <button class="withdraw-card__method">
-                        <img src="images/WebMoney-img.png" alt="WebMoney">
-                    </button>
-                    <button class="withdraw-card__method">
-                        <img src="images/visa-img.png" alt="Visa/Mastercard">
-                    </button>
+            <!-- Срок и Бюджет -->
+            <div class="form-order__row">
+                <div class="form-order__group">
+                    <label class="form-order__label">Срок выполнения работы в днях</label>
+                    <input type="number" class="form-order__input" placeholder="14">
+                </div>
+                <div class="form-order__group">
+                    <label class="form-order__label">Бюджет в тенге</label>
+                    <input type="number" class="form-order__input" placeholder="250 000">
                 </div>
             </div>
-        </div>
 
-        <!-- Секция истории -->
-        <section class="history">
-            <h2 class="history__title">История</h2>
-            
-            <div class="history__table-wrapper">
-                <div class="history__table">
-                    <!-- Заголовки таблицы -->
-                    <div class="history__row history__row--header">
-                        <div class="history__cell">Операция</div>
-                        <div class="history__cell">Дата операции</div>
-                        <div class="history__cell">Сумма</div>
-                        <div class="history__cell">Hash операции</div>
-                    </div>
-
-                    <!-- Строка 1: Пополнение -->
-                    <div class="history__row">
-                        <div class="history__cell history__cell--operation">
-                            <div class="history__icon history__icon--plus">
-                                <img src="images/plus-icon.svg" alt="+">
-                            </div>
-                            <span>Пополнение баланса</span>
-                        </div>
-                        <div class="history__cell">22 октября, 2021 года</div>
-                        <div class="history__cell history__cell--amount">150 000 тенге</div>
-                        <div class="history__cell history__cell--hash">c2d5abbb5d87eb9d0378e187ff0e9df5a97adf68</div>
-                    </div>
-
-                    <!-- Строка 2: Вывод -->
-                    <div class="history__row">
-                        <div class="history__cell history__cell--operation">
-                            <div class="history__icon history__icon--check">
-                                <img src="images/Vector.svg" alt="v">
-                            </div>
-                            <span>Вывод средств</span>
-                        </div>
-                        <div class="history__cell">15 октября, 2021 года</div>
-                        <div class="history__cell history__cell--amount">300 000 тенге</div>
-                        <div class="history__cell history__cell--hash">826ad6e3c5757747304a0c7aff4e00f6ffacd832</div>
-                    </div>
-
-                    <!-- Строка 3: Покупка -->
-                    <div class="history__row">
-                        <div class="history__cell history__cell--operation">
-                            <div class="history__icon history__icon--cart">
-                                <img src="images/cart-icon.svg" alt="shopping">
-                            </div>
-                            <span>Покупка услуги</span>
-                        </div>
-                        <div class="history__cell">14 сентября, 2021 года</div>
-                        <div class="history__cell history__cell--amount">200 000 тенге</div>
-                        <div class="history__cell history__cell--hash">987829a3bdb628cb8bb69d4ad1eedce6193792ac</div>
+            <!-- Документы -->
+            <div class="form-order__group">
+                <label class="form-order__label">Документы</label>
+                <div class="upload-area js-upload-area">
+                    <input type="file" class="upload-area__input js-file-input" multiple>
+                    <div class="upload-area__content">
+                        <div class="upload-area__icon"><img src="" alt=""></div>
+                        <p class="upload-area__text">Перетащите файл сюда или нажмите <span class="accent">Загрузить</span></p>
+                        <p class="upload-area__hint">Загружайте только файлы doc, pdf, png, jpg, jpeg и не более 500 Кб</p>
                     </div>
                 </div>
+
+                <!-- Список загруженных файлов -->
+                <div class="upload-list js-file-list">
+                    <!-- Файлы будут добавляться сюда через JS -->
+                </div>
             </div>
-        </section>
+
+            <!-- Кнопки -->
+            <div class="form-order__actions">
+                <button type="button" class="form-order__btn form-order__btn--back" onclick="history.back()">Назад</button>
+                <button type="submit" class="form-order__btn form-order__btn--submit">Опубликовать</button>
+            </div>
+        </form>
     </div>
 </main>
 
@@ -371,7 +349,8 @@
     </div>
 </div>
 
-<script src="script.js"></script>
+<script src="create-order.js"></script>
 <script src="profile.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

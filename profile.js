@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // --- 1. БУРГЕР МЕНЮ ---
     const burger = document.querySelector('.js-burger');
     const nav = document.querySelector('.js-nav');

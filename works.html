@@ -6,13 +6,16 @@
     <title>Worktap</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="works.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <header class="header">
     <div class="header__container">
+
         <a href="index.html" class="header__logo">
             <img src="images/logo.png" alt="Worktap" class="header__logo-img">
         </a>
@@ -22,6 +25,7 @@
                 <li class="nav__item"><a href="exchange.html" class="nav__link">Биржа</a></li>
                 <li class="nav__item"><a href="works.html" class="nav__link">Ворки</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Конкурсы</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Создать ворк</a></li>
                 <li class="nav__item"><a href="create-order.html" class="nav__link">Создать заказ</a></li>
             </ul>
         </nav>
@@ -34,8 +38,8 @@
             </div>
             
             <div class="header__profile profile-meta js-profile-trigger">
-    <span class="profile-meta__name">Ернар Ибрагимов</span>
-    <div class="profile-meta__avatar">
+            <span class="profile-meta__name">Ернар Ибрагимов</span>
+            <div class="profile-meta__avatar">
         <img src="images/profile.png" alt="">
     </div>
     <div class="profile-meta__arrow-box js-profile-arrow">
@@ -76,109 +80,82 @@
     </div>
 </header>
 
-    <!-- WALLET SECTION -->
-<main class="wallet">
-    <div class="wallet__container">
-        <h1 class="wallet__title">Мой <span class="accent">кошелек</span></h1>
+<!-- HEADER (Берем из профиля/биржи) -->
 
-        <div class="wallet__top">
-            <!-- Сетка маленьких карточек -->
-            <div class="wallet__stats">
-                <div class="wallet__card">
-                    <p class="wallet__card-label">Чистый доход</p>
-                    <p class="wallet__card-value">1 000 000 тенге</p>
-                </div>
-                <div class="wallet__card">
-                    <p class="wallet__card-label">Выведено</p>
-                    <p class="wallet__card-value">500 000 тенге</p>
-                </div>
-                <div class="wallet__card">
-                    <p class="wallet__card-label">Куплено</p>
-                    <p class="wallet__card-value">40 000 тенге</p>
-                </div>
-                <div class="wallet__card">
-                    <p class="wallet__card-label">Ожидает разрешения</p>
-                    <p class="wallet__card-value">50 000 тенге</p>
-                </div>
-            </div>
+<main class="works-page">
+    <div class="works-page__container">
+        <h1 class="works-page__title">Все <span class="accent">ворки</span></h1>
 
-            <!-- Карточка вывода средств -->
-            <div class="wallet__withdraw withdraw-card">
-                <p class="withdraw-card__label">Доступна сумма для вывода</p>
-                <p class="withdraw-card__value">250 000 тенге</p>
-                
-                <p class="withdraw-card__method-label">Вывести средства на</p>
-                <div class="withdraw-card__methods">
-                    <button class="withdraw-card__method">
-                        <img src="images/qiwi-img.png" alt="QIWI">
-                    </button>
-                    <button class="withdraw-card__method">
-                        <img src="images/WebMoney-img.png" alt="WebMoney">
-                    </button>
-                    <button class="withdraw-card__method">
-                        <img src="images/visa-img.png" alt="Visa/Mastercard">
-                    </button>
-                </div>
+        <!-- Блок поиска (центрированный) -->
+        <div class="works-page__search-wrapper">
+            <form class="search js-search-form">
+                <input type="text" class="search__input" placeholder="Какую услугу ищете?">
+                <button type="submit" class="search__btn">Найти</button>
+            </form>
+        </div>
+
+        <!-- Теги категорий -->
+        <div class="works-page__tags tags">
+            <div class="tags__list">
+                <a href="#" class="tags__item tags__item--active">Дизайн</a>
+                <a href="#" class="tags__item">Разработка</a>
+                <a href="#" class="tags__item">Тексты и переводы</a>
+                <a href="#" class="tags__item">Аудио, видео монтаж</a>
+                <a href="#" class="tags__item">SEO и оптимизация</a>
+                <a href="#" class="tags__item">Бизнес и жизнь</a>
+                <a href="#" class="tags__item">Соцсети и реклама</a>
+                <a href="#" class="tags__item tags__item--all">Все категории</a>
             </div>
         </div>
 
-        <!-- Секция истории -->
-        <section class="history">
-            <h2 class="history__title">История</h2>
+        <!-- Сетка ворков -->
+        <div class="works-grid js-works-grid">
             
-            <div class="history__table-wrapper">
-                <div class="history__table">
-                    <!-- Заголовки таблицы -->
-                    <div class="history__row history__row--header">
-                        <div class="history__cell">Операция</div>
-                        <div class="history__cell">Дата операции</div>
-                        <div class="history__cell">Сумма</div>
-                        <div class="history__cell">Hash операции</div>
+            <!-- Полноценная карточка -->
+            <article class="work-item">
+                <div class="work-item__image">
+                    <img src="images/work-profile.png" alt="">
+                </div>
+                <div class="work-item__body">
+                    <div class="work-item__author">
+                        <div class="work-item__avatar">
+                            <img src="images/top-freelancer1.png" alt="">
+                        </div>
+                        <span class="work-item__author-name">Екатерина Иванова</span>
+                    </div>
+                    
+                    <h3 class="work-item__title">Сделаю качественный дизайн вашего будущего лендинга</h3>
+                    
+                    <div class="work-item__rating rating">
+                        <div class="rating__stars">
+                            <span class="star star--full"></span>
+                            <span class="star star--full"></span>
+                            <span class="star star--full"></span>
+                            <span class="star star--full"></span>
+                            <span class="star"></span>
+                        </div>
+                        <span class="rating__count">(15)</span>
                     </div>
 
-                    <!-- Строка 1: Пополнение -->
-                    <div class="history__row">
-                        <div class="history__cell history__cell--operation">
-                            <div class="history__icon history__icon--plus">
-                                <img src="images/plus-icon.svg" alt="+">
-                            </div>
-                            <span>Пополнение баланса</span>
+                    <div class="work-item__footer">
+                        <div class="work-item__price">
+                            <span class="work-item__price-label">от</span>
+                            <span class="work-item__price-value">50 000 тенге</span>
                         </div>
-                        <div class="history__cell">22 октября, 2021 года</div>
-                        <div class="history__cell history__cell--amount">150 000 тенге</div>
-                        <div class="history__cell history__cell--hash">c2d5abbb5d87eb9d0378e187ff0e9df5a97adf68</div>
-                    </div>
-
-                    <!-- Строка 2: Вывод -->
-                    <div class="history__row">
-                        <div class="history__cell history__cell--operation">
-                            <div class="history__icon history__icon--check">
-                                <img src="images/Vector.svg" alt="v">
-                            </div>
-                            <span>Вывод средств</span>
-                        </div>
-                        <div class="history__cell">15 октября, 2021 года</div>
-                        <div class="history__cell history__cell--amount">300 000 тенге</div>
-                        <div class="history__cell history__cell--hash">826ad6e3c5757747304a0c7aff4e00f6ffacd832</div>
-                    </div>
-
-                    <!-- Строка 3: Покупка -->
-                    <div class="history__row">
-                        <div class="history__cell history__cell--operation">
-                            <div class="history__icon history__icon--cart">
-                                <img src="images/cart-icon.svg" alt="shopping">
-                            </div>
-                            <span>Покупка услуги</span>
-                        </div>
-                        <div class="history__cell">14 сентября, 2021 года</div>
-                        <div class="history__cell history__cell--amount">200 000 тенге</div>
-                        <div class="history__cell history__cell--hash">987829a3bdb628cb8bb69d4ad1eedce6193792ac</div>
+                        <button class="work-item__btn-view">Посмотреть</button>
                     </div>
                 </div>
-            </div>
-        </section>
+            </article>
+
+            <!-- Повтори этот блок для заполнения сетки -->
+
+        </div>
+
+        <button class="btn-load-more js-load-works">Загрузить еще</button>
     </div>
 </main>
+
+<!-- FOOTER -->
 
 <!-- FOOTER SECTION -->
 <footer class="footer">
@@ -371,7 +348,7 @@
     </div>
 </div>
 
+<script src="works.js"></script>
 <script src="script.js"></script>
-<script src="profile.js"></script>
 </body>
 </html>
