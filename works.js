@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span class="work-item__price-label">от</span>
                         <span class="work-item__price-value">50 000 тенге</span>
                     </div>
-                    <button class="work-item__btn-view">Посмотреть</button>
+                    <a class="work-item__btn-view" href="work-page.html">Посмотреть</a>
                 </div>
             </div>
         </article>

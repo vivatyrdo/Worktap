@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Биржа</title>
+    <title>Дизайн сайта | Worktap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="profile.css">
-    <link rel="stylesheet" href="exchange.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="own-order-page.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<main>
-    <!-- HEADER SECTION (Standard) -->
+
 <header class="header">
     <div class="header__container">
         <a href="index.html" class="header__logo">
@@ -24,7 +22,7 @@
             <ul class="nav__list">
                 <li class="nav__item"><a href="exchange.html" class="nav__link">Биржа</a></li>
                 <li class="nav__item"><a href="works.html" class="nav__link">Ворки</a></li>
-                <li class="nav__item"><a href="create-work.html" class="nav__link">Создать ворк</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Создать ворк</a></li>
                 <li class="nav__item"><a href="create-order.html" class="nav__link">Создать заказ</a></li>
             </ul>
         </nav>
@@ -79,230 +77,235 @@
     </div>
 </header>
 
-<!-- HERO EXCHANGE SECTION -->
-<section class="hero-exchange js-hero-exchange">
-    <div class="hero-exchange__container">
+<main class="order-single">
+    <div class="order-single__container">
         
-        <!-- Верхняя часть (скрывается при скролле) -->
-        <div class="hero-exchange__full-content">
-            <h1 class="hero-exchange__title">
-                Ищите и находите подходящую работу среди <br>
-                <span class="hero-exchange__title--accent">10,000+</span> проектов и покажите на что Вы способны!
-            </h1>
-        </div>
-
-        <!-- Основная панель (превращается в компактную) -->
-        <div class="hero-exchange__main-panel">
+        <!-- Верхняя сетка: Инфо + Сайдбар -->
+        <div class="order-single__top-grid">
             
-            <!-- Первый ряд: Поиск + Цены + Сортировка -->
-            <div class="hero-exchange__top-row">
-                <form class="hero-exchange__search search">
-                    <input type="text" class="search__input" placeholder="Какую работу ищете?">
-                    <button type="submit" class="search__btn">Найти</button>
-                </form>
-
-                <div class="hero-exchange__filters filters">
-                    <div class="filters__price">
-                        <input type="text" class="filters__input" placeholder="Минимальная цена">
-                        <span class="filters__sep">—</span>
-                        <input type="text" class="filters__input" placeholder="Максимальная цена">
+            <!-- ОСНОВНОЙ БЛОК ЗАКАЗА -->
+            <section class="order-main-info">
+                <div class="order-main-info__header">
+                    <div class="order-main-info__title-box">
+                        <h1 class="order-main-info__title">Нужно сделать Дизайн сайта по тематике авто</h1>
+                        <nav class="breadcrumbs">
+                            <span>Дизайн</span> <span>›</span> <span>Веб и мобильный дизайн</span> <span>›</span> <span class="current">Веб-дизайн</span>
+                        </nav>
+                    </div>
+                    <div class="order-main-info__price-box">
+                        <span class="order-main-info__price">50 000 тенге</span>
+                        <span class="order-main-info__deadline">до 14.07.2021</span>
                     </div>
                 </div>
-            </div>
 
-            <!-- Второй ряд: Подкатегории (появляются или меняются при скролле) -->
-            <div class="hero-exchange__bottom-row tags">
-                <div class="tags__list">
-                    <a href="#" class="tags__item tags__item--back">‹ Дизайн</a>
-                    <a href="#" class="tags__item">Дизайн сайтов</a>
-                    <a href="#" class="tags__item">Дизайн логотипа</a>
-                    <a href="#" class="tags__item">Флаера и брошюры</a>
-                    <a href="#" class="tags__item">Дизайн визиток</a>
-                    <a href="#" class="tags__item">Баннеры и стенды</a>
-                    <a href="#" class="tags__item tags__item--all">Все подкатегории</a>
+                <div class="order-main-info__description">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt aliquet felis ullamcorper duis faucibus sapien tincidunt tristique elit. Facilisi feugiat neque, morbi quis. Justo non mauris velit amet, habitasse. Enim, euismod purus semper urna. Lorem adipiscing tristique dignissim mattis. Consectetur morbi nisl, at sodales nunc egestas dolor aliquet amet. Massa ipsum laoreet ipsum proin maecenas. Magnis pulvinar consequat donec ipsum id pulvinar nam sed. Ut tempor turpis vehicula nulla non.
+                    </p>
                 </div>
-            </div>
+
+                <!-- Список документов -->
+                <div class="order-main-info__docs docs-list">
+                    <div class="docs-list__item">
+                        <div class="docs-list__icon docs-list__icon--png"></div>
+                        <span class="docs-list__name">Документ 1.png</span>
+                    </div>
+                    <div class="docs-list__item">
+                        <div class="docs-list__icon docs-list__icon--jpg"></div>
+                        <span class="docs-list__name">Документ 2.jpeg</span>
+                    </div>
+                    <div class="docs-list__item">
+                        <div class="docs-list__icon docs-list__icon--pdf"></div>
+                        <span class="docs-list__name">Документ 3.pdf</span>
+                    </div>
+                </div>
+
+                <div class="order-main-info__footer">
+                    <span class="order-main-info__offers-count">Предложений: 7</span>
+                </div>
+            </section>
+
+            <!-- САЙДБАР С КНОПКАМИ И АВТОРОМ -->
+            <aside class="order-sidebar">
+                <div class="order-sidebar__actions">
+                    <button class="btn-outline btn-outline--blue">Изменить</button>
+                    <button class="btn-outline btn-outline--red">Закрыть без выполнения</button>
+                </div>
+
+                <div class="order-sidebar__author author-card">
+                    <div class="author-card__top">
+                        <div class="author-card__avatar">
+                            <img src="images/profile.png" alt="">
+                        </div>
+                        <div class="author-card__meta">
+                            <p class="author-card__name">Екатерина Иванова</p>
+                            <p class="author-card__stats">Размещено проектов на бирже: 25</p>
+                            <div class="rating">
+                                <div class="rating__stars">
+                                    <span class="star star--full"></span>
+                                    <span class="star star--full"></span>
+                                    <span class="star star--full"></span>
+                                    <span class="star star--full"></span>
+                                    <span class="star"></span>
+                                </div>
+                                <span class="rating__count">15 отзывов</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
         </div>
 
-        <!-- Инфо-блок (скрывается при скролле) -->
-        
+        <!-- СПИСОК СТАВОК -->
+        <section class="order-bids">
+            <h2 class="order-bids__title">Ставки фрилансеров</h2>
+
+            <div class="order-bids__list">
+                
+                <!-- Карточка ставки -->
+                <article class="bid-card">
+                    <div class="bid-card__header">
+                        <div class="bid-card__user">
+                            <div class="bid-card__avatar"><img src="" alt=""></div>
+                            <div class="bid-card__user-info">
+                                <h4 class="bid-card__name">Никита Евреев</h4>
+                                <div class="rating__stars">
+                                    <span class="star star--full"></span>
+                                    <span class="star star--full"></span>
+                                    <span class="star star--full"></span>
+                                    <span class="star star--full"></span>
+                                    <span class="star"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bid-card__pricing">
+                            <span class="bid-card__price">50 000 ТГ</span>
+                            <span class="bid-card__time">3 дня</span>
+                        </div>
+                    </div>
+
+                    <div class="bid-card__details">
+                        <p class="bid-card__revisions">Количество доработок: 5</p>
+                        <p class="bid-card__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus tincidunt eget eu, eget commodo condimentum non, fringilla fermentum. Morbi sed enim facilisis metus pretium leo, mauris. In egestas cursus orci dignissim in lectus nulla.
+                        </p>
+                    </div>
+
+                    <div class="bid-card__actions">
+                        <button class="btn-action btn-action--green">Выбрать</button>
+                        <button class="btn-action btn-action--purple">Отклонить</button>
+                    </div>
+                </article>
+
+                <article class="bid-card">
+                    <div class="bid-card__header">
+                        <div class="bid-card__user">
+                            <div class="bid-card__avatar"><img src="" alt=""></div>
+                            <div class="bid-card__user-info">
+                                <h4 class="bid-card__name">Никита Евреев</h4>
+                                <div class="rating__stars">
+                                    <span class="star star--full"></span>
+                                    <span class="star star--full"></span>
+                                    <span class="star star--full"></span>
+                                    <span class="star star--full"></span>
+                                    <span class="star"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bid-card__pricing">
+                            <span class="bid-card__price">50 000 ТГ</span>
+                            <span class="bid-card__time">3 дня</span>
+                        </div>
+                    </div>
+
+                    <div class="bid-card__details">
+                        <p class="bid-card__revisions">Количество доработок: 5</p>
+                        <p class="bid-card__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus tincidunt eget eu, eget commodo condimentum non, fringilla fermentum. Morbi sed enim facilisis metus pretium leo, mauris. In egestas cursus orci dignissim in lectus nulla.
+                        </p>
+                    </div>
+
+                    <div class="bid-card__actions">
+                        <button class="btn-action btn-action--green">Выбрать</button>
+                        <button class="btn-action btn-action--purple">Отклонить</button>
+                    </div>
+                </article>
+
+                <article class="bid-card">
+                    <div class="bid-card__header">
+                        <div class="bid-card__user">
+                            <div class="bid-card__avatar"><img src="" alt=""></div>
+                            <div class="bid-card__user-info">
+                                <h4 class="bid-card__name">Никита Евреев</h4>
+                                <div class="rating__stars">
+                                    <span class="star star--full"></span>
+                                    <span class="star star--full"></span>
+                                    <span class="star star--full"></span>
+                                    <span class="star star--full"></span>
+                                    <span class="star"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bid-card__pricing">
+                            <span class="bid-card__price">50 000 ТГ</span>
+                            <span class="bid-card__time">3 дня</span>
+                        </div>
+                    </div>
+
+                    <div class="bid-card__details">
+                        <p class="bid-card__revisions">Количество доработок: 5</p>
+                        <p class="bid-card__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus tincidunt eget eu, eget commodo condimentum non, fringilla fermentum. Morbi sed enim facilisis metus pretium leo, mauris. In egestas cursus orci dignissim in lectus nulla.
+                        </p>
+                    </div>
+
+                    <div class="bid-card__actions">
+                        <button class="btn-action btn-action--green">Выбрать</button>
+                        <button class="btn-action btn-action--purple">Отклонить</button>
+                    </div>
+                </article>
+
+                <article class="bid-card">
+                    <div class="bid-card__header">
+                        <div class="bid-card__user">
+                            <div class="bid-card__avatar"><img src="" alt=""></div>
+                            <div class="bid-card__user-info">
+                                <h4 class="bid-card__name">Никита Евреев</h4>
+                                <div class="rating__stars">
+                                    <span class="star star--full"></span>
+                                    <span class="star star--full"></span>
+                                    <span class="star star--full"></span>
+                                    <span class="star star--full"></span>
+                                    <span class="star"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bid-card__pricing">
+                            <span class="bid-card__price">50 000 ТГ</span>
+                            <span class="bid-card__time">3 дня</span>
+                        </div>
+                    </div>
+
+                    <div class="bid-card__details">
+                        <p class="bid-card__revisions">Количество доработок: 5</p>
+                        <p class="bid-card__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus tincidunt eget eu, eget commodo condimentum non, fringilla fermentum. Morbi sed enim facilisis metus pretium leo, mauris. In egestas cursus orci dignissim in lectus nulla.
+                        </p>
+                    </div>
+
+                    <div class="bid-card__actions">
+                        <button class="btn-action btn-action--green">Выбрать</button>
+                        <button class="btn-action btn-action--purple">Отклонить</button>
+                    </div>
+                </article>
+
+                <!-- Повторить ставку для примера... -->
+
+            </div>
+        </section>
     </div>
-
-    <!-- Декор -->
-    <div class="hero-exchange__blob hero-exchange__blob--1"></div>
-    <div class="hero-exchange__blob hero-exchange__blob--2"></div>
-</section>
-
-<!-- ORDERS LIST SECTION -->
-<section class="orders">
-    <div class="orders__container">
-        <h2 class="orders__header">65 проектов по дизайну</h2>
-
-        <div class="orders__list js-orders-list">
-            <!-- Card Template -->
-
-            <article class="order-card">
-                <div class="order-card__main">
-                    <h3 class="order-card__title">Нужно сделать Дизайн сайта по тематике авто</h3>
-                    
-                    <div class="order-card__details">
-                        <div class="order-card__author author">
-                            <div class="author__avatar">
-                                <img src="images/exchange-img.png" alt="">
-                            </div>
-                            <div class="author__info">
-                                <p class="author__name">Екатерина Иванова</p>
-                                <p class="author__stats">Размещено проектов на бирже: 25</p>
-                                <div class="author__rating">
-                                    
-                                    <div class="freelancer-card__rating author__stars">
-                                        <span class="freelancer-card__star freelancer-card__star--full"></span>
-                                        <span class="freelancer-card__star freelancer-card__star--full"></span>
-                                        <span class="freelancer-card__star freelancer-card__star--full"></span>
-                                        <span class="freelancer-card__star freelancer-card__star--full"></span>
-                                        <span class="freelancer-card__star"></span>
-                                    </div>
-                                    <span class="author__reviews">15 отзывов</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="order-card__price-box">
-                            <p class="order-card__price">Бюджет: 50 000 тенге</p>
-                            <p class="order-card__date">4 часа 28 минут назад</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="order-card__footer">
-                    <p class="order-card__offers">Предложений: 50</p>
-                    <a class="order-card__btn" href="order-page.html" style="text-decoration: none;">Посмотреть</a>
-                </div>
-            </article>
-
-            <article class="order-card">
-                <div class="order-card__main">
-                    <h3 class="order-card__title">Нужно сделать Дизайн сайта по тематике авто</h3>
-                    
-                    <div class="order-card__details">
-                        <div class="order-card__author author">
-                            <div class="author__avatar">
-                                <img src="images/exchange-img.png" alt="">
-                            </div>
-                            <div class="author__info">
-                                <p class="author__name">Екатерина Иванова</p>
-                                <p class="author__stats">Размещено проектов на бирже: 25</p>
-                                <div class="author__rating">
-                                    
-                                    <div class="freelancer-card__rating author__stars">
-                                        <span class="freelancer-card__star freelancer-card__star--full"></span>
-                                        <span class="freelancer-card__star freelancer-card__star--full"></span>
-                                        <span class="freelancer-card__star freelancer-card__star--full"></span>
-                                        <span class="freelancer-card__star freelancer-card__star--full"></span>
-                                        <span class="freelancer-card__star"></span>
-                                    </div>
-                                    <span class="author__reviews">15 отзывов</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="order-card__price-box">
-                            <p class="order-card__price">Бюджет: 50 000 тенге</p>
-                            <p class="order-card__date">4 часа 28 минут назад</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="order-card__footer">
-                    <p class="order-card__offers">Предложений: 50</p>
-                    <a class="order-card__btn" href="order-page.html" style="text-decoration: none;">Посмотреть</a>
-                </div>
-            </article>
-
-             <article class="order-card">
-                <div class="order-card__main">
-                    <h3 class="order-card__title">Нужно сделать Дизайн сайта по тематике авто</h3>
-                    
-                    <div class="order-card__details">
-                        <div class="order-card__author author">
-                            <div class="author__avatar">
-                                <img src="images/exchange-img.png" alt="">
-                            </div>
-                            <div class="author__info">
-                                <p class="author__name">Екатерина Иванова</p>
-                                <p class="author__stats">Размещено проектов на бирже: 25</p>
-                                <div class="author__rating">
-                                    
-                                    <div class="freelancer-card__rating author__stars">
-                                        <span class="freelancer-card__star freelancer-card__star--full"></span>
-                                        <span class="freelancer-card__star freelancer-card__star--full"></span>
-                                        <span class="freelancer-card__star freelancer-card__star--full"></span>
-                                        <span class="freelancer-card__star freelancer-card__star--full"></span>
-                                        <span class="freelancer-card__star"></span>
-                                    </div>
-                                    <span class="author__reviews">15 отзывов</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="order-card__price-box">
-                            <p class="order-card__price">Бюджет: 50 000 тенге</p>
-                            <p class="order-card__date">4 часа 28 минут назад</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="order-card__footer">
-                    <p class="order-card__offers">Предложений: 50</p>
-                    <a class="order-card__btn" href="order-page.html" style="text-decoration: none;">Посмотреть</a>
-                </div>
-            </article>
-
-             <article class="order-card">
-                <div class="order-card__main">
-                    <h3 class="order-card__title">Нужно сделать Дизайн сайта по тематике авто</h3>
-                    
-                    <div class="order-card__details">
-                        <div class="order-card__author author">
-                            <div class="author__avatar">
-                                <img src="images/exchange-img.png" alt="">
-                            </div>
-                            <div class="author__info">
-                                <p class="author__name">Екатерина Иванова</p>
-                                <p class="author__stats">Размещено проектов на бирже: 25</p>
-                                <div class="author__rating">
-                                    
-                                    <div class="freelancer-card__rating author__stars">
-                                        <span class="freelancer-card__star freelancer-card__star--full"></span>
-                                        <span class="freelancer-card__star freelancer-card__star--full"></span>
-                                        <span class="freelancer-card__star freelancer-card__star--full"></span>
-                                        <span class="freelancer-card__star freelancer-card__star--full"></span>
-                                        <span class="freelancer-card__star"></span>
-                                    </div>
-                                    <span class="author__reviews">15 отзывов</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="order-card__price-box">
-                            <p class="order-card__price">Бюджет: 50 000 тенге</p>
-                            <p class="order-card__date">4 часа 28 минут назад</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="order-card__footer">
-                    <p class="order-card__offers">Предложений: 50</p>
-                    <a class="order-card__btn" href="order-page.html" style="text-decoration: none;">Посмотреть</a>
-                </div>
-            </article>
-
-        
-
-        </div>
-
-        <button class="orders__load-more js-load-more">Загрузить еще</button>
-    </div>
-</section>
 </main>
 
-<!-- FOOTER SECTION -->
 <footer class="footer">
     <div class="footer__container">
         <div class="footer__grid">
@@ -494,6 +497,5 @@
 </div>
 
 <script src="profile.js"></script>
-<script src="script.js"></script>
 </body>
 </html>

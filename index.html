@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Worktap</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,11 +15,11 @@
 <!-- HEADER SECTION -->
 <header class="header">
     <div class="header__container">
-        <a href="#" class="header__logo">
+        <a href="index.html" class="header__logo">
             <img src="images/logo.png" alt="Worktap" class="header__logo-img">
         </a>
 
-        <nav class="header__nav nav">
+        <nav class="header__nav nav js-nav">
             <ul class="nav__list">
                 <li class="nav__item"><a href="exchange.html" class="nav__link">Биржа</a></li>
                 <li class="nav__item"><a href="works.html" class="nav__link">Ворки</a></li>
@@ -27,14 +28,53 @@
             </ul>
         </nav>
 
-        <div class="header__actions">
-            <a class="header__btn header__btn--reg" href="login.html">Регистрация</a>
-            <a class="header__btn header__btn--login" href="register.html">Войти</a>
+        <div class="header__user-panel">
+            <div class="header__actions-icons">
+                <button class="header__icon-btn"><img src="" alt=""></button>
+                <button class="header__icon-btn"><img src="" alt=""></button>
+                <button class="header__icon-btn"><img src="" alt=""></button>
+            </div>
+            
+            <div class="header__profile profile-meta js-profile-trigger">
+    <span class="profile-meta__name">Ернар Ибрагимов</span>
+    <div class="profile-meta__avatar">
+        <img src="images/profile.png" alt="">
+    </div>
+    <div class="profile-meta__arrow-box js-profile-arrow">
+        <img src="images/chevron-down.svg" alt="" class="profile-meta__arrow">
+    </div>
+
+    <!-- ВЫПАДАЮЩЕЕ МЕНЮ -->
+    <div class="profile-dropdown js-profile-dropdown">
+        <div class="profile-dropdown__user">
+            <div class="profile-dropdown__info">
+                <span class="profile-dropdown__name">Ернар Ибрагимов</span>
+            </div>
+            <div class="profile-dropdown__avatar">
+                <img src="images/profile.png" alt="">
+            </div>
         </div>
 
-        <button class="header__burger burger" aria-label="Открыть меню">
-            <span class="burger__line"></span>
-        </button>
+        <div class="profile-dropdown__roles">
+            <button class="profile-dropdown__role profile-dropdown__role--active">Я заказчик</button>
+            <button class="profile-dropdown__role">Я исполнитель</button>
+        </div>
+
+        <ul class="profile-dropdown__list">
+            <li class="profile-dropdown__item"><a href="profile.html" class="profile-dropdown__link">Мой кабинет</a></li>
+            <li class="profile-dropdown__item"><a href="orders.html" class="profile-dropdown__link">Мои заказы</a></li>
+            <li class="profile-dropdown__item"><a href="history.html" class="profile-dropdown__link">История</a></li>
+            <li class="profile-dropdown__item"><a href="wallet.html" class="profile-dropdown__link">Мой кошелек</a></li>
+        </ul>
+
+        <button class="profile-dropdown__logout js-logout">Выйти из аккаунта</button>
+    </div>
+</div>
+
+            <button class="burger js-burger" aria-label="Открыть меню">
+                <span class="burger__line"></span>
+            </button>
+        </div>
     </div>
 </header>
 
@@ -151,7 +191,7 @@
             </article>
 
             <!-- All Works Link -->
-            <a href="#" class="works__all-link">
+            <a href="works.html" class="works__all-link">
                 <span>Смотреть все ворки</span>
             </a>
 
@@ -571,6 +611,7 @@
     </div>
 </div>
 
+<script src="profile.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

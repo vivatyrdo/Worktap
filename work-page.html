@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дизайн сайта | Worktap</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="work-page.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+    <div class="header__container">
+        <a href="index.html" class="header__logo">
+            <img src="images/logo.png" alt="Worktap" class="header__logo-img">
+        </a>
+
+        <nav class="header__nav nav js-nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="exchange.html" class="nav__link">Биржа</a></li>
+                <li class="nav__item"><a href="works.html" class="nav__link">Ворки</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Создать ворк</a></li>
+                <li class="nav__item"><a href="create-order.html" class="nav__link">Создать заказ</a></li>
+            </ul>
+        </nav>
+
+        <div class="header__user-panel">
+            <div class="header__actions-icons">
+                <button class="header__icon-btn"><img src="" alt=""></button>
+                <button class="header__icon-btn"><img src="" alt=""></button>
+                <button class="header__icon-btn"><img src="" alt=""></button>
+            </div>
+            
+            <div class="header__profile profile-meta js-profile-trigger">
+    <span class="profile-meta__name">Ернар Ибрагимов</span>
+    <div class="profile-meta__avatar">
+        <img src="images/profile.png" alt="">
+    </div>
+    <div class="profile-meta__arrow-box js-profile-arrow">
+        <img src="images/chevron-down.svg" alt="" class="profile-meta__arrow">
+    </div>
+
+    <!-- ВЫПАДАЮЩЕЕ МЕНЮ -->
+    <div class="profile-dropdown js-profile-dropdown">
+        <div class="profile-dropdown__user">
+            <div class="profile-dropdown__info">
+                <span class="profile-dropdown__name">Ернар Ибрагимов</span>
+            </div>
+            <div class="profile-dropdown__avatar">
+                <img src="images/profile.png" alt="">
+            </div>
+        </div>
+
+        <div class="profile-dropdown__roles">
+            <button class="profile-dropdown__role profile-dropdown__role--active">Я заказчик</button>
+            <button class="profile-dropdown__role">Я исполнитель</button>
+        </div>
+
+        <ul class="profile-dropdown__list">
+            <li class="profile-dropdown__item"><a href="profile.html" class="profile-dropdown__link">Мой кабинет</a></li>
+            <li class="profile-dropdown__item"><a href="orders.html" class="profile-dropdown__link">Мои заказы</a></li>
+            <li class="profile-dropdown__item"><a href="history.html" class="profile-dropdown__link">История</a></li>
+            <li class="profile-dropdown__item"><a href="wallet.html" class="profile-dropdown__link">Мой кошелек</a></li>
+        </ul>
+
+        <button class="profile-dropdown__logout js-logout">Выйти из аккаунта</button>
+    </div>
+</div>
+
+            <button class="burger js-burger" aria-label="Открыть меню">
+                <span class="burger__line"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main class="work-page">
+    <div class="work-page__container">
+
+        <!-- Основная сетка страницы -->
+        <div class="work-page__grid">
+            
+            <!-- Блок 1: Свайпер (КРАСНЫЙ) -->
+             <section class="work-page__swiper-block work-gallery">
+        <!-- Главный слайдер -->
+        <div class="swiper work-gallery__main js-work-slider-main">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/swiper-img1.png" alt="" class="work-gallery__img"></div>
+                <div class="swiper-slide"><img src="images/swiper-img1.png" alt="" class="work-gallery__img"></div>
+                <div class="swiper-slide"><img src="images/swiper-img1.png" alt="" class="work-gallery__img"></div>
+                <div class="swiper-slide"><img src="images/swiper-img1.png" alt="" class="work-gallery__img"></div>
+                <div class="swiper-slide"><img src="images/swiper-img1.png" alt="" class="work-gallery__img"></div>
+            </div>
+            <!-- Кнопки навигации -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- Слайдер миниатюр -->
+        <div class="swiper work-gallery__thumbs js-work-slider-thumbs">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/swiper-img1.png" alt="" class="work-gallery__thumb-img"></div>
+                <div class="swiper-slide"><img src="images/swiper-img1.png" alt="" class="work-gallery__thumb-img"></div>
+                <div class="swiper-slide"><img src="images/swiper-img1.png" alt="" class="work-gallery__thumb-img"></div>
+                <div class="swiper-slide"><img src="images/swiper-img1.png" alt="" class="work-gallery__thumb-img"></div>
+                <div class="swiper-slide"><img src="images/swiper-img1.png" alt="" class="work-gallery__thumb-img"></div>
+            </div>
+        </div>
+    </section>
+
+
+            <!-- Блок 2: Сайдбар (СИНИЙ) -->
+<aside class="work-page__sidebar sidebar">
+    
+    <!-- Спиок пакетов -->
+    <div class="sidebar__packages packages">
+        
+        <!-- ЭКОНОМ ПАКЕТ (Активен по умолчанию) -->
+        <div class="package js-main-tier package--active">
+            <button class="package__header">
+                <span class="package__title">Эконом пакет</span>
+                <div class="package__arrow"></div>
+            </button>
+            
+            <div class="package__content">
+                <div class="package__inner">
+                    <p class="package__description">
+                        Дизайн лэндинга с мобильной и компьютерной версией дизайна.
+                    </p>
+                    
+                    <div class="package__price-row">
+                        <span class="package__price">50 000 ТГ</span>
+                        <span class="package__delivery">Сделаю за 5 дней</span>
+                    </div>
+
+                    <ul class="package__features">
+                        <li>Количество доработок: 5</li>
+                        <li>Переменная 1: Значение 1</li>
+                        <li>Переменная 2: Значение 2</li>
+                    </ul>
+
+                    <!-- ВЛОЖЕННЫЕ ДОП. ОПЦИИ -->
+                    <div class="package__extras extras">
+                        <h4 class="extras__title">Дополнительные опции</h4>
+                        
+                        <!-- Опция 1 -->
+                        <div class="extra-item js-sub-accordion">
+                            <button class="extra-item__header">
+                                <span>Планшетная версия</span>
+                                <div class="extra-item__arrow"></div>
+                            </button>
+                            <div class="extra-item__content">
+                                <div class="extra-item__inner">Описание опции...</div>
+                            </div>
+                        </div>
+
+                        <!-- Опция 2 -->
+                        <div class="extra-item js-sub-accordion">
+                            <button class="extra-item__header">
+                                <span>Перенести в фотошоп</span>
+                                <div class="extra-item__arrow"></div>
+                            </button>
+                            <div class="extra-item__content">
+                                <div class="extra-item__inner">Описание опции...</div>
+                            </div>
+                        </div>
+
+                        <!-- Опция 3 (Активна для примера) -->
+                        <div class="extra-item js-sub-accordion extra-item--active">
+                            <button class="extra-item__header">
+                                <span>Подготовка к верстке</span>
+                                <div class="extra-item__arrow"></div>
+                            </button>
+                            <div class="extra-item__content">
+                                <div class="extra-item__inner">
+                                    <p>Настройка всех слоев и назвать так чтобы было понятно верстальщику. Цена за 1 страницу</p>
+                                    <p class="extra-item__meta">Срок выполнения: 1 день</p>
+                                    <p class="extra-item__meta">Цена: 5000 тенге</p>
+                                    <button class="extra-item__btn-add">Добавить к заказу</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="package__btn-buy">Купить за 50 000 тенге</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- СТАНДАРТНЫЙ ПАКЕТ (Закрыт) -->
+        <div class="package js-main-tier">
+            <button class="package__header">
+                <span class="package__title"> Стандартный пакет</span>
+                <div class="package__arrow"></div>
+            </button>
+            
+            <div class="package__content">
+                <div class="package__inner">
+                    <p class="package__description">
+                        Дизайн лэндинга с мобильной и компьютерной версией дизайна.
+                    </p>
+                    
+                    <div class="package__price-row">
+                        <span class="package__price">50 000 ТГ</span>
+                        <span class="package__delivery">Сделаю за 5 дней</span>
+                    </div>
+
+                    <ul class="package__features">
+                        <li>Количество доработок: 5</li>
+                        <li>Переменная 1: Значение 1</li>
+                        <li>Переменная 2: Значение 2</li>
+                    </ul>
+
+                    <!-- ВЛОЖЕННЫЕ ДОП. ОПЦИИ -->
+                    <div class="package__extras extras">
+                        <h4 class="extras__title">Дополнительные опции</h4>
+                        
+                        <!-- Опция 1 -->
+                        <div class="extra-item js-sub-accordion">
+                            <button class="extra-item__header">
+                                <span>Планшетная версия</span>
+                                <div class="extra-item__arrow"></div>
+                            </button>
+                            <div class="extra-item__content">
+                                <div class="extra-item__inner">Описание опции...</div>
+                            </div>
+                        </div>
+
+                        <!-- Опция 2 -->
+                        <div class="extra-item js-sub-accordion">
+                            <button class="extra-item__header">
+                                <span>Перенести в фотошоп</span>
+                                <div class="extra-item__arrow"></div>
+                            </button>
+                            <div class="extra-item__content">
+                                <div class="extra-item__inner">Описание опции...</div>
+                            </div>
+                        </div>
+
+                        <!-- Опция 3 (Активна для примера) -->
+                        <div class="extra-item js-sub-accordion extra-item--active">
+                            <button class="extra-item__header">
+                                <span>Подготовка к верстке</span>
+                                <div class="extra-item__arrow"></div>
+                            </button>
+                            <div class="extra-item__content">
+                                <div class="extra-item__inner">
+                                    <p>Настройка всех слоев и назвать так чтобы было понятно верстальщику. Цена за 1 страницу</p>
+                                    <p class="extra-item__meta">Срок выполнения: 1 день</p>
+                                    <p class="extra-item__meta">Цена: 5000 тенге</p>
+                                    <button class="extra-item__btn-add">Добавить к заказу</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="package__btn-buy">Купить за 50 000 тенге</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ПРЕМИУМ ПАКЕТ (Закрыт) -->
+        <div class="package js-main-tier">
+            <button class="package__header">
+                <span class="package__title">Эконом пакет</span>
+                <div class="package__arrow"></div>
+            </button>
+            
+            <div class="package__content">
+                <div class="package__inner">
+                    <p class="package__description">
+                        Дизайн лэндинга с мобильной и компьютерной версией дизайна.
+                    </p>
+                    
+                    <div class="package__price-row">
+                        <span class="package__price">50 000 ТГ</span>
+                        <span class="package__delivery">Сделаю за 5 дней</span>
+                    </div>
+
+                    <ul class="package__features">
+                        <li>Количество доработок: 5</li>
+                        <li>Переменная 1: Значение 1</li>
+                        <li>Переменная 2: Значение 2</li>
+                    </ul>
+
+                    <!-- ВЛОЖЕННЫЕ ДОП. ОПЦИИ -->
+                    <div class="package__extras extras">
+                        <h4 class="extras__title">Дополнительные опции</h4>
+                        
+                        <!-- Опция 1 -->
+                        <div class="extra-item js-sub-accordion">
+                            <button class="extra-item__header">
+                                <span>Планшетная версия</span>
+                                <div class="extra-item__arrow"></div>
+                            </button>
+                            <div class="extra-item__content">
+                                <div class="extra-item__inner">Описание опции...</div>
+                            </div>
+                        </div>
+
+                        <!-- Опция 2 -->
+                        <div class="extra-item js-sub-accordion">
+                            <button class="extra-item__header">
+                                <span>Перенести в фотошоп</span>
+                                <div class="extra-item__arrow"></div>
+                            </button>
+                            <div class="extra-item__content">
+                                <div class="extra-item__inner">Описание опции...</div>
+                            </div>
+                        </div>
+
+                        <!-- Опция 3 (Активна для примера) -->
+                        <div class="extra-item js-sub-accordion extra-item--active">
+                            <button class="extra-item__header">
+                                <span>Подготовка к верстке</span>
+                                <div class="extra-item__arrow"></div>
+                            </button>
+                            <div class="extra-item__content">
+                                <div class="extra-item__inner">
+                                    <p>Настройка всех слоев и назвать так чтобы было понятно верстальщику. Цена за 1 страницу</p>
+                                    <p class="extra-item__meta">Срок выполнения: 1 день</p>
+                                    <p class="extra-item__meta">Цена: 5000 тенге</p>
+                                    <button class="extra-item__btn-add">Добавить к заказу</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="package__btn-buy">Купить за 50 000 тенге</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- КАРТОЧКА ПРОДАВЦА -->
+    <div class="sidebar__seller seller-card">
+        <div class="seller-card__header">
+            <div class="seller-card__avatar">
+                <img src="images/top-freelancer1.png" alt="">
+            </div>
+            <div class="seller-card__info">
+                <p class="seller-card__name">Екатерина Иванова</p>
+                <p class="seller-card__deals">Закрыто сделок: 25</p>
+                <div class="seller-card__rating rating">
+                    <div class="rating__stars">
+                        <span class="star star--full"></span>
+                        <span class="star star--full"></span>
+                        <span class="star star--full"></span>
+                        <span class="star star--full"></span>
+                        <span class="star"></span>
+                    </div>
+                    <span class="rating__count">15 отзывов</span>
+                </div>
+            </div>
+        </div>
+        <div class="seller-card__tags">
+            <span class="seller-card__tag">Дизайн сайта</span>
+            <span class="seller-card__tag">Веб дизайн</span>
+            <span class="seller-card__tag">UX/UI дизайн</span>
+            <span class="seller-card__tag">Web дизайн</span>
+        </div>
+    </div>
+</aside>
+
+            <!-- Блок 3: Описание и FAQ (ЗЕЛЕНЫЙ) -->
+            <!-- Блок 3: Описание и FAQ (ЗЕЛЕНЫЙ) -->
+<section class="work-page__description-block work-description">
+    
+    <!-- Текст описания -->
+    <div class="work-description__text">
+        <p>
+            Привет! Раз уж ты открыл этот work, то тебе нужен классный дизайн для твоего сайта. 
+            И да, поздравляю, ты по адресу! В UX/UI дизайне я уже 2 года и за это время успел 
+            поработать с очень крупными компаниями(КазМунайГаз, КБТУ, Hickmet travel, YLP delivery) 
+            и знаменитыми личностями (Ахметбек Нурсила, Артур Кривов). Создал для них очень крутые 
+            дизайны сайтов и не только. Хочешь и тебе сделаю? Выбери интересующий пакет и поехали!
+        </p>
+    </div>
+
+    <!-- FAQ Аккордеон -->
+    <div class="work-description__faq faq">
+        <h2 class="faq__title">Часто задаваемые вопросы</h2>
+        
+        <div class="faq__list">
+            <!-- Item 1 -->
+            <div class="accordion js-accordion">
+                <button class="accordion__header">
+                    <span>Исходники будут?</span>
+                    <div class="accordion__arrow"></div>
+                </button>
+                <div class="accordion__content">
+                    <div class="accordion__inner">
+                        Да, конечно. Все исходные файлы в формате Figma включены в стоимость любого пакета.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="accordion js-accordion">
+                <button class="accordion__header">
+                    <span>А в каком формате я получу исходники?</span>
+                    <div class="accordion__arrow"></div>
+                </button>
+                <div class="accordion__content">
+                    <div class="accordion__inner">
+                        Вы получите ссылку на проект в Figma с настроенными стилями и компонентами, а также экспортированные ассеты в PNG/SVG.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 3 (Активный по умолчанию, как на макете) -->
+            <div class="accordion js-accordion accordion--active">
+                <button class="accordion__header">
+                    <span>А что если мне не понравиться дизайн?</span>
+                    <div class="accordion__arrow"></div>
+                </button>
+                <div class="accordion__content">
+                    <div class="accordion__inner">
+                        Мы создаем продукт, а не баннер для рекламы. При созданий продукта которыми 
+                        будут пользоваться люди в первую очередь нужно обратить внимание на удобство. 
+                        Это не значит что дизайн будет уродским, нет он будет приятен глазу и будет 
+                        подходит тематике сайта.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Требования -->
+    <div class="work-description__requirements requirements">
+        <h2 class="requirements__title">Требования к заказчику</h2>
+        <ol class="requirements__list">
+            <li>Предоставить Техническое задание где есть текста для сайта и все необходимые медиа(фото, видео и т.п.)</li>
+            <li>Требование 2</li>
+        </ol>
+    </div>
+</section>
+
+        </div>
+    </div>
+</main>
+
+
+
+<footer class="footer">
+    <div class="footer__container">
+        <div class="footer__grid">
+            
+            <!-- Column 1 -->
+            <div class="footer__col">
+                <h4 class="footer__caption">Топ категории</h4>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#" class="footer__link">Тексты и переводы</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Разработка</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Дизайн</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Аудио, видео монтаж</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Соцсети и реклама</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Бизнес и жизнь</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">SEO и оптимизация</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="footer__col">
+                <h4 class="footer__caption">О Проекте</h4>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#" data-modal="modal-about" class="footer__link">О Нас</a></li>
+                    <li class="footer__item"><a href="#" data-modal="modal-how" class="footer__link">Как Это Работает</a></li>
+                    <li class="footer__item"><a href="#" data-modal="modal-rules" class="footer__link">Политика Приватности</a></li>
+                    <li class="footer__item"><a href="#" data-modal="modal-security" class="footer__link">Правила Пользования</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="footer__col">
+                <h4 class="footer__caption">Поддержка</h4>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#" class="footer__link">Контакты</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Политика Безопасности</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="footer__col">
+                <h4 class="footer__caption">Follow</h4>
+                <div class="footer__socials">
+                    <a href="#" class="footer__social-link">
+                        <img src="images/facebook-icon.svg" alt="Facebook">
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <img src="images/twitter-icon.svg" alt="Twitter">
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <img src="images/instagram-icon.svg" alt="Instagram">
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <img src="images/linkedin-icon.svg" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer__bottom">
+            <p class="footer__copy">Copyright @ 2021 | WorkTap – Worktap.KZ. All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Modal: О нас -->
+<div class="modal" id="modal-about">
+    <div class="modal__overlay">
+        <div class="modal__card modal__card--about">
+            <button class="modal__close">
+                <img src="images/Vector.png" alt="Закрыть">
+            </button>
+            
+            <div class="modal__about-header">
+                <h2 class="modal__title">О нас</h2>
+                <p class="modal__about-text">
+                    WorkTap — онлайн сервис поиска частных специалистов для решения бизнес задач в кратчайшие сроки. 
+                    Наша платформа объединяет заказчиков услуг, которым необходимо выполнить какую-либо работу, 
+                    и компетентных специалистов, ищущих подработку или дополнительный заработок.
+                </p>
+            </div>
+
+            <div class="modal__about-image">
+                <img src="images/about-img.png" alt="О нас" class="modal__img">
+            </div>
+            
+            <div class="modal__footer">
+                <button class="modal__btn-primary js-modal-close">Понятно</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL WINDOWS SYSTEM -->
+
+<!-- Modal: Как это работает -->
+<div class="modal" id="modal-how">
+    <div class="modal__overlay">
+        <div class="modal__card modal__card--wide">
+            <button class="modal__close">
+                <img src="images/Vector.png" alt="Закрыть"> 
+            </button>
+            <h2 class="modal__title">Как это работает</h2>
+            
+            <div class="modal__steps-grid">
+                <div class="modal__step">
+                    <div class="modal__step-icon"><img src="images/how-it-works-img1.png" alt="Укажите вид работы и категорию"></div>
+                    <h4 class="modal__step-title">Укажите вид работы и категорию</h4>
+                </div>
+                <div class="modal__step">
+                    <div class="modal__step-icon"><img src="images/how-it-works-img2.png" alt="Выберите специалиста"></div>
+                    <h4 class="modal__step-title">Выберите специалиста</h4>
+                    <p class="modal__step-text">Каждый специалист перед началом работы проходит тщательную проверку, имеет рейтинг и отзывы предыдущих заказчиков.</p>
+                </div>
+                <div class="modal__step">
+                    <div class="modal__step-icon"><img src="images/how-it-works-img3.png" alt="Оплатите услугу"></div>
+                    <h4 class="modal__step-title">Оплатите услугу</h4>
+                </div>
+                <div class="modal__step">
+                    <div class="modal__step-icon"><img src="images/how-it-works-img4.png" alt="Специалист выполняет работу"></div>
+                    <h4 class="modal__step-title">Специалист выполняет работу</h4>
+                    <p class="modal__step-text">После выполнения заказа у вас будет возможность поставить специалисту оценку и написать отзыв.</p>
+                </div>
+            </div>
+
+            <div class="modal__footer">
+                <button class="modal__btn-primary js-modal-close">Понятно</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: Правила сервиса -->
+<div class="modal" id="modal-rules">
+    <div class="modal__overlay">
+        <div class="modal__card">
+            <button class="modal__close">
+                <img src="images/Vector.png" alt="Закрыть">
+            </button>
+            <h2 class="modal__title">ПРАВИЛА СЕРВИСА</h2>
+            
+            <div class="modal__scroll-content">
+                <h5 class="modal__content-subtitle">Правила сайта</h5>
+                <ol class="modal__rules-list">
+                    <li>Пользоваться сервисом worktap.kz может любой человек, достигший совершеннолетия. Для создания или заказа ворка необходима регистрация с помощью email.</li>
+                    <li>У одного человека может быть только один аккаунт. Администрация оставляет за собой право удалить дублирующие аккаунты.</li>
+                    <li>При регистрации пользователь самостоятельно выбирает логин...</li>
+                    <!-- Здесь будет остальной текст из макета -->
+                    <li>Ответственность за всю размещенную пользователем информацию (тексты, иллюстрации, видео и т.д.) несет сам пользователь.</li>
+                    <li>На сайте запрещена ненормативная лексика, грубое общение, несанкционированная реклама.</li>
+                </ol>
+            </div>
+
+            <div class="modal__footer">
+                <button class="modal__btn-primary js-modal-close">Понятно</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: Политика безопасности -->
+<div class="modal" id="modal-security">
+    <div class="modal__overlay">
+        <div class="modal__card">
+            <button class="modal__close">
+                <img src="images/Vector.png" alt="Закрыть">
+            </button>
+            <h2 class="modal__title">Политика безопасности</h2>
+            
+            <div class="modal__scroll-content">
+                <h5 class="modal__content-subtitle">БЕЗОПАСНОСТЬ ОНЛАЙН ПЛАТЕЖЕЙ</h5>
+                <p class="modal__description-text">
+                    Наш сайт подключен к интернет-эквайрингу, и Вы можете оплатить Услугу банковской картой Visa или Mastercard. 
+                    После подтверждения выбранного Товара либо услуги откроется защищенное окно с платежной страницей...
+                </p>
+                <!-- Текст про CloudPayments и PCI DSS из макета -->
+            </div>
+
+            <div class="modal__footer modal__footer--row">
+                <button class="modal__btn-primary js-modal-close">Понятно</button>
+                <button class="modal__btn-outline">
+                    Скачать документ <img src="images/download-img.png" alt="icon">
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="profile.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="work-page.js"></script>
+</body>
+</html>

@@ -12,7 +12,7 @@
     padding: 80px 0 50px;
     background-color: var(--color-bg);
     position: relative;
-    z-index: 10;
+    z-index: -1;
 }
 
 /* Transformation Logic */
