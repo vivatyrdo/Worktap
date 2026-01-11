@@ -836,3 +836,10 @@
 .form__btn-submit--login {
   background-color: var(--color-primary);
 }
+
+@media (max-width: 700px){
+  .hero-exchange__container{
+    display: none;
+  }
+} 
+  
