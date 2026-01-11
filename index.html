@@ -12,7 +12,6 @@
 </head>
 <body>
 
-<!-- HEADER SECTION -->
 <header class="header">
     <div class="header__container">
         <a href="index.html" class="header__logo">
@@ -36,40 +35,41 @@
             </div>
             
             <div class="header__profile profile-meta js-profile-trigger">
-    <span class="profile-meta__name">Ернар Ибрагимов</span>
-    <div class="profile-meta__avatar">
-        <img src="images/profile.png" alt="">
-    </div>
-    <div class="profile-meta__arrow-box js-profile-arrow">
-        <img src="images/chevron-down.svg" alt="" class="profile-meta__arrow">
-    </div>
-
-    <!-- ВЫПАДАЮЩЕЕ МЕНЮ -->
-    <div class="profile-dropdown js-profile-dropdown">
-        <div class="profile-dropdown__user">
-            <div class="profile-dropdown__info">
-                <span class="profile-dropdown__name">Ернар Ибрагимов</span>
-            </div>
-            <div class="profile-dropdown__avatar">
+                <span class="profile-meta__name">Ернар Ибрагимов</span>
+                <div class="profile-meta__avatar">
                 <img src="images/profile.png" alt="">
             </div>
+
+            <div class="profile-meta__arrow-box js-profile-arrow">
+                <img src="images/chevron-down.svg" alt="" class="profile-meta__arrow">
+            </div>
+
+            <div class="profile-dropdown js-profile-dropdown">
+                <div class="profile-dropdown__user">
+                    <div class="profile-dropdown__info">
+                        <span class="profile-dropdown__name">Ернар Ибрагимов</span>
+                    </div>
+
+                    <div class="profile-dropdown__avatar">
+                        <img src="images/profile.png" alt="">
+                    </div>
+                </div>
+
+                <div class="profile-dropdown__roles">
+                    <button class="profile-dropdown__role profile-dropdown__role--active">Я заказчик</button>
+                    <button class="profile-dropdown__role">Я исполнитель</button>
+                </div>
+
+                <ul class="profile-dropdown__list">
+                    <li class="profile-dropdown__item"><a href="profile.html" class="profile-dropdown__link">Мой кабинет</a></li>
+                    <li class="profile-dropdown__item"><a href="orders.html" class="profile-dropdown__link">Мои заказы</a></li>
+                    <li class="profile-dropdown__item"><a href="history.html" class="profile-dropdown__link">История</a></li>
+                    <li class="profile-dropdown__item"><a href="wallet.html" class="profile-dropdown__link">Мой кошелек</a></li>
+                </ul>
+
+                <button class="profile-dropdown__logout js-logout">Выйти из аккаунта</button>
+            </div>
         </div>
-
-        <div class="profile-dropdown__roles">
-            <button class="profile-dropdown__role profile-dropdown__role--active">Я заказчик</button>
-            <button class="profile-dropdown__role">Я исполнитель</button>
-        </div>
-
-        <ul class="profile-dropdown__list">
-            <li class="profile-dropdown__item"><a href="profile.html" class="profile-dropdown__link">Мой кабинет</a></li>
-            <li class="profile-dropdown__item"><a href="orders.html" class="profile-dropdown__link">Мои заказы</a></li>
-            <li class="profile-dropdown__item"><a href="history.html" class="profile-dropdown__link">История</a></li>
-            <li class="profile-dropdown__item"><a href="wallet.html" class="profile-dropdown__link">Мой кошелек</a></li>
-        </ul>
-
-        <button class="profile-dropdown__logout js-logout">Выйти из аккаунта</button>
-    </div>
-</div>
 
             <button class="burger js-burger" aria-label="Открыть меню">
                 <span class="burger__line"></span>
@@ -78,7 +78,6 @@
     </div>
 </header>
 
-<!-- HERO SECTION -->
 <section class="hero">
     <div class="hero__container">
         <div class="hero__content">
@@ -113,14 +112,12 @@
     </div>
 </section>
 
-<!-- ACTUAL WORKS SECTION -->
 <section class="works">
     <div class="works__container">
         <h2 class="works__title">Актуальные ворки</h2>
 
         <div class="works__grid">
             
-            <!-- Work Card 1 -->
             <article class="work-card">
                 <div class="work-card__header">
                     <div class="work-card__avatar">
@@ -134,7 +131,6 @@
                 <button class="work-card__btn">Посмотреть</button>
             </article>
 
-            <!-- Work Card 2 (Featured) -->
             <article class="work-card">
                 <div class="work-card__header">
                     <div class="work-card__avatar">
@@ -148,7 +144,6 @@
                 <button class="work-card__btn work-card__btn--filled">Посмотреть</button>
             </article>
 
-            <!-- Work Card 3 -->
             <article class="work-card">
                 <div class="work-card__header">
                     <div class="work-card__avatar">
@@ -162,7 +157,6 @@
                 <button class="work-card__btn">Посмотреть</button>
             </article>
 
-            <!-- Work Card 4 -->
             <article class="work-card">
                 <div class="work-card__header">
                     <div class="work-card__avatar">
@@ -176,7 +170,6 @@
                 <button class="work-card__btn">Посмотреть</button>
             </article>
 
-            <!-- Work Card 5 -->
             <article class="work-card">
                 <div class="work-card__header">
                     <div class="work-card__avatar">
@@ -190,7 +183,6 @@
                 <button class="work-card__btn">Посмотреть</button>
             </article>
 
-            <!-- All Works Link -->
             <a href="works.html" class="works__all-link">
                 <span>Смотреть все ворки</span>
             </a>
@@ -199,14 +191,12 @@
     </div>
 </section>
 
-<!-- TOP FREELANCERS SECTION -->
 <section class="freelancers">
     <div class="freelancers__container">
         <h2 class="freelancers__title">Топ фрилансеров</h2>
 
         <div class="freelancers__grid">
             
-            <!-- Freelancer Card 1 -->
             <article class="freelancer-card">
                 <div class="freelancer-card__content">
                     <div class="freelancer-card__avatar-wrapper">
@@ -218,7 +208,6 @@
                         <p class="freelancer-card__job">Разработчик PHP</p>
                         <p class="freelancer-card__projects">Выполнено проектов: 65</p>
                         <div class="freelancer-card__rating">
-                            <!-- Звезды рейтинга -->
                             <span class="freelancer-card__star freelancer-card__star--full"></span>
                             <span class="freelancer-card__star freelancer-card__star--full"></span>
                             <span class="freelancer-card__star freelancer-card__star--full"></span>
@@ -230,7 +219,6 @@
                 <button class="freelancer-card__btn freelancer-card__btn--filled">Написать</button>
             </article>
 
-            <!-- Freelancer Card 2 -->
             <article class="freelancer-card">
                 <div class="freelancer-card__content">
                     <div class="freelancer-card__avatar-wrapper">
@@ -253,7 +241,6 @@
                 <button class="freelancer-card__btn">Написать</button>
             </article>
 
-            <!-- Freelancer Card 3 -->
             <article class="freelancer-card">
                 <div class="freelancer-card__content">
                     <div class="freelancer-card__avatar-wrapper">
@@ -276,7 +263,6 @@
                 <button class="freelancer-card__btn">Написать</button>
             </article>
 
-            <!-- Freelancer Card 4 -->
             <article class="freelancer-card">
                 <div class="freelancer-card__content">
                     <div class="freelancer-card__avatar-wrapper">
@@ -299,7 +285,6 @@
                 <button class="freelancer-card__btn">Написать</button>
             </article>
 
-            <!-- Freelancer Card 5 -->
             <article class="freelancer-card">
                 <div class="freelancer-card__content">
                     <div class="freelancer-card__avatar-wrapper">
@@ -322,7 +307,6 @@
                 <button class="freelancer-card__btn">Написать</button>
             </article>
 
-            <!-- All Freelancers Link Card -->
             <a href="#" class="freelancers__all-link">
                 <span>Посмотреть всех ТОП фрилансеров</span>
             </a>
@@ -331,7 +315,6 @@
     </div>
 </section>
 
-<!-- HOW IT WORKS SECTION -->
 <section class="steps">
     <div class="steps__container">
         <div class="steps__header">
@@ -341,7 +324,6 @@
 
         <div class="steps__grid">
             
-            <!-- Step 1 -->
             <div class="steps__item">
                 <div class="steps__icon-wrapper">
                     <img src="images/steps-icon1.svg" alt="Иконка" class="steps__icon">
@@ -352,7 +334,6 @@
                 </p>
             </div>
 
-            <!-- Step 2 -->
             <div class="steps__item">
                 <div class="steps__icon-wrapper">
                     <img src="images/steps-icon2.svg" alt="Иконка" class="steps__icon">
@@ -363,7 +344,6 @@
                 </p>
             </div>
 
-            <!-- Step 3 -->
             <div class="steps__item">
                 <div class="steps__icon-wrapper">
                     <img src="images/steps-icon3.svg" alt="Иконка" class="steps__icon">
@@ -378,9 +358,7 @@
     </div>
 </section>
 
-<!-- BUSINESS BENEFITS SECTION -->
 <section class="business">
-    <!-- Фоновое изображение (1-я картинка) -->
     <img src="images/background-img1.jpg" alt="Фоновое изображение" class="business__bg">
 
     <div class="business__container">
@@ -388,26 +366,24 @@
             <h2 class="business__title">Как WorkTap помогает бизнесу?</h2>
 
             <div class="business__list">
-                <!-- Benefit Item 1 -->
                 <div class="business__card">
                     <div class="business__card-icon-box">
-                        <img src="images/credit-card 1.svg" alt="Иконка кредитной карты" class="business__card-icon"> <!-- 2-я картинка -->
+                        <img src="images/credit-card 1.svg" alt="Иконка кредитной карты" class="business__card-icon"> 
                     </div>
                     <p class="business__card-text">Оплачивайте с р/с или карты компании</p>
                 </div>
 
-                <!-- Benefit Item 2 -->
                 <div class="business__card">
                     <div class="business__card-icon-box">
-                        <img src="images/money (1) 1.svg" alt="Иконка денег" class="business__card-icon"> <!-- 3-я картинка -->
+                        <img src="images/money (1) 1.svg" alt="Иконка денег" class="business__card-icon">
                     </div>
                     <p class="business__card-text">Экономьте до 87% бюджета на фрилансе</p>
                 </div>
 
-                <!-- Benefit Item 3 -->
+
                 <div class="business__card">
                     <div class="business__card-icon-box">
-                        <img src="images/clock 1.svg" alt="Иконка часов" class="business__card-icon"> <!-- 4-я картинка -->
+                        <img src="images/clock 1.svg" alt="Иконка часов" class="business__card-icon"> 
                     </div>
                     <p class="business__card-text">Экономьте до 75% времени на решении фриланс задач</p>
                 </div>
@@ -420,12 +396,10 @@
     </div>
 </section>
 
-<!-- FOOTER SECTION -->
 <footer class="footer">
     <div class="footer__container">
         <div class="footer__grid">
             
-            <!-- Column 1 -->
             <div class="footer__col">
                 <h4 class="footer__caption">Топ категории</h4>
                 <ul class="footer__list">
@@ -439,7 +413,6 @@
                 </ul>
             </div>
 
-            <!-- Column 2 -->
             <div class="footer__col">
                 <h4 class="footer__caption">О Проекте</h4>
                 <ul class="footer__list">
@@ -450,7 +423,6 @@
                 </ul>
             </div>
 
-            <!-- Column 3 -->
             <div class="footer__col">
                 <h4 class="footer__caption">Поддержка</h4>
                 <ul class="footer__list">
@@ -460,7 +432,6 @@
                 </ul>
             </div>
 
-            <!-- Column 4 -->
             <div class="footer__col">
                 <h4 class="footer__caption">Follow</h4>
                 <div class="footer__socials">
@@ -487,8 +458,6 @@
     </div>
 </footer>
 
-
-<!-- Modal: О нас -->
 <div class="modal" id="modal-about">
     <div class="modal__overlay">
         <div class="modal__card modal__card--about">
@@ -516,9 +485,6 @@
     </div>
 </div>
 
-<!-- MODAL WINDOWS SYSTEM -->
-
-<!-- Modal: Как это работает -->
 <div class="modal" id="modal-how">
     <div class="modal__overlay">
         <div class="modal__card modal__card--wide">
@@ -555,7 +521,6 @@
     </div>
 </div>
 
-<!-- Modal: Правила сервиса -->
 <div class="modal" id="modal-rules">
     <div class="modal__overlay">
         <div class="modal__card">
@@ -570,7 +535,6 @@
                     <li>Пользоваться сервисом worktap.kz может любой человек, достигший совершеннолетия. Для создания или заказа ворка необходима регистрация с помощью email.</li>
                     <li>У одного человека может быть только один аккаунт. Администрация оставляет за собой право удалить дублирующие аккаунты.</li>
                     <li>При регистрации пользователь самостоятельно выбирает логин...</li>
-                    <!-- Здесь будет остальной текст из макета -->
                     <li>Ответственность за всю размещенную пользователем информацию (тексты, иллюстрации, видео и т.д.) несет сам пользователь.</li>
                     <li>На сайте запрещена ненормативная лексика, грубое общение, несанкционированная реклама.</li>
                 </ol>
@@ -583,7 +547,6 @@
     </div>
 </div>
 
-<!-- Modal: Политика безопасности -->
 <div class="modal" id="modal-security">
     <div class="modal__overlay">
         <div class="modal__card">
@@ -598,7 +561,6 @@
                     Наш сайт подключен к интернет-эквайрингу, и Вы можете оплатить Услугу банковской картой Visa или Mastercard. 
                     После подтверждения выбранного Товара либо услуги откроется защищенное окно с платежной страницей...
                 </p>
-                <!-- Текст про CloudPayments и PCI DSS из макета -->
             </div>
 
             <div class="modal__footer modal__footer--row">

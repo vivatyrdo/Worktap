@@ -13,7 +13,6 @@
 </head>
 <body>
 
-<!-- HEADER SECTION -->
 <header class="header">
     <div class="header__container">
         <a href="index.html" class="header__logo">
@@ -45,7 +44,6 @@
         <img src="images/chevron-down.svg" alt="" class="profile-meta__arrow">
     </div>
 
-    <!-- ВЫПАДАЮЩЕЕ МЕНЮ -->
     <div class="profile-dropdown js-profile-dropdown">
         <div class="profile-dropdown__user">
             <div class="profile-dropdown__info">
@@ -82,7 +80,6 @@
 <main class="create-work">
     <div class="create-work__container">
         
-        <!-- STEPPER (Индикатор шагов) -->
         <nav class="stepper">
             <div class="stepper__list">
                 <div class="stepper__item stepper__item--active" data-step="1">
@@ -120,7 +117,6 @@
         <div class="create-work__form-wrapper">
             <div class="steps-container">
                 
-                <!-- ШАГ 1: ОСНОВНЫЕ -->
                 <section class="step-content js-step-content" data-step="1">
                     <div class="work-form">
                         <div class="work-form__group">
@@ -150,7 +146,6 @@
                             <label class="work-form__label">Теги</label>
                             <div class="tags-input js-tags-container">
                                 <div class="tags-input__list js-tags-list">
-                                    <!-- Теги вставляются из JS -->
                                 </div>
                                 <input type="text" class="tags-input__field js-tag-input" placeholder="Добавьте тег и нажмите Enter">
                             </div>
@@ -158,12 +153,10 @@
                     </div>
                 </section>
 
-                <!-- ШАГ 2: СТОИМОСТЬ И ОПЦИИ -->
                 <section class="step-content js-step-content step-content--hidden" data-step="2">
                     <div class="pricing-section">
                         <h2 class="create-work__step-title">Пакеты</h2>
                         <div class="pricing-grid">
-                            <!-- Карточка пакета: Эконом -->
                             <div class="package-card">
                                 <h3 class="package-card__title">Эконом</h3>
                                 <div class="work-form__group">
@@ -185,7 +178,6 @@
                                 <button type="button" class="package-card__btn-add js-open-modal">Добавить опцию</button>
                             </div>
 
-                            <!-- Карточка пакета: Стандарт -->
                             <div class="package-card">
                                 <h3 class="package-card__title">Стандарт</h3>
                                 <div class="work-form__group">
@@ -207,7 +199,6 @@
                                 <button type="button" class="package-card__btn-add js-open-modal">Добавить опцию</button>
                             </div>
 
-                            <!-- Карточка пакета: Бизнес -->
                             <div class="package-card">
                                 <h3 class="package-card__title">Бизнес</h3>
                                 <div class="work-form__group">
@@ -234,7 +225,6 @@
                     <div class="extra-options">
                         <h2 class="create-work__step-title">Дополнительные опции</h2>
                         <div class="extra-options__grid js-extra-grid">
-                            <!-- Кнопка добавления -->
                             <button type="button" class="extra-options__add-btn js-add-extra">
                                 <div class="extra-options__add-icon"></div>
                                 <span>Добавить новую опцию</span>
@@ -243,18 +233,12 @@
                     </div>
                 </section>
 
-                
-
-                <!-- ШАГИ 3-6 (Заглушки для логики переключения) -->
-                <!-- ШАГ 3: ОПИСАНИЕ И FAQ -->
 <section class="step-content js-step-content step-content--hidden" data-step="3">
     
-    <!-- Описание -->
     <div class="description-section">
         <h2 class="create-work__step-title">Описание</h2>
         
         <div class="editor">
-            <!-- Панель инструментов (Имитация редактора) -->
             <div class="editor__toolbar">
                 <button type="button" class="editor__tool"><img src="images/b-icon.svg" alt="B"></button>
                 <button type="button" class="editor__tool"><img src="images/i-icon.svg" alt="I"></button>
@@ -274,12 +258,10 @@
         </div>
     </div>
 
-    <!-- FAQ -->
     <div class="faq-section">
         <h2 class="create-work__step-title">Часто задаваемые вопросы</h2>
         
         <div class="faq-grid js-faq-grid">
-            <!-- Карточка вопроса -->
             <div class="faq-card js-faq-card">
                 <div class="work-form__group">
                     <label class="work-form__label">Вопрос</label>
@@ -292,7 +274,6 @@
                 <button type="button" class="faq-card__delete js-remove-faq">Удалить</button>
             </div>
 
-            <!-- Кнопка добавления -->
             <button type="button" class="faq-add-btn js-add-faq">
                 <div class="faq-add-btn__icon"></div>
                 <span>Добавить вопрос-ответ</span>
@@ -300,7 +281,6 @@
         </div>
     </div>
 </section>
-                <!-- ШАГ 4: ТРЕБОВАНИЯ -->
 <section class="step-content js-step-content step-content--hidden" data-step="4">
     <div class="requirements-section">
         <div class="step-header">
@@ -309,7 +289,6 @@
         </div>
         
         <div class="editor">
-            <!-- Панель инструментов (Имитация редактора) -->
             <div class="editor__toolbar">
                 <button type="button" class="editor__tool"><img src="images/b-icon.svg" alt="B"></button>
                 <button type="button" class="editor__tool"><img src="images/i-icon.svg" alt="I"></button>
@@ -329,30 +308,25 @@
         </div>
     </div>
 </section>
-                <!-- ШАГ 5: ГАЛЕРЕЯ -->
 <section class="step-content js-step-content step-content--hidden" data-step="5">
     <div class="gallery-page">
         
-        <!-- Заголовок секции -->
         <div class="step-header">
             <h2 class="create-work__step-title">Создайте свою галерею</h2>
             <p class="step-header__subtitle">Добавьте запоминающийся контент в свою галерею, чтобы выделиться среди конкурентов.</p>
         </div>
 
-        <!-- ФОТОГРАФИИ ВОРКА -->
         <div class="gallery-section">
             <h3 class="gallery-section__title">Фотографии ворка</h3>
             <p class="gallery-section__subtitle">Загрузите фотографии, которые описывают или имеют отношение к вашему ворку. Только файлы с расширением png, jpg, jpeg.</p>
             
             <div class="gallery-grid js-photo-grid">
-                <!-- Кнопка "Добавить фото" -->
                 <label class="gallery-add js-photo-upload">
                     <input type="file" class="gallery-add__input js-input-photo" accept="image/*" multiple>
                     <div class="gallery-add__icon"></div>
                     <span class="gallery-add__text">Добавить фото</span>
                 </label>
 
-                <!-- Статические картинки (твои теги img) -->
                 <div class="gallery-item">
                     <img src="images/step5-img1.png" alt="Work photo 1" class="gallery-item__img">
                     <button type="button" class="gallery-item__remove">×</button>
@@ -363,19 +337,16 @@
                 </div>
             </div>
 
-            <!-- Ссылка на видео -->
             <div class="work-form__group gallery-video">
                 <label class="work-form__label">Ссылка на видео Youtube</label>
                 <input type="text" class="work-form__input" placeholder="Placeholder">
             </div>
         </div>
 
-        <!-- ДОКУМЕНТЫ ВОРКА -->
         <div class="gallery-section">
             <h3 class="gallery-section__title">Документы ворка</h3>
             <p class="gallery-section__subtitle">Мы рекомендуем добавлять файл документа только в том случае, если он дополнительно разъясняет услугу, которую вы будете предоставлять.</p>
             
-            <!-- Переиспользуем зону загрузки из страницы заказов -->
             <div class="upload-area js-doc-upload-area">
                 <input type="file" class="upload-area__input js-doc-input" multiple>
                 <div class="upload-area__content">
@@ -388,13 +359,12 @@
             </div>
 
             <div class="upload-list js-doc-list">
-                <!-- Список документов появится здесь -->
             </div>
         </div>
 
     </div>
 </section>
-                <!-- ШАГ 6: ПУБЛИКАЦИЯ -->
+
 <section class="step-content js-step-content step-content--hidden" data-step="6">
     <div class="success-page">
         <div class="success-page__content">
@@ -405,7 +375,6 @@
             </p>
             
             <div class="success-page__visual">
-                <!-- Главная иллюстрация (человек с документом) -->
                 <img src="images/step6-img.png" alt="Success illustration" class="success-page__img">
             </div>
         </div>
@@ -414,7 +383,6 @@
 
             </div>
 
-            <!-- БЛОК КНОПОК (ВСЕГДА ВНИЗУ) -->
             <div class="create-work__actions">
                 <button type="button" class="btn-back js-btn-back btn--hidden">Назад</button>
                 <button type="button" class="btn-next js-btn-next">Дальше</button>
@@ -423,7 +391,6 @@
     </div>
 </main>
 
-<!-- MODAL: ДОБАВЛЕНИЕ ОПЦИИ -->
 <div class="modal js-modal-option">
     <div class="modal__overlay js-close-modal">
         <div class="modal__card modal__card--small">

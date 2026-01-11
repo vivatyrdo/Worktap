@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<!-- HEADER SECTION -->
+
 <header class="header">
     <div class="header__container">
         <a href="index.html" class="header__logo">
@@ -43,7 +43,6 @@
         <img src="images/chevron-down.svg" alt="" class="profile-meta__arrow">
     </div>
 
-    <!-- ВЫПАДАЮЩЕЕ МЕНЮ -->
     <div class="profile-dropdown js-profile-dropdown">
         <div class="profile-dropdown__user">
             <div class="profile-dropdown__info">
@@ -78,7 +77,6 @@
 </header>
 
 <main class="profile-page">
-    <!-- Табы (Только мобильная версия) -->
     <div class="profile-tabs">
         <div class="profile-tabs__container">
             <button class="profile-tabs__btn profile-tabs__btn--active">Обо мне</button>
@@ -87,7 +85,6 @@
         </div>
     </div>
 
-    <!-- Боковая кнопка поиска (Только десктоп) -->
     <button class="btn-quick-search btn-quick-search--side">
         <span>Быстрый поиск ворков</span>
         <div class="btn-quick-search__arrow"></div>
@@ -96,7 +93,6 @@
     <div class="profile-hero">
         <div class="profile-hero__container">
             
-            <!-- Левая часть: Инфо -->
             <div class="profile-hero__content">
                 <div class="profile-hero__head">
                     <p class="profile-hero__label">Дизайнер</p>
@@ -112,7 +108,6 @@
                     <span class="tags__item">Figma</span>
                     <span class="tags__item">Adobe photoshop</span>
                     
-                    <!-- Кнопка поиска внутри тегов (Только мобильная версия) -->
                     <button class="btn-quick-search btn-quick-search--inline">
                         Быстрый поиск ворков
                     </button>
@@ -123,7 +118,6 @@
                     <span class="tags__item">HTML/CSS</span>
                 </div>
 
-                <!-- Раскрывающийся блок информации -->
                 <div class="details-card js-details-card">
                     <button class="details-card__header js-details-toggle">
                         <span>Скрыть подробную информацию</span>
@@ -163,7 +157,6 @@
                 </div>
             </div>
 
-            <!-- Правая часть: Визуал (Фото) -->
             <div class="profile-hero__visual visual">
 
                 <div class="visual__container">
@@ -187,8 +180,6 @@
                         </div>
                     </div>
                     
-                    <!-- Декоративные элементы фона -->
-                    
                     <div class="visual__deco visual__deco--dots"></div>
                     <div class="visual__deco visual__deco--waves"></div>
                 </div>
@@ -197,15 +188,12 @@
         </div>
     </div>
 
-
-    <!-- MY WORKS SECTION -->
 <section class="my-works">
     <div class="my-works__container">
         <h2 class="my-works__title">Мои ворки</h2>
         
         <div class="my-works__grid js-works-grid">
             
-            <!-- Кнопка создания (всегда первая) -->
             <div class="work-card work-card--create">
                 <a href="create-work.html" style="text-decoration: none;">
                 <div class="work-card__create-content">
@@ -215,7 +203,6 @@
                 </a>
             </div>
 
-            <!-- Карточка ворка -->
             <article class="work-card">
                 <div class="work-card__image">
                     <img src="images/work-profile.png" alt="">
@@ -226,7 +213,6 @@
                 </div>
             </article>
 
-            <!-- Повторяющиеся карточки для примера -->
             <article class="work-card">
                 <div class="work-card__image">
                     <img src="images/work-profile.png" alt="">
@@ -252,7 +238,6 @@
     </div>
 </section>
 
-<!-- REVIEWS SECTION -->
 <section class="reviews">
     <div class="reviews__container">
         <h2 class="reviews__title">Отзывы</h2>
@@ -263,7 +248,6 @@
         </div>
 
         <div class="reviews__grid js-reviews-grid">
-            <!-- Положительные отзывы (по умолчанию видны) -->
             <div class="review-card js-review-item" data-type="positive">
                 <div class="review-card__header">
                     <div class="review-card__avatar"><img src="" alt=""></div>
@@ -277,7 +261,6 @@
                 <p class="review-card__text">Отличная работа! Все выполнено в срок и согласно ТЗ. Очень доволен результатом сотрудничества.</p>
             </div>
 
-            <!-- Отрицательные отзывы (по умолчанию скрыты в CSS) -->
             <div class="review-card js-review-item review-card--hidden" data-type="negative">
                 <div class="review-card__header">
                     <div class="review-card__avatar"><img src="" alt=""></div>
@@ -297,12 +280,10 @@
 </section>
 </main>
 
-<!-- FOOTER SECTION -->
 <footer class="footer">
     <div class="footer__container">
         <div class="footer__grid">
             
-            <!-- Column 1 -->
             <div class="footer__col">
                 <h4 class="footer__caption">Топ категории</h4>
                 <ul class="footer__list">
@@ -316,7 +297,6 @@
                 </ul>
             </div>
 
-            <!-- Column 2 -->
             <div class="footer__col">
                 <h4 class="footer__caption">О Проекте</h4>
                 <ul class="footer__list">
@@ -327,7 +307,6 @@
                 </ul>
             </div>
 
-            <!-- Column 3 -->
             <div class="footer__col">
                 <h4 class="footer__caption">Поддержка</h4>
                 <ul class="footer__list">
@@ -337,7 +316,6 @@
                 </ul>
             </div>
 
-            <!-- Column 4 -->
             <div class="footer__col">
                 <h4 class="footer__caption">Follow</h4>
                 <div class="footer__socials">
@@ -364,8 +342,6 @@
     </div>
 </footer>
 
-
-<!-- Modal: О нас -->
 <div class="modal" id="modal-about">
     <div class="modal__overlay">
         <div class="modal__card modal__card--about">
@@ -393,9 +369,6 @@
     </div>
 </div>
 
-<!-- MODAL WINDOWS SYSTEM -->
-
-<!-- Modal: Как это работает -->
 <div class="modal" id="modal-how">
     <div class="modal__overlay">
         <div class="modal__card modal__card--wide">
@@ -432,7 +405,6 @@
     </div>
 </div>
 
-<!-- Modal: Правила сервиса -->
 <div class="modal" id="modal-rules">
     <div class="modal__overlay">
         <div class="modal__card">
@@ -447,7 +419,6 @@
                     <li>Пользоваться сервисом worktap.kz может любой человек, достигший совершеннолетия. Для создания или заказа ворка необходима регистрация с помощью email.</li>
                     <li>У одного человека может быть только один аккаунт. Администрация оставляет за собой право удалить дублирующие аккаунты.</li>
                     <li>При регистрации пользователь самостоятельно выбирает логин...</li>
-                    <!-- Здесь будет остальной текст из макета -->
                     <li>Ответственность за всю размещенную пользователем информацию (тексты, иллюстрации, видео и т.д.) несет сам пользователь.</li>
                     <li>На сайте запрещена ненормативная лексика, грубое общение, несанкционированная реклама.</li>
                 </ol>
@@ -460,7 +431,6 @@
     </div>
 </div>
 
-<!-- Modal: Политика безопасности -->
 <div class="modal" id="modal-security">
     <div class="modal__overlay">
         <div class="modal__card">
@@ -475,7 +445,6 @@
                     Наш сайт подключен к интернет-эквайрингу, и Вы можете оплатить Услугу банковской картой Visa или Mastercard. 
                     После подтверждения выбранного Товара либо услуги откроется защищенное окно с платежной страницей...
                 </p>
-                <!-- Текст про CloudPayments и PCI DSS из макета -->
             </div>
 
             <div class="modal__footer modal__footer--row">
@@ -488,11 +457,9 @@
     </div>
 </div>
 
-<!-- QUICK SEARCH MODAL -->
 <div class="modal-search js-modal-search">
     <div class="modal-search__container">
         
-        <!-- Кнопка закрытия -->
         <button class="modal-search__close js-close-search">
             <span class="modal-search__close-icon">×</span>
             <span class="modal-search__close-text">Закрыть быстрый поиск</span>
@@ -521,7 +488,6 @@
             </div>
         </div>
 
-        <!-- Декоративные фоновые круги -->
         <div class="modal-search__blob modal-search__blob--1"></div>
         <div class="modal-search__blob modal-search__blob--2"></div>
         <div class="modal-search__blob modal-search__blob--3"></div>

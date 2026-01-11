@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<!-- HEADER SECTION -->
+
 <header class="header">
     <div class="header__container">
         <a href="index.html" class="header__logo">
@@ -44,7 +44,6 @@
         <img src="images/chevron-down.svg" alt="" class="profile-meta__arrow">
     </div>
 
-    <!-- ВЫПАДАЮЩЕЕ МЕНЮ -->
     <div class="profile-dropdown js-profile-dropdown">
         <div class="profile-dropdown__user">
             <div class="profile-dropdown__info">
@@ -78,12 +77,10 @@
     </div>
 </header>
 
-<!-- PURCHASE HISTORY SECTION -->
 <section class="purchases">
     <div class="purchases__container">
         <h1 class="purchases__title">История <span class="accent">покупок</span></h1>
 
-        <!-- Controls: Count, Filters, Sort -->
         <div class="purchases__controls">
             <div class="purchases__total">Всего 65 сделок</div>
             
@@ -114,10 +111,8 @@
             </div>
         </div>
 
-        <!-- Grid -->
         <div class="purchases__grid js-purchases-grid">
             
-            <!-- Card 1 (Progress) -->
             <article class="purchase-card js-purchase-card" data-status="progress">
                 <div class="purchase-card__image">
                     <img src="images/history-img.png" alt="">
@@ -138,7 +133,6 @@
                 </div>
             </article>
 
-            <!-- Card 2 (Done) -->
             <article class="purchase-card js-purchase-card" data-status="done">
                 <div class="purchase-card__image">
                     <img src="images/history-img.png" alt="">
@@ -167,12 +161,10 @@
     </div>
 </section>
 
-<!-- FOOTER SECTION -->
 <footer class="footer">
     <div class="footer__container">
         <div class="footer__grid">
             
-            <!-- Column 1 -->
             <div class="footer__col">
                 <h4 class="footer__caption">Топ категории</h4>
                 <ul class="footer__list">
@@ -186,7 +178,6 @@
                 </ul>
             </div>
 
-            <!-- Column 2 -->
             <div class="footer__col">
                 <h4 class="footer__caption">О Проекте</h4>
                 <ul class="footer__list">
@@ -197,7 +188,6 @@
                 </ul>
             </div>
 
-            <!-- Column 3 -->
             <div class="footer__col">
                 <h4 class="footer__caption">Поддержка</h4>
                 <ul class="footer__list">
@@ -207,7 +197,6 @@
                 </ul>
             </div>
 
-            <!-- Column 4 -->
             <div class="footer__col">
                 <h4 class="footer__caption">Follow</h4>
                 <div class="footer__socials">
@@ -234,8 +223,6 @@
     </div>
 </footer>
 
-
-<!-- Modal: О нас -->
 <div class="modal" id="modal-about">
     <div class="modal__overlay">
         <div class="modal__card modal__card--about">
@@ -263,9 +250,6 @@
     </div>
 </div>
 
-<!-- MODAL WINDOWS SYSTEM -->
-
-<!-- Modal: Как это работает -->
 <div class="modal" id="modal-how">
     <div class="modal__overlay">
         <div class="modal__card modal__card--wide">
@@ -302,7 +286,6 @@
     </div>
 </div>
 
-<!-- Modal: Правила сервиса -->
 <div class="modal" id="modal-rules">
     <div class="modal__overlay">
         <div class="modal__card">
@@ -317,7 +300,6 @@
                     <li>Пользоваться сервисом worktap.kz может любой человек, достигший совершеннолетия. Для создания или заказа ворка необходима регистрация с помощью email.</li>
                     <li>У одного человека может быть только один аккаунт. Администрация оставляет за собой право удалить дублирующие аккаунты.</li>
                     <li>При регистрации пользователь самостоятельно выбирает логин...</li>
-                    <!-- Здесь будет остальной текст из макета -->
                     <li>Ответственность за всю размещенную пользователем информацию (тексты, иллюстрации, видео и т.д.) несет сам пользователь.</li>
                     <li>На сайте запрещена ненормативная лексика, грубое общение, несанкционированная реклама.</li>
                 </ol>
@@ -330,7 +312,6 @@
     </div>
 </div>
 
-<!-- Modal: Политика безопасности -->
 <div class="modal" id="modal-security">
     <div class="modal__overlay">
         <div class="modal__card">
@@ -345,7 +326,6 @@
                     Наш сайт подключен к интернет-эквайрингу, и Вы можете оплатить Услугу банковской картой Visa или Mastercard. 
                     После подтверждения выбранного Товара либо услуги откроется защищенное окно с платежной страницей...
                 </p>
-                <!-- Текст про CloudPayments и PCI DSS из макета -->
             </div>
 
             <div class="modal__footer modal__footer--row">

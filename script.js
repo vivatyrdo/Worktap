@@ -1,4 +1,3 @@
-/* AUTH CHECK (GLOBAL) */
 function updateHeaderState() {
     const header = document.querySelector('.js-header');
     const isLoggedIn = localStorage.getItem('worktap_logged_in');
@@ -15,7 +14,6 @@ function updateHeaderState() {
 }
 document.addEventListener('DOMContentLoaded', updateHeaderState);
 
-/* MOBILE MENU LOGIC */
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('.header__nav');
 const body = document.body;
@@ -24,7 +22,6 @@ burger.addEventListener('click', () => {
     burger.classList.toggle('burger--active');
     nav.classList.toggle('header__nav--active');
     
-    // Блокировка скролла при открытом меню
     if (nav.classList.contains('header__nav--active')) {
         body.style.overflow = 'hidden';
     } else {
@@ -32,7 +29,6 @@ burger.addEventListener('click', () => {
     }
 });
 
-// Закрытие меню при клике на ссылку
 const navLinks = document.querySelectorAll('.nav__link');
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -42,13 +38,11 @@ navLinks.forEach(link => {
     });
 });
 
-/* ABOUT BLOCK LOGIC */
 const aboutSection = document.querySelector('.about');
 const closeBtn = document.querySelector('.about__close');
 
 if (closeBtn && aboutSection) {
     closeBtn.addEventListener('click', () => {
-        // Плавное исчезновение
         aboutSection.style.transition = 'opacity 0.3s ease';
         aboutSection.style.opacity = '0';
         setTimeout(() => {
@@ -57,12 +51,10 @@ if (closeBtn && aboutSection) {
     });
 }
 
-/* MODAL MANAGEMENT */
 const modalTrigger = document.querySelectorAll('[data-modal]');
 const modals = document.querySelectorAll('.modal');
 const closeButtons = document.querySelectorAll('.modal__close, .js-modal-close');
 
-// Открытие
 modalTrigger.forEach(trigger => {
     trigger.addEventListener('click', (e) => {
         e.preventDefault();
@@ -70,20 +62,18 @@ modalTrigger.forEach(trigger => {
         const modal = document.getElementById(modalId);
         if (modal) {
             modal.classList.add('modal--active');
-            document.body.style.overflow = 'hidden'; // Блокируем скролл страницы
+            document.body.style.overflow = 'hidden'; 
         }
     });
 });
 
-// Закрытие
 closeButtons.forEach(btn => {
     btn.addEventListener('click', () => {
         modals.forEach(modal => modal.classList.remove('modal--active'));
-        document.body.style.overflow = ''; // Возвращаем скролл
+        document.body.style.overflow = ''; 
     });
 });
 
-// Закрытие по клику на оверлей (пустое место вокруг карты)
 window.addEventListener('click', (e) => {
     if (e.target.classList.contains('modal__overlay')) {
         modals.forEach(modal => modal.classList.remove('modal--active'));
@@ -91,13 +81,10 @@ window.addEventListener('click', (e) => {
     }
 });
 
-/* EXCHANGE PAGE INTERACTIVITY */
-
 const heroExchange = document.querySelector('.js-hero-exchange');
 const ordersList = document.querySelector('.js-orders-list');
 const loadMoreBtn = document.querySelector('.js-load-more');
 
-// 1. Scroll Transformation
 window.addEventListener('scroll', () => {
     if (window.scrollY > 200) {
         heroExchange.classList.add('hero-exchange--compact');
@@ -106,7 +93,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// 2. Load More Logic
 const createOrder = () => {
     const card = document.querySelector('.order-card').cloneNode(true);
     card.style.opacity = '0';
@@ -122,7 +108,6 @@ loadMoreBtn.addEventListener('click', () => {
             const newOrder = createOrder();
             ordersList.appendChild(newOrder);
             
-            // Анимированное появление
             setTimeout(() => {
                 newOrder.style.transition = 'all 0.4s ease';
                 newOrder.style.opacity = '1';
@@ -133,9 +118,6 @@ loadMoreBtn.addEventListener('click', () => {
     }, 800);
 });
 
-/* PASSWORD RECOVERY LOGIC */
-
-// Оборачиваем в проверку, чтобы код не падал на других страницах
 const recoveryBtn = document.querySelector('.js-btn-recovery');
 const emailInput = document.querySelector('.js-input-email');
 const codeInput = document.querySelector('.js-input-code');
@@ -144,9 +126,8 @@ if (recoveryBtn && emailInput && codeInput) {
     let isCodeSent = false;
 
     recoveryBtn.addEventListener('click', () => {
-        // 1. Проверяем, заполнено ли поле E-mail
         if (emailInput.value.trim() === "") {
-            emailInput.style.borderColor = 'red'; // Визуальная подсказка
+            emailInput.style.borderColor = 'red'; 
             alert("Пожалуйста, введите E-mail");
             return;
         } else {
@@ -154,22 +135,17 @@ if (recoveryBtn && emailInput && codeInput) {
         }
 
         if (!isCodeSent) {
-            // --- ЭТАП 1: Генерация кода ---
-            
-            // Генерируем код
+
             const randomCode = Math.floor(1000 + Math.random() * 9000);
-            
-            // Вставляем в поле
+        
             codeInput.value = randomCode;
             
-            // Меняем кнопку
             recoveryBtn.textContent = "Войти";
-            recoveryBtn.style.backgroundColor = "#1dbf73"; // Зеленый из макета
+            recoveryBtn.style.backgroundColor = "#1dbf73"; 
             
             isCodeSent = true;
             console.log("Код сгенерирован:", randomCode);
         } else {
-            // --- ЭТАП 2: Вход ---
             if (codeInput.value.trim() !== "") {
                 localStorage.setItem('worktap_logged_in', 'true');
                 window.location.href = 'exchange.html';

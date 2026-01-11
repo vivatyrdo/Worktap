@@ -1,4 +1,3 @@
-/* --- My Orders Page --- */
 .my-orders {
     padding: 60px 0;
     background-color: #f5f6fa;
@@ -16,7 +15,6 @@
     color: var(--color-orange);
 }
 
-/* Controls */
 .my-orders__controls {
     display: flex;
     justify-content: space-between;
@@ -40,7 +38,6 @@
     cursor: pointer;
 }
 
-/* --- Order Item Card --- */
 .order-item {
     background: #fff;
     border-radius: 20px;
@@ -80,7 +77,6 @@
     max-width: 750px;
 }
 
-/* Statuses */
 .order-item__status {
     font-size: 13px;
     font-weight: 700;
@@ -90,7 +86,6 @@
 .order-item__status--done { color: var(--color-primary); }
 .order-item__status--closed { color: #ff5c5c; }
 
-/* Meta Side */
 .order-item__meta {
     text-align: right;
     display: flex;
@@ -119,7 +114,6 @@
     color: #b9b9c9;
 }
 
-/* --- Responsive --- */
 @media (max-width: 992px) {
     .order-item {
         padding: 25px;

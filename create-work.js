@@ -2,13 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentStep = 1;
     const totalSteps = 6;
 
-    // Элементы навигации
     const steps = document.querySelectorAll('.js-step-content');
     const stepperItems = document.querySelectorAll('.stepper__item');
     const nextBtn = document.querySelector('.js-btn-next');
     const backBtn = document.querySelector('.js-btn-back');
 
-    // Функция обновления шага
     function updateStepDisplay() {
         steps.forEach(s => {
             s.classList.toggle('step-content--hidden', parseInt(s.dataset.step) !== currentStep);
@@ -19,28 +17,23 @@ document.addEventListener('DOMContentLoaded', () => {
             item.classList.toggle('stepper__item--active', stepNum <= currentStep);
         });
 
-        // Кнопка Назад
         backBtn.classList.toggle('btn--hidden', currentStep === 1);
 
-        // Текст кнопки Дальше
         nextBtn.textContent = currentStep === totalSteps ? 'Опубликовать' : 'Дальше';
 
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Навигация Вперед
     nextBtn.addEventListener('click', () => {
         if (currentStep < totalSteps) {
             currentStep++;
             updateStepDisplay();
         } else {
-            // Финальное действие при нажатии "Опубликовать"
             alert('Поздравляем! Ваш ворк успешно отправлен на модерацию.');
-            window.location.href = 'profile.html'; // Перенаправляем пользователя
+            window.location.href = 'profile.html';
         }
     });
 
-    // Навигация Назад
     backBtn.addEventListener('click', () => {
         if (currentStep > 1) {
             currentStep--;
@@ -48,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- ЛОГИКА ТЕГОВ (ШАГ 1) ---
     const tagInput = document.querySelector('.js-tag-input');
     const tagsList = document.querySelector('.js-tags-list');
     let tags = ['Тег 1', 'Тег 2', 'Дизайн сайта'];
@@ -83,7 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     renderTags();
 
-    // --- ЛОГИКА ДОП. ОПЦИЙ (ШАГ 2) ---
     const extraGrid = document.querySelector('.js-extra-grid');
     const addExtraBtn = document.querySelector('.js-add-extra');
 
@@ -108,7 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- МОДАЛКА (ШАГ 2) ---
     const modal = document.querySelector('.js-modal-option');
     const openModalBtns = document.querySelectorAll('.js-open-modal');
     const closeElements = document.querySelectorAll('.js-close-modal');
@@ -118,7 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target === c || c.classList.contains('modal__btn-primary')) modal.classList.remove('modal--active');
     }));
 
-    // --- ЛОГИКА FAQ (ШАГ 3) ---
     const faqGrid = document.querySelector('.js-faq-grid');
     const addFaqBtn = document.querySelector('.js-add-faq');
 
@@ -137,11 +126,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <button type="button" class="faq-card__delete js-remove-faq">Удалить</button>
             `;
-            // Вставляем новую карточку перед кнопкой добавления
             faqGrid.insertBefore(faqCard, addFaqBtn);
         });
 
-        // Удаление через делегирование
         faqGrid.addEventListener('click', (e) => {
             if (e.target.classList.contains('js-remove-faq')) {
                 const card = e.target.closest('.js-faq-card');
@@ -150,7 +137,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- ЛОГИКА ФОТО (ШАГ 5) ---
     const photoInput = document.querySelector('.js-input-photo');
     const photoGrid = document.querySelector('.js-photo-grid');
 
@@ -171,7 +157,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     `;
                     photoGrid.appendChild(item);
 
-                    // Удаление фото
                     item.querySelector('.gallery-item__remove').addEventListener('click', () => item.remove());
                 };
                 reader.readAsDataURL(file);
@@ -179,7 +164,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- ЛОГИКА ДОКУМЕНТОВ (ШАГ 5 - ПЕРЕИСПОЛЬЗОВАНИЕ) ---
     const docInput = document.querySelector('.js-doc-input');
     const docList = document.querySelector('.js-doc-list');
     const docArea = document.querySelector('.js-doc-upload-area');
@@ -200,7 +184,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Drag & Drop эффекты
         ['dragenter', 'dragover'].forEach(name => {
             docArea.addEventListener(name, () => docArea.classList.add('upload-area--dragover'));
         });

@@ -1,4 +1,3 @@
-/* Базовый контейнер */
 .work-page__container {
     max-width: 1240px;
     margin: 0 auto;
@@ -9,21 +8,17 @@
     margin-bottom: 30px;
 }
 
-/* Сетка */
 .work-page__grid {
     display: grid;
-    /* Левая колонка гибкая (1fr), правая фиксированная под сайдбар (400px) */
     grid-template-columns: 1fr 400px;
-    /* Две строки, высота которых зависит от контента */
     grid-template-rows: auto auto;
     gap: 30px;
 }
 
-/* Схематические цвета и размеры для наглядности */
 .schematic-red {
     background-color: rgba(255, 0, 0, 0.2);
     border: 2px solid red;
-    min-height: 500px; /* Имитируем высоту слайдера */
+    min-height: 500px; 
     grid-column: 1;
     grid-row: 1;
 }
@@ -31,7 +26,6 @@
 .schematic-blue {
     background-color: rgba(0, 0, 255, 0.2);
     border: 2px solid blue;
-    /* Сайдбар занимает ПЕРВУЮ и ВТОРУЮ строки */
     grid-column: 2;
     grid-row: 1 / span 2; 
     min-height: 800px;
@@ -40,48 +34,43 @@
 .schematic-green {
     background-color: rgba(0, 255, 0, 0.2);
     border: 2px solid green;
-    min-height: 600px; /* Имитируем высоту описания */
+    min-height: 600px; 
     grid-column: 1;
     grid-row: 2;
 }
 
-/* --- АДАПТИВ (переход в одну колонку) --- */
 @media (max-width: 1100px) {
     .work-page__grid {
-        grid-template-columns: 1fr; /* Одна колонка */
-        grid-template-rows: auto;    /* Строки друг за другом */
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto;   
     }
 
     .schematic-red, .schematic-blue, .schematic-green {
-        grid-column: 1; /* Все в одну колонку */
+        grid-column: 1; 
     }
 
     .schematic-red { grid-row: 1; }
-    .schematic-blue { grid-row: 3; } /* Сайдбар на мобилках обычно уходит под описание или сразу под слайдер */
+    .schematic-blue { grid-row: 3; } 
     .schematic-green { grid-row: 2; }
 }
 
-/* --- Заголовок и крошки --- */
 .breadcrumbs { font-size: 13px; color: var(--color-text-light); margin-bottom: 15px; }
 .breadcrumbs a { text-decoration: none; color: inherit; }
 .breadcrumbs__sep { margin: 0 5px; }
 .work-title { font-size: 32px; font-weight: 700; margin-bottom: 35px; }
 
-/* --- Корректировка сетки для Swiper --- */
 .work-page__swiper-block {
     grid-column: 1;
     grid-row: 1;
-    min-width: 0; /* Критически важно для Swiper внутри Grid */
+    min-width: 0; 
 }
 
-/* --- Галерея --- */
 .work-gallery {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-/* Главный слайдер */
 .work-gallery__main {
     width: 100%;
     height: 480px;
@@ -96,7 +85,6 @@
     object-fit: cover;
 }
 
-/* Миниатюры */
 .work-gallery__thumbs {
     width: 100%;
     height: 90px;
@@ -112,7 +100,6 @@
     transition: var(--transition);
 }
 
-/* Активная миниатюра */
 .work-gallery__thumbs .swiper-slide-thumb-active {
     opacity: 1;
 }
@@ -123,7 +110,6 @@
     object-fit: cover;
 }
 
-/* Стилизация стрелок Swiper под дизайн */
 .work-gallery__main .swiper-button-next,
 .work-gallery__main .swiper-button-prev {
     color: var(--color-primary);
@@ -140,13 +126,11 @@
     font-weight: 700;
 }
 
-/* Адаптив */
 @media (max-width: 768px) {
     .work-gallery__main { height: 300px; }
     .work-gallery__thumbs { height: 70px; }
 }
 
-/* --- Секция описания --- */
 .work-description {
     grid-column: 1;
     grid-row: 2;
@@ -159,7 +143,6 @@
     margin-bottom: 50px;
 }
 
-/* --- FAQ Accordion --- */
 .faq__title {
     font-size: 20px;
     font-weight: 700;
@@ -197,7 +180,6 @@
     margin-right: 10px;
 }
 
-/* Содержимое аккордеона */
 .accordion__content {
     max-height: 0;
     overflow: hidden;
@@ -211,9 +193,8 @@
     color: #555;
 }
 
-/* Активное состояние */
 .accordion--active .accordion__content {
-    max-height: 1000px; /* Достаточно большое число для раскрытия */
+    max-height: 1000px; 
     transition: max-height 0.6s ease-in;
 }
 
@@ -221,7 +202,6 @@
     transform: rotate(-135deg);
 }
 
-/* --- Requirements --- */
 .requirements {
     margin-top: 50px;
 }
@@ -243,7 +223,6 @@
     margin-bottom: 10px;
 }
 
-/* --- Sidebar Layout --- */
 .sidebar {
     grid-column: 2;
     grid-row: 1 / span 2;
@@ -252,7 +231,6 @@
     gap: 30px;
 }
 
-/* --- Packages (Main Accordion) --- */
 .package {
     background: #fff;
     border-radius: 20px;
@@ -263,7 +241,7 @@
 }
 
 .package--active {
-    background-color: #f2f0ff; /* Фиолетовый фон активного пакета */
+    background-color: #f2f0ff; 
 }
 
 .package__header {
@@ -306,7 +284,6 @@
 .package__features { list-style: none; padding: 0; margin-bottom: 30px; }
 .package__features li { font-size: 13px; color: #444; margin-bottom: 8px; }
 
-/* Вложенные опции */
 .extras__title { font-size: 16px; font-weight: 700; margin-bottom: 15px; }
 
 .extra-item { border-top: 1px solid #d4d4ff; }
@@ -332,7 +309,6 @@
     color: #fff; border: none; font-weight: 700; font-size: 15px; cursor: pointer; margin-top: 20px;
 }
 
-/* --- Seller Card --- */
 .seller-card { background: #fff; padding: 30px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
 .seller-card__header { display: flex; gap: 15px; margin-bottom: 20px; }
 .seller-card__avatar { width: 60px; height: 60px; border-radius: 50%; overflow: hidden; background: #eee; }

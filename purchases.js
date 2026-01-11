@@ -1,11 +1,8 @@
-/* PURCHASES PAGE LOGIC */
-
 document.addEventListener('DOMContentLoaded', () => {
     const grid = document.querySelector('.js-purchases-grid');
     const filterRadios = document.querySelectorAll('.js-filter-status');
     const loadMoreBtn = document.querySelector('.js-load-purchases');
 
-    // 1. Фильтрация
     filterRadios.forEach(radio => {
         radio.addEventListener('change', () => {
             const status = radio.value;
@@ -21,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 2. Загрузить еще
     const createCardHTML = (status) => {
         const isDone = status === 'done';
         return `
@@ -53,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         loadMoreBtn.textContent = 'Загрузка...';
         
         setTimeout(() => {
-            // Генерируем по 2 карточки каждого типа
             const statuses = ['progress', 'done', 'progress', 'done'];
             const currentFilter = document.querySelector('.js-filter-status:checked').value;
 
@@ -61,12 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 grid.insertAdjacentHTML('beforeend', createCardHTML(status));
                 const newCard = grid.lastElementChild;
 
-                // Если есть фильтр, скрываем новую карточку сразу, если она не подходит
                 if (currentFilter !== 'all' && status !== currentFilter) {
                     newCard.classList.add('purchase-card--hidden');
                 }
 
-                // Плавная анимация появления
                 setTimeout(() => {
                     newCard.style.transition = 'all 0.4s ease';
                     newCard.style.opacity = '1';

@@ -7,7 +7,6 @@
     --transition: all 0.3s ease;
 }
 
-/* --- Hero Exchange --- */
 .hero-exchange {
     padding: 80px 0 50px;
     background-color: var(--color-bg);
@@ -15,7 +14,6 @@
     z-index: -1;
 }
 
-/* Transformation Logic */
 .hero-exchange--compact {
     position: fixed;
     top: 0;
@@ -49,7 +47,6 @@
     padding: 0 20px;
 }
 
-/* Hero Content */
 .hero-exchange__title {
     text-align: center;
     font-size: 36px;
@@ -65,7 +62,6 @@
     margin: 0 auto 40px;
 }
 
-/* Search */
 .hero-exchange__search {
     display: flex;
     background: #fff;
@@ -79,7 +75,6 @@
     background: var(--color-bg);
 }
 
-/* Filters (Shown in compact mode) */
 .hero-exchange__filters {
     display: none;
     align-items: center;
@@ -115,7 +110,6 @@
     cursor: pointer;
 }
 
-/* Tags (The missing styles) */
 .tags__list {
     display: flex;
     flex-wrap: wrap;
@@ -144,7 +138,6 @@
     color: var(--color-secondary);
 }
 
-/* Orders List */
 .orders { padding: 60px 0; }
 .orders__header { font-size: 22px; margin-bottom: 30px; }
 
@@ -206,7 +199,6 @@
     cursor: pointer;
 }
 
-/* --- Hero Exchange Base --- */
 .hero-exchange {
     padding: 60px 0 40px;
     background-color: var(--color-bg);
@@ -214,7 +206,6 @@
     z-index: 100;
 }
 
-/* Фиксация контейнера при скролле */
 .hero-exchange--compact {
     position: fixed;
     top: 0;
@@ -226,14 +217,12 @@
     z-index: 1000;
 }
 
-/* Скрываем лишнее в компактном режиме */
 .hero-exchange--compact .hero-exchange__full-content,
 .hero-exchange--compact .hero-exchange__info,
 .hero-exchange--compact .hero-exchange__blob {
     display: none;
 }
 
-/* Исправляем структуру рядов */
 .hero-exchange__main-panel {
     max-width: 1240px;
     margin: 0 auto;
@@ -250,9 +239,8 @@
     width: 100%;
 }
 
-/* Исправляем "кривой" поиск */
 .hero-exchange__search {
-    flex: 1; /* Поиск занимает свободное место */
+    flex: 1; 
     display: flex;
     align-items: center;
     background: #fff;
@@ -263,7 +251,7 @@
 }
 
 .hero-exchange--compact .hero-exchange__search {
-    background: #f1f3f9; /* Чуть темнее фон в компактном режиме */
+    background: #f1f3f9; 
 }
 
 .search__input {
@@ -273,18 +261,15 @@
     outline: none;
     font-family: inherit;
     font-size: 14px;
-    height: 40px; /* Фиксируем высоту для центровки */
+    height: 40px; 
 }
 
-/* Фильтры и сортировка */
 .hero-exchange__filters {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-/* В обычном режиме (не компактном) на макете фильтры могут быть скрыты 
-   или идти под поиском. Чтобы соответствовать твоему скрину, в компактном они в ряд: */
 .filters__price {
     display: flex;
     align-items: center;
@@ -315,7 +300,6 @@
     min-width: 200px;
 }
 
-/* Теги (второй ряд) */
 .hero-exchange__bottom-row {
     display: flex;
     justify-content: flex-start;
@@ -353,7 +337,6 @@
     border: 1px solid #ffe8d4;
 }
 
-/* Корректировка для мобилок */
 @media (max-width: 1024px) {
     .hero-exchange__top-row {
         flex-direction: column;
@@ -370,7 +353,6 @@
     }
 }
 
-/* --- Hero Exchange Base --- */
 .hero-exchange {
     padding: 80px 0 50px;
     background-color: var(--color-bg);
@@ -378,7 +360,6 @@
     z-index: 100;
 }
 
-/* Контейнер для всей панели управления */
 .hero-exchange__main-panel {
     max-width: 1240px;
     margin: 0 auto;
@@ -388,19 +369,17 @@
     gap: 30px;
 }
 
-/* Ряд с поиском и фильтрами */
 .hero-exchange__top-row {
     display: flex;
     align-items: baseline;
-    justify-content: center; /* Центрируем поиск по умолчанию */
+    justify-content: center; 
     width: 100%;
     transition: all 0.3s ease;
 }
 
-/* Поиск по умолчанию */
 .hero-exchange__search {
     width: 100%;
-    max-width: 700px; /* Ограничиваем ширину поиска в развернутом виде */
+    max-width: 700px; 
     display: flex;
     align-items: center;
     background: #fff;
@@ -422,7 +401,6 @@
     height: 45px;
 }
 
-/* СКРЫВАЕМ ФИЛЬТРЫ ПО УМОЛЧАНИЮ */
 .hero-exchange__filters {
     display: none; 
     align-items: center;
@@ -431,7 +409,6 @@
     transition: opacity 0.3s ease;
 }
 
-/* --- КОМПАКТНЫЙ РЕЖИМ (ПРИ СКРОЛЛЕ) --- */
 .hero-exchange--compact {
     position: fixed;
     top: 0;
@@ -449,26 +426,22 @@
     to { transform: translateY(0); }
 }
 
-/* В компактном режиме выравниваем всё по левому краю */
 .hero-exchange--compact .hero-exchange__top-row {
     justify-content: flex-start;
     padding: 0 20px;
 }
 
-/* Поиск в компактном режиме сжимается */
 .hero-exchange--compact .hero-exchange__search {
     flex: 1;
-    max-width: 450px; /* Или любую нужную ширину */
+    max-width: 450px; 
     background: #f1f3f9;
 }
 
-/* ПОКАЗЫВАЕМ ФИЛЬТРЫ В КОМПАКТНОМ РЕЖИМЕ */
 .hero-exchange--compact .hero-exchange__filters {
     display: flex;
     opacity: 1;
 }
 
-/* Стили фильтров (инпуты и селект) */
 .filters__price {
     display: flex;
     align-items: center;
@@ -501,17 +474,15 @@
     outline: none;
 }
 
-/* Теги (второй ряд) */
 .hero-exchange__bottom-row {
     width: 100%;
     padding: 0 20px;
 }
 
 .hero-exchange--compact .hero-exchange__bottom-row {
-    margin-top: -10px; /* Подтягиваем теги выше в компактном режиме */
+    margin-top: -10px; 
 }
 
-/* Скрываем остальное */
 .hero-exchange--compact .hero-exchange__full-content,
 .hero-exchange--compact .hero-exchange__info,
 .hero-exchange--compact .hero-exchange__blob {
@@ -534,7 +505,6 @@
     }
 }
 
-/* --- Auth Layout --- */
 .auth {
     min-height: 100vh;
     display: flex;
@@ -546,7 +516,6 @@
     min-height: 100vh;
 }
 
-/* Left Content Section */
 .auth__left {
     flex: 0 0 50%;
     display: flex;
@@ -587,7 +556,6 @@
     color: var(--color-text);
 }
 
-/* --- Form Styles --- */
 .form__group {
     margin-bottom: 25px;
 }
@@ -628,7 +596,6 @@
     font-size: 13px;
 }
 
-/* Custom Checkbox */
 .form__checkbox-wrapper {
     display: flex;
     align-items: center;
@@ -659,7 +626,6 @@
     color: var(--color-secondary);
 }
 
-/* Buttons */
 .form__btn-submit {
     width: 100%;
     display: inline-block;
@@ -703,7 +669,6 @@
     height: 18px;
 }
 
-/* Auth Footer */
 .auth__footer-text {
     margin-top: 40px;
     text-align: center;
@@ -717,7 +682,6 @@
     font-weight: 600;
 }
 
-/* Right Side Image */
 .auth__right {
     flex: 0 0 50%;
     height: 100vh;
@@ -729,10 +693,9 @@
     object-fit: cover;
 }
 
-/* --- Responsive --- */
 @media (max-width: 992px) {
     .auth__right {
-        display: none; /* Скрываем картинку на планшетах и мобилках */
+        display: none; 
     }
     .auth__left {
         flex: 0 0 100%;
@@ -751,9 +714,6 @@
     }
 }
 
-/* --- Registration Specific Styles --- */
-
-/* Контейнер для регистрации может быть чуть выше из-за количества полей */
 .auth__content-wrapper--reg {
     max-width: 450px;
     padding: 20px 0;
@@ -763,7 +723,6 @@
     margin-bottom: 40px;
 }
 
-/* Переключатели ролей */
 .form__roles {
     display: flex;
     gap: 30px;
@@ -799,7 +758,6 @@
     background-color: var(--color-primary);
 }
 
-/* Точка внутри радиокнопки (опционально, для акцента как на макете) */
 .form__radio:checked + .form__radio-custom::after {
     content: '';
     position: absolute;
@@ -812,7 +770,6 @@
     border-radius: 50%;
 }
 
-/* Адаптив для формы регистрации */
 @media (max-height: 900px) and (min-width: 993px) {
     .auth__left {
         justify-content: flex-start;
@@ -828,7 +785,6 @@
     }
 }
 
-/* Состояние кнопки после получения кода */
 .form__btn-submit--login {
     background-color: var(--color-primary);
 }

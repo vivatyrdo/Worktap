@@ -1,11 +1,8 @@
-/* FILE UPLOAD LOGIC */
-
 document.addEventListener('DOMContentLoaded', () => {
     const uploadArea = document.querySelector('.js-upload-area');
     const fileInput = document.querySelector('.js-file-input');
     const fileList = document.querySelector('.js-file-list');
 
-    // Визуальный эффект при перетаскивании
     ['dragenter', 'dragover'].forEach(eventName => {
         uploadArea.addEventListener(eventName, () => {
             uploadArea.classList.add('upload-area--dragover');
@@ -18,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Обработка выбора файлов
     fileInput.addEventListener('change', (e) => {
         handleFiles(e.target.files);
     });
@@ -27,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const filesArray = Array.from(files);
         
         filesArray.forEach(file => {
-            // Создаем элемент файла в списке
             const fileItem = document.createElement('div');
             fileItem.className = 'upload-file';
             
@@ -46,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             fileList.appendChild(fileItem);
 
-            // Удаление из списка
             fileItem.querySelector('.upload-file__remove').addEventListener('click', () => {
                 fileItem.remove();
             });

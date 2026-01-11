@@ -1,4 +1,3 @@
-/* --- Create Order Styles --- */
 .create-order {
     padding: 60px 0;
     background-color: #f5f6fa;
@@ -13,7 +12,6 @@
 
 .create-order__title .accent { color: var(--color-primary); }
 
-/* Form Elements */
 .form-order__group { margin-bottom: 30px; position: relative; }
 
 .form-order__label {
@@ -50,7 +48,6 @@
     gap: 40px;
 }
 
-/* --- Upload Area --- */
 .upload-area {
     background: #f2f0ff;
     border: 2px dashed #d4d4ff;
@@ -75,7 +72,6 @@
 .upload-area__text .accent { color: var(--color-orange); text-decoration: underline; }
 .upload-area__hint { font-size: 11px; color: #b9b9c9; }
 
-/* --- File List --- */
 .upload-list { margin-top: 20px; }
 
 .upload-file {
@@ -96,7 +92,6 @@
     color: #ff5c5c; font-size: 18px;
 }
 
-/* --- Buttons --- */
 .form-order__actions {
     display: flex;
     justify-content: space-between;
@@ -119,7 +114,6 @@
 
 @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
 
-/* --- Responsive --- */
 @media (max-width: 768px) {
     .form-order__row { grid-template-columns: 1fr; gap: 0; }
     .form-order__actions { flex-direction: column-reverse; gap: 15px; }

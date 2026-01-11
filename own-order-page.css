@@ -1,4 +1,3 @@
-/* --- Layout --- */
 .order-single { padding: 40px 0 80px; background-color: #f5f6fa; }
 .order-single__container { max-width: 1240px; margin: 0 auto; padding: 0 20px; }
 
@@ -9,7 +8,6 @@
     margin-bottom: 60px;
 }
 
-/* --- Main Info Block --- */
 .order-main-info {
     background: #fff;
     border-radius: 20px;
@@ -30,15 +28,13 @@
 
 .order-main-info__description { font-size: 14px; line-height: 1.7; color: #444; margin-bottom: 35px; }
 
-/* Documents */
 .docs-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 30px; }
 .docs-list__item { display: flex; align-items: center; gap: 12px; }
-.docs-list__icon { width: 24px; height: 30px; background: #e9e6ff; border-radius: 4px; } /* Иконка-заглушка */
+.docs-list__icon { width: 24px; height: 30px; background: #e9e6ff; border-radius: 4px; } 
 .docs-list__name { font-size: 13px; color: #222; font-weight: 500; }
 
 .order-main-info__offers-count { font-size: 13px; color: #b9b9c9; }
 
-/* --- Sidebar --- */
 .order-sidebar { display: flex; flex-direction: column; gap: 20px; }
 
 .order-sidebar__actions { display: flex; flex-direction: column; gap: 15px; }
@@ -52,7 +48,6 @@
 .btn-outline--red { border: 1px solid #ff5c5c; color: #ff5c5c; }
 .btn-outline:hover { background: #f8f8f8; }
 
-/* --- Bids List --- */
 .order-bids__title { font-size: 18px; font-weight: 700; margin-bottom: 30px; }
 .order-bids__list { display: flex; flex-direction: column; gap: 20px; max-width: 830px; }
 
@@ -87,7 +82,6 @@
 .btn-action--purple { border: 1px solid #5e4bdb; color: #5e4bdb; }
 .btn-action:hover { opacity: 0.7; }
 
-/* --- Responsive --- */
 @media (max-width: 1024px) {
     .order-single__top-grid { grid-template-columns: 1fr; }
     .order-bids__list { max-width: 100%; }
@@ -110,7 +104,6 @@
     gap: 10px;
 }
 
-/* --- Service Offer Block --- */
 .service-offer {
     background-color: #f5f6fa;
     padding: 20px;
@@ -132,7 +125,6 @@
     margin-bottom: 35px;
 }
 
-/* Form Groups */
 .service-offer__group {
     margin-bottom: 30px;
 }
@@ -166,7 +158,7 @@
 
 .service-offer__input:focus,
 .service-offer__textarea:focus {
-    border-bottom-color: #1dbf73; /* Зеленый акцент */
+    border-bottom-color: #1dbf73; 
 }
 
 .service-offer__textarea {
@@ -175,7 +167,6 @@
     line-height: 1.5;
 }
 
-/* Button */
 .service-offer__btn {
     background-color: #1dbf73;
     color: #ffffff;
@@ -198,7 +189,6 @@
     transform: scale(0.98);
 }
 
-/* --- Responsive --- */
 @media (max-width: 600px) {
     .service-offer__container {
         padding: 30px 20px;

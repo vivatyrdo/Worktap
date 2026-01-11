@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- 1. БУРГЕР МЕНЮ ---
     const burger = document.querySelector('.js-burger');
     const nav = document.querySelector('.js-nav');
 
@@ -12,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 2. АККОРДЕОН (ПОДРОБНАЯ ИНФО) ---
     const toggle = document.querySelector('.js-details-toggle');
     const card = document.querySelector('.js-details-card');
 
@@ -28,9 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 3. МОДАЛКА БЫСТРОГО ПОИСКА ---
     const searchModal = document.querySelector('.js-modal-search');
-    // Исправленные селекторы: ищем кнопки по классу из твоего HTML
     const openSearchBtns = document.querySelectorAll('.btn-quick-search');
     const closeSearchBtn = document.querySelector('.js-close-search');
 
@@ -50,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Закрытие по клику вне контента (по фону)
         searchModal.addEventListener('click', (e) => {
             if (e.target === searchModal) {
                 searchModal.classList.remove('modal-search--active');
@@ -59,7 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 4. МОДАЛКИ ИЗ ФУТЕРА (О нас, Правила и т.д.) ---
     const footerModalTriggers = document.querySelectorAll('[data-modal]');
     
     footerModalTriggers.forEach(trigger => {
@@ -74,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Закрытие всех стандартных модалок
     const allModals = document.querySelectorAll('.modal');
     allModals.forEach(modal => {
         const closeBtn = modal.querySelector('.modal__close');
@@ -95,7 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- 5. ЛОГИКА "МОИ ВОРКИ" (ЗАГРУЗКА) ---
     const worksGrid = document.querySelector('.js-works-grid');
     const loadWorksBtn = document.querySelector('.js-load-works');
 
@@ -127,30 +119,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 7. ВЫПАДАЮЩЕЕ МЕНЮ ПРОФИЛЯ ---
     const profileTrigger = document.querySelector('.js-profile-trigger');
     const profileDropdown = document.querySelector('.js-profile-dropdown');
 
     if (profileTrigger && profileDropdown) {
         profileTrigger.addEventListener('click', (e) => {
-            // Останавливаем всплытие, чтобы клик по самому меню не закрывал его
             e.stopPropagation();
             profileTrigger.classList.toggle('profile-meta--active');
             profileDropdown.classList.toggle('profile-dropdown--active');
         });
 
-        // Закрытие меню при клике в любое место экрана
         document.addEventListener('click', () => {
             profileTrigger.classList.remove('profile-meta--active');
             profileDropdown.classList.remove('profile-dropdown--active');
         });
         
-        // Предотвращаем закрытие при клике внутри самого меню
         profileDropdown.addEventListener('click', (e) => {
             e.stopPropagation();
         });
 
-        // Переключение ролей внутри меню (визуальное)
         const roleBtns = document.querySelectorAll('.profile-dropdown__role');
         roleBtns.forEach(btn => {
             btn.addEventListener('click', () => {
@@ -160,7 +147,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 6. ЛОГИКА "ОТЗЫВЫ" (ФИЛЬТРАЦИЯ И ЗАГРУЗКА) ---
     const reviewsGrid = document.querySelector('.js-reviews-grid');
     const loadReviewsBtn = document.querySelector('.js-load-reviews');
     const filterBtns = document.querySelectorAll('.reviews__filter-btn');

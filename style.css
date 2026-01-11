@@ -26,14 +26,12 @@ img {
     display: block;
 }
 
-/* --- Layout --- */
 [class*="__container"] {
     max-width: var(--container-width);
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* --- Header --- */
 .header {
     padding: 20px 0;
     background: #fff;
@@ -97,7 +95,6 @@ img {
     background: #18a362;
 }
 
-/* --- Burger --- */
 .burger {
     display: none;
     width: 30px;
@@ -134,7 +131,6 @@ img {
 .burger--active::before { top: 9px; transform: rotate(45deg); }
 .burger--active::after { bottom: 9px; transform: rotate(-45deg); }
 
-/* --- Hero --- */
 .hero {
     padding: 80px 0;
     background: linear-gradient(180deg, #fff 0%, var(--color-bg) 100%);
@@ -167,7 +163,6 @@ img {
     line-height: 1.5;
 }
 
-/* Search bar */
 .search {
     display: flex;
     background: #fff;
@@ -202,7 +197,6 @@ img {
     background: #f99035;
 }
 
-/* Tags */
 .hero__categories-label {
     font-size: 14px;
     margin-bottom: 15px;
@@ -235,7 +229,6 @@ img {
     border: 1px solid var(--color-secondary);
 }
 
-/* Hero Visual */
 .hero__visual {
     position: relative;
 }
@@ -277,7 +270,6 @@ img {
 .hero__badge--top-right { top: 5%; right: 0; }
 .hero__badge--bottom-right { bottom: 20%; right: -5%; }
 
-/* --- Responsive --- */
 @media (max-width: 1024px) {
     .header__nav {
         position: fixed;
@@ -306,7 +298,7 @@ img {
 
     .nav__link { font-size: 20px; }
 
-    .header__actions { display: none; } /* Можно добавить внутрь мобильного меню */
+    .header__actions { display: none; }
     
     .burger { display: block; }
 
@@ -332,7 +324,6 @@ img {
     }
 }
 
-/* --- Works Section --- */
 .works {
     padding: 60px 0;
     background-color: #fff;
@@ -351,7 +342,6 @@ img {
     gap: 30px;
 }
 
-/* --- Work Card Block --- */
 .work-card {
     background: #fff;
     border-radius: 20px;
@@ -401,7 +391,7 @@ img {
     line-height: 1.6;
     color: #7a7a7a;
     margin-bottom: 25px;
-    flex-grow: 1; /* Чтобы кнопки всегда были на одном уровне */
+    flex-grow: 1; 
 }
 
 .work-card__btn {
@@ -433,7 +423,6 @@ img {
     border-color: #18a362;
 }
 
-/* --- Special Link Card --- */
 .works__all-link {
     background-color: #f2f0ff;
     border-radius: 20px;
@@ -454,7 +443,6 @@ img {
     background-color: #e9e6ff;
 }
 
-/* --- Responsive --- */
 @media (max-width: 1100px) {
     .works__grid {
         grid-template-columns: repeat(2, 1fr);
@@ -476,7 +464,6 @@ img {
     }
 }
 
-/* --- Freelancers Section --- */
 .freelancers {
     padding: 60px 0;
     background-color: #fff;
@@ -494,7 +481,6 @@ img {
     gap: 30px;
 }
 
-/* --- Freelancer Card Block --- */
 .freelancer-card {
     background: #fff;
     border-radius: 20px;
@@ -527,7 +513,6 @@ img {
     background-color: #f0f0f0;
 }
 
-/* Status Indicator */
 .freelancer-card__status {
     position: absolute;
     width: 14px;
@@ -555,7 +540,7 @@ img {
 
 .freelancer-card__job {
     font-size: 14px;
-    color: var(--color-secondary); /* Оранжевый из :root первого блока */
+    color: var(--color-secondary); 
     font-weight: 600;
 }
 
@@ -565,7 +550,6 @@ img {
     margin-top: 2px;
 }
 
-/* Rating Stars */
 .freelancer-card__rating {
     display: flex;
     gap: 3px;
@@ -575,7 +559,7 @@ img {
 .freelancer-card__star {
     width: 16px;
     height: 16px;
-    background-color: #e0e0e0; /* Пустая звезда */
+    background-color: #e0e0e0; 
     mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z'/%3E%3C/svg%3E") no-repeat center;
     -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z'/%3E%3C/svg%3E") no-repeat center;
 }
@@ -608,7 +592,6 @@ img {
     color: #fff;
 }
 
-/* --- All Link Card --- */
 .freelancers__all-link {
     background-color: #f2f0ff;
     border-radius: 20px;
@@ -632,7 +615,6 @@ img {
     background-color: #e9e6ff;
 }
 
-/* --- Responsive --- */
 @media (max-width: 1200px) {
     .freelancers__grid {
         grid-template-columns: repeat(2, 1fr);
@@ -664,10 +646,9 @@ img {
     }
 }
 
-/* --- Steps Section --- */
 .steps {
     padding: 80px 0;
-    background-color: #f5f6fa; /* Светлый фон как на макете */
+    background-color: #f5f6fa;
 }
 
 .steps__header {
@@ -692,7 +673,6 @@ img {
     gap: 40px;
 }
 
-/* --- Step Item --- */
 .steps__item {
     display: flex;
     flex-direction: column;
@@ -728,7 +708,6 @@ img {
     max-width: 280px;
 }
 
-/* --- Responsive --- */
 @media (max-width: 992px) {
     .steps__grid {
         gap: 30px;
@@ -764,7 +743,6 @@ img {
     }
 }
 
-/* --- Business Benefits Section --- */
 .business {
     position: relative;
     padding: 100px 0;
@@ -772,10 +750,9 @@ img {
     display: flex;
     align-items: center;
     overflow: hidden;
-    background-color: #f7b700; /* Резервный цвет фона (желтый) */
+    background-color: #f7b700; 
 }
 
-/* Background Image Handling */
 .business__bg {
     position: absolute;
     top: 0;
@@ -788,7 +765,7 @@ img {
 
 .business__container {
     position: relative;
-    z-index: 2; /* Поверх фона */
+    z-index: 2; 
     width: 100%;
 }
 
@@ -810,7 +787,6 @@ img {
     margin-bottom: 40px;
 }
 
-/* --- Benefit Card --- */
 .business__card {
     background: #fff;
     border-radius: 15px;
@@ -847,7 +823,6 @@ img {
     line-height: 1.4;
 }
 
-/* --- Bottom Elements --- */
 .business__tagline {
     font-size: 18px;
     font-weight: 600;
@@ -856,7 +831,7 @@ img {
 }
 
 .business__btn {
-    background-color: #5e4bdb; /* Фиолетовый цвет кнопки */
+    background-color: #5e4bdb; 
     color: #fff;
     border: none;
     padding: 18px 60px;
@@ -874,7 +849,6 @@ img {
     transform: translateY(-2px);
 }
 
-/* --- Responsive --- */
 @media (max-width: 1024px) {
     .business__content {
         max-width: 500px;
@@ -910,7 +884,6 @@ img {
         transform: none;
     }
 
-    /* Добавляем небольшое затемнение фона на мобилках для читаемости белого текста */
     .business::after {
         content: '';
         position: absolute;
@@ -934,10 +907,9 @@ img {
     }
 }
 
-/* --- Footer Section --- */
 .footer {
     padding: 80px 0 40px;
-    background-color: #f2f0ff; /* Светло-фиолетовый фон */
+    background-color: #f2f0ff; 
 }
 
 .footer__grid {
@@ -974,7 +946,6 @@ img {
     color: var(--color-primary);
 }
 
-/* --- Socials --- */
 .footer__socials {
     display: flex;
     gap: 15px;
@@ -1001,7 +972,6 @@ img {
     height: auto;
 }
 
-/* --- Footer Bottom --- */
 .footer__bottom {
     border-top: 1px solid rgba(0, 0, 0, 0.05);
     padding-top: 30px;
@@ -1013,7 +983,6 @@ img {
     color: #7a7a7a;
 }
 
-/* --- Responsive --- */
 @media (max-width: 1024px) {
     .footer__grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1041,18 +1010,17 @@ img {
     }
 }
 
-/* --- About Section --- */
 .about {
     padding: 60px 0;
-    background-color: #e5e5e5; /* Серый фон как на макете */
-    min-height: calc(100vh - 200px); /* Чтобы блок был по центру экрана между header и footer */
+    background-color: #e5e5e5; 
+    min-height: calc(100vh - 200px); 
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .about__container {
-    max-width: 900px; /* Ограничиваем ширину карточки */
+    max-width: 900px;
     width: 100%;
 }
 
@@ -1064,7 +1032,6 @@ img {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* Close button */
 .about__close {
     position: absolute;
     top: 20px;
@@ -1081,7 +1048,6 @@ img {
     transform: rotate(90deg);
 }
 
-/* Header & Text */
 .about__header {
     padding: 40px 60px;
     text-align: center;
@@ -1102,20 +1068,18 @@ img {
     margin: 0 auto;
 }
 
-/* Image */
 .about__image-box {
     width: 100%;
-    height: 450px; /* Фиксированная высота для области фото */
+    height: 450px; 
 }
 
 .about__img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Фото заполняет область без искажений */
+    object-fit: cover; 
     display: block;
 }
 
-/* --- Responsive --- */
 @media (max-width: 768px) {
     .about {
         padding: 20px;
@@ -1150,7 +1114,6 @@ img {
     }
 }
 
-/* --- Modal System Styles --- */
 .modal {
     position: fixed;
     top: 0;
@@ -1215,14 +1178,12 @@ img {
     text-transform: none;
 }
 
-/* Scrollable Area */
 .modal__scroll-content {
     overflow-y: auto;
     padding-right: 15px;
     margin-bottom: 30px;
 }
 
-/* Custom Scrollbar */
 .modal__scroll-content::-webkit-scrollbar {
     width: 4px;
 }
@@ -1231,7 +1192,6 @@ img {
     border-radius: 10px;
 }
 
-/* Steps Grid (for How it Works) */
 .modal__steps-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1263,7 +1223,6 @@ img {
     line-height: 1.6;
 }
 
-/* Buttons */
 .modal__footer {
     display: flex;
     justify-content: center;
@@ -1299,7 +1258,6 @@ img {
     cursor: pointer;
 }
 
-/* --- Responsive --- */
 @media (max-width: 992px) {
     .modal__steps-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1318,9 +1276,8 @@ img {
     }
 }
 
-/* --- Modal About Specific --- */
 .modal__card--about {
-    padding: 0; /* Убираем падинги, чтобы картинка и заголовок прилегали корректно */
+    padding: 0; 
     overflow: hidden;
 }
 
@@ -1353,7 +1310,6 @@ img {
     padding: 20px 0 30px;
 }
 
-/* --- Responsive for About Modal --- */
 @media (max-width: 768px) {
     .modal__about-header {
         padding: 40px 20px 20px;
@@ -1369,7 +1325,6 @@ img {
     }
 }
 
-/* --- Hero Exchange Transformer --- */
 .hero-exchange {
     padding: 60px 0 40px;
     background-color: #f5f6fa;
@@ -1378,7 +1333,6 @@ img {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Компактное состояние при скролле */
 .hero-exchange--compact {
     position: fixed;
     top: 0;
@@ -1403,10 +1357,9 @@ img {
 }
 
 .hero-exchange--compact .hero-exchange__filters {
-    display: flex; /* Показываем фильтры цен в компактном виде */
+    display: flex; 
 }
 
-/* --- Elements --- */
 .hero-exchange__title {
     text-align: center;
     font-size: 32px;
@@ -1420,7 +1373,7 @@ img {
 }
 
 .hero-exchange__filters {
-    display: none; /* Скрыты по умолчанию в большой версии как на макете */
+    display: none; 
     align-items: center;
     gap: 20px;
 }
@@ -1442,7 +1395,6 @@ img {
     font-family: inherit;
 }
 
-/* Стилизация карточек заказов */
 .order-card {
     background: #fff;
     border-radius: 12px;
@@ -1516,7 +1468,6 @@ img {
     align-items: center;
 }
 
-/* Кнопка загрузить еще */
 .orders__load-more {
     display: block;
     margin: 40px auto;
@@ -1529,7 +1480,6 @@ img {
     cursor: pointer;
 }
 
-/* Декор */
 .hero-exchange__blob {
     position: absolute;
     border-radius: 50%;
@@ -1540,41 +1490,36 @@ img {
 .hero-exchange__blob--1 { width: 200px; height: 200px; background: #ffe8d4; top: 10%; left: 5%; }
 .hero-exchange__blob--2 { width: 150px; height: 150px; background: #d4ffeb; bottom: 10%; right: 10%; }
 
-/* По умолчанию скрываем оба блока, чтобы не было "мигания" при загрузке */
 .js-header-guest,
 .js-header-user {
     display: none;
 }
 
-/* Если гость (нет метки в localStorage) */
 .header--guest .js-header-guest {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-/* Если авторизован (есть метка) */
 .header--logged .js-header-user {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-/* Дополнительно: чтобы бургер не ломал логику на мобилках */
 @media (max-width: 768px) {
     .header--logged .profile-meta__name {
-        display: none; /* Скрываем имя на мобилках в хедере */
+        display: none; 
     }
 }
 
-/* --- Catalog Layout --- */
 .works-catalog { padding: 60px 0; background-color: var(--color-bg-light); }
 .works-catalog__title { text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 40px; }
 .works-catalog__title .accent { color: var(--color-orange); }
 
 .works-catalog__header { margin-bottom: 50px; }
 
-/* --- Full Work Card Style --- */
+
 .work-card-full {
     background: #fff;
     border-radius: 20px;
@@ -1613,7 +1558,6 @@ img {
 }
 .work-card-full__btn:hover { background: var(--color-primary); color: #fff; }
 
-/* Сетка (используем уже имеющуюся логику) */
 .works__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

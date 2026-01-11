@@ -4,24 +4,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (profileTrigger && profileDropdown) {
         profileTrigger.addEventListener('click', (e) => {
-            // Останавливаем всплытие, чтобы клик по самому меню не закрывал его
             e.stopPropagation();
             profileTrigger.classList.toggle('profile-meta--active');
             profileDropdown.classList.toggle('profile-dropdown--active');
         });
 
-        // Закрытие меню при клике в любое место экрана
         document.addEventListener('click', () => {
             profileTrigger.classList.remove('profile-meta--active');
             profileDropdown.classList.remove('profile-dropdown--active');
         });
         
-        // Предотвращаем закрытие при клике внутри самого меню
         profileDropdown.addEventListener('click', (e) => {
             e.stopPropagation();
         });
 
-        // Переключение ролей внутри меню (визуальное)
         const roleBtns = document.querySelectorAll('.profile-dropdown__role');
         roleBtns.forEach(btn => {
             btn.addEventListener('click', () => {

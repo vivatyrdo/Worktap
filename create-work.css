@@ -8,12 +8,10 @@
     --transition: all 0.3s ease;
 }
 
-/* --- Layout --- */
 .create-work { padding: 60px 0; background-color: var(--color-bg); min-height: 100vh; }
 .create-work__container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
 .create-work__form-wrapper { display: flex; flex-direction: column; min-height: 500px; }
 
-/* --- Stepper --- */
 .stepper { margin-bottom: 80px; }
 .stepper__list { display: flex; align-items: center; justify-content: space-between; position: relative; }
 .stepper__item { display: flex; flex-direction: column; align-items: center; flex: 1; position: relative; z-index: 2; }
@@ -26,14 +24,12 @@
 
 .stepper__item--active .stepper__circle { background: var(--color-primary); box-shadow: 0 0 0 6px rgba(29, 191, 115, 0.15); }
 
-/* --- Step Content --- */
 .step-content { animation: fadeIn 0.4s ease; }
 .step-content--hidden { display: none; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
 .create-work__step-title { font-size: 18px; font-weight: 700; margin-bottom: 30px; }
 
-/* --- Forms Common --- */
 .work-form__group { margin-bottom: 30px; }
 .work-form__label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 12px; }
 .work-form__input, .work-form__select, .work-form__textarea {
@@ -42,19 +38,16 @@
 .work-form__input:focus, .work-form__textarea:focus { border-bottom-color: var(--color-primary); }
 .work-form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
 
-/* --- Tags --- */
 .tags-input { display: flex; flex-wrap: wrap; gap: 10px; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
 .tag-item { background: var(--color-purple-light); padding: 6px 12px; border-radius: 8px; color: #5e4bdb; font-weight: 600; font-size: 12px; display: flex; align-items: center; gap: 8px; }
 .tag-item__remove { cursor: pointer; font-size: 16px; line-height: 1; }
 .tags-input__field { border: none; outline: none; flex: 1; min-width: 120px; font-size: 14px; background: transparent; }
 .tags-input__list { display: flex; gap: 10px; flex-wrap: wrap;}
-/* --- Step 2 Pricing --- */
 .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 50px; }
 .package-card { background: #fff; padding: 30px; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.02); display: flex; flex-direction: column; }
 .package-card__title { text-align: center; margin-bottom: 25px; font-size: 18px; }
 .package-card__btn-add { margin-top: auto; background: var(--color-purple-light); color: #5e4bdb; border: none; padding: 12px; border-radius: 12px; font-weight: 600; cursor: pointer; }
 
-/* Extra Options */
 .extra-options__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
 .extra-card { background: #fff; padding: 30px; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.02); }
 .extra-card__delete { width: 100%; padding: 12px; background: #ffe8e8; color: #ff5c5c; border: none; border-radius: 50px; font-weight: 700; margin-top: 15px; cursor: pointer; }
@@ -66,14 +59,12 @@
 .extra-options__add-icon::after { width: 4px; height: 24px; }
 .extra-options__add-btn span { color: var(--color-orange); font-weight: 700; font-size: 14px; }
 
-/* --- Footer Actions --- */
 .create-work__actions { display: flex; justify-content: space-between; margin-top: 60px; padding-top: 30px; border-top: 1px solid #ddd; }
 .btn--hidden { display: none !important; }
 .btn-next { background: var(--color-primary); color: #fff; border: none; padding: 16px 60px; border-radius: 50px; font-weight: 700; font-size: 16px; cursor: pointer; margin-left: auto; }
 .btn-back { background: var(--color-purple-light); color: #5e4bdb; border: none; padding: 16px 60px; border-radius: 50px; font-weight: 700; font-size: 16px; cursor: pointer; }
 .btn-back:not(.btn--hidden) + .btn-next { margin-left: 0; }
 
-/* --- Modal --- */
 .modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1000; opacity: 0; visibility: hidden; transition: var(--transition); }
 .modal--active { opacity: 1; visibility: visible; }
 .modal__overlay { width: 100%; height: 100%; background: rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; padding: 20px; }
@@ -81,7 +72,6 @@
 .modal__title { font-size: 20px; margin-bottom: 25px; }
 .modal__btn-primary { background: var(--color-primary); color: #fff; border: none; padding: 14px 40px; border-radius: 50px; font-weight: 700; cursor: pointer; width: 100%; }
 
-/* --- Adaptive --- */
 @media (max-width: 900px) {
     .stepper__text { display: none; }
     .pricing-grid, .extra-options__grid { grid-template-columns: 1fr; }
@@ -89,7 +79,6 @@
     .btn-next, .btn-back { padding: 14px 40px; font-size: 14px; }
 }
 
-/* --- Step 3: Editor --- */
 .editor {
     margin-bottom: 60px;
 }
@@ -137,7 +126,6 @@
     padding: 15px 0;
 }
 
-/* --- Step 3: FAQ --- */
 .faq-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -208,14 +196,12 @@
     font-size: 14px;
 }
 
-/* Adaptive Step 3 */
 @media (max-width: 768px) {
     .faq-grid {
         grid-template-columns: 1fr;
     }
 }
 
-/* --- Step 4: Requirements --- */
 .step-header {
     margin-bottom: 30px;
 }
@@ -226,7 +212,6 @@
     margin-top: 10px;
 }
 
-/* --- Step 5: Gallery --- */
 .gallery-section {
     margin-bottom: 50px;
 }
@@ -244,7 +229,6 @@
     margin-bottom: 30px;
 }
 
-/* Grid для фото */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -290,7 +274,6 @@
     font-size: 13px;
 }
 
-/* Карточки с фото */
 .gallery-item {
     height: 180px;
     border-radius: 20px;
@@ -320,7 +303,6 @@
     line-height: 1;
 }
 
-/* Adaptive Gallery */
 @media (max-width: 1024px) {
     .gallery-grid { grid-template-columns: repeat(3, 1fr); }
 }
@@ -330,7 +312,6 @@
     .gallery-add, .gallery-item { height: 220px; }
 }
 
-/* --- Step 6: Publication (Success) --- */
 .success-page {
     padding: 40px 0;
     text-align: center;
@@ -367,10 +348,6 @@
     display: block;
 }
 
-/* На последнем шаге кнопка Назад остается на месте, 
-   а кнопка Дальше меняет текст (уже реализовано в JS) */
-
-/* Responsive Step 6 */
 @media (max-width: 768px) {
     .success-page__title {
         font-size: 20px;
