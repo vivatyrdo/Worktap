@@ -1,38 +1,38 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const profileTrigger = document.querySelector('.js-profile-trigger');
-    const profileDropdown = document.querySelector('.js-profile-dropdown');
+document.addEventListener("DOMContentLoaded", () => {
+  const profileTrigger = document.querySelector(".js-profile-trigger");
+  const profileDropdown = document.querySelector(".js-profile-dropdown");
 
-    if (profileTrigger && profileDropdown) {
-        profileTrigger.addEventListener('click', (e) => {
-            e.stopPropagation();
-            profileTrigger.classList.toggle('profile-meta--active');
-            profileDropdown.classList.toggle('profile-dropdown--active');
-        });
+  if (profileTrigger && profileDropdown) {
+    profileTrigger.addEventListener("click", (e) => {
+      e.stopPropagation();
+      profileTrigger.classList.toggle("profile-meta--active");
+      profileDropdown.classList.toggle("profile-dropdown--active");
+    });
 
-        document.addEventListener('click', () => {
-            profileTrigger.classList.remove('profile-meta--active');
-            profileDropdown.classList.remove('profile-dropdown--active');
-        });
-        
-        profileDropdown.addEventListener('click', (e) => {
-            e.stopPropagation();
-        });
+    document.addEventListener("click", () => {
+      profileTrigger.classList.remove("profile-meta--active");
+      profileDropdown.classList.remove("profile-dropdown--active");
+    });
 
-        const roleBtns = document.querySelectorAll('.profile-dropdown__role');
-        roleBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                roleBtns.forEach(b => b.classList.remove('profile-dropdown__role--active'));
-                btn.classList.add('profile-dropdown__role--active');
-            });
-        });
-    }
+    profileDropdown.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
 
+    const roleBtns = document.querySelectorAll(".profile-dropdown__role");
+    roleBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        roleBtns.forEach((b) =>
+          b.classList.remove("profile-dropdown__role--active")
+        );
+        btn.classList.add("profile-dropdown__role--active");
+      });
+    });
+  }
 
+  const grid = document.querySelector(".js-works-grid");
+  const loadBtn = document.querySelector(".js-load-works");
 
-    const grid = document.querySelector('.js-works-grid');
-    const loadBtn = document.querySelector('.js-load-works');
-
-    const cardTemplate = () => `
+  const cardTemplate = () => `
         <article class="work-item" style="opacity: 0; transform: translateY(10px)">
             <div class="work-item__image"><img src="images/work-profile.png" alt=""></div>
             <div class="work-item__body">
@@ -58,21 +58,21 @@ document.addEventListener('DOMContentLoaded', () => {
         </article>
     `;
 
-    if (loadBtn && grid) {
-        loadBtn.addEventListener('click', () => {
-            loadBtn.textContent = 'Загрузка...';
-            setTimeout(() => {
-                for (let i = 0; i < 4; i++) {
-                    grid.insertAdjacentHTML('beforeend', cardTemplate());
-                    const last = grid.lastElementChild;
-                    setTimeout(() => {
-                        last.style.transition = 'all 0.4s ease';
-                        last.style.opacity = '1';
-                        last.style.transform = 'translateY(0)';
-                    }, i * 100);
-                }
-                loadBtn.textContent = 'Загрузить еще';
-            }, 600);
-        });
-    }
+  if (loadBtn && grid) {
+    loadBtn.addEventListener("click", () => {
+      loadBtn.textContent = "Загрузка...";
+      setTimeout(() => {
+        for (let i = 0; i < 4; i++) {
+          grid.insertAdjacentHTML("beforeend", cardTemplate());
+          const last = grid.lastElementChild;
+          setTimeout(() => {
+            last.style.transition = "all 0.4s ease";
+            last.style.opacity = "1";
+            last.style.transform = "translateY(0)";
+          }, i * 100);
+        }
+        loadBtn.textContent = "Загрузить еще";
+      }, 600);
+    });
+  }
 });

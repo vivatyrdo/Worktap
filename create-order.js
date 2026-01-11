@@ -1,32 +1,32 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const uploadArea = document.querySelector('.js-upload-area');
-    const fileInput = document.querySelector('.js-file-input');
-    const fileList = document.querySelector('.js-file-list');
+document.addEventListener("DOMContentLoaded", () => {
+  const uploadArea = document.querySelector(".js-upload-area");
+  const fileInput = document.querySelector(".js-file-input");
+  const fileList = document.querySelector(".js-file-list");
 
-    ['dragenter', 'dragover'].forEach(eventName => {
-        uploadArea.addEventListener(eventName, () => {
-            uploadArea.classList.add('upload-area--dragover');
-        });
+  ["dragenter", "dragover"].forEach((eventName) => {
+    uploadArea.addEventListener(eventName, () => {
+      uploadArea.classList.add("upload-area--dragover");
     });
+  });
 
-    ['dragleave', 'drop'].forEach(eventName => {
-        uploadArea.addEventListener(eventName, () => {
-            uploadArea.classList.remove('upload-area--dragover');
-        });
+  ["dragleave", "drop"].forEach((eventName) => {
+    uploadArea.addEventListener(eventName, () => {
+      uploadArea.classList.remove("upload-area--dragover");
     });
+  });
 
-    fileInput.addEventListener('change', (e) => {
-        handleFiles(e.target.files);
-    });
+  fileInput.addEventListener("change", (e) => {
+    handleFiles(e.target.files);
+  });
 
-    function handleFiles(files) {
-        const filesArray = Array.from(files);
-        
-        filesArray.forEach(file => {
-            const fileItem = document.createElement('div');
-            fileItem.className = 'upload-file';
-            
-            fileItem.innerHTML = `
+  function handleFiles(files) {
+    const filesArray = Array.from(files);
+
+    filesArray.forEach((file) => {
+      const fileItem = document.createElement("div");
+      fileItem.className = "upload-file";
+
+      fileItem.innerHTML = `
                 <div class="upload-file__info">
                     <img src="" alt="" style="width: 20px;"> <!-- Иконка документа -->
                     <span class="upload-file__name">${file.name}</span>
@@ -39,11 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 <button type="button" class="upload-file__remove">×</button>
             `;
 
-            fileList.appendChild(fileItem);
+      fileList.appendChild(fileItem);
 
-            fileItem.querySelector('.upload-file__remove').addEventListener('click', () => {
-                fileItem.remove();
-            });
+      fileItem
+        .querySelector(".upload-file__remove")
+        .addEventListener("click", () => {
+          fileItem.remove();
         });
-    }
+    });
+  }
 });

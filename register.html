@@ -1,89 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Worktap | Login</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="exchange.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="exchange.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="auth">
+      <div class="auth__left">
+        <div class="auth__content-wrapper auth__content-wrapper--reg">
+          <a href="index.html" class="auth__logo">
+            <img src="images/logo.png" alt="Worktap" class="auth__logo-img" />
+          </a>
 
-<main class="auth">
-        <div class="auth__left">
-            <div class="auth__content-wrapper auth__content-wrapper--reg">
-                <a href="index.html" class="auth__logo">
-                    <img src="images/logo.png" alt="Worktap" class="auth__logo-img">
-                </a>
+          <div class="auth__header">
+            <p class="auth__subtitle">Давайте создадим Вам аккаунт</p>
+            <h1 class="auth__title">Заполните все поля</h1>
+          </div>
 
-                <div class="auth__header">
-                    <p class="auth__subtitle">Давайте создадим Вам аккаунт</p>
-                    <h1 class="auth__title">Заполните все поля</h1>
-                </div>
-
-                <form class="auth__form form">
-                    <div class="form__group">
-                        <label for="reg-name" class="form__label">Ваше имя</label>
-                        <input type="text" id="reg-name" class="form__input" placeholder="Имя">
-                    </div>
-
-                    <div class="form__group">
-                        <label for="reg-surname" class="form__label">Ваша фамилия</label>
-                        <input type="text" id="reg-surname" class="form__input" placeholder="Фамилия">
-                    </div>
-
-                    <div class="form__group">
-                        <label for="reg-email" class="form__label">E-mail</label>
-                        <input type="email" id="reg-email" class="form__input" placeholder="E-mail">
-                    </div>
-
-                    <div class="form__group">
-                        <label for="reg-phone" class="form__label">Телефон номер</label>
-                        <input type="tel" id="reg-phone" class="form__input" placeholder="Телефон">
-                    </div>
-
-                    <div class="form__group">
-                        <label for="reg-pass" class="form__label">Пароль</label>
-                        <input type="password" id="reg-pass" class="form__input" placeholder="Пароль">
-                    </div>
-
-                    <div class="form__group">
-                        <label for="reg-pass-repeat" class="form__label">Повторите пароль</label>
-                        <input type="password" id="reg-pass-repeat" class="form__input" placeholder="Пароль">
-                    </div>
-
-                    <div class="form__roles">
-                        <label class="form__radio-wrapper">
-                            <input type="radio" name="role" class="form__radio" checked>
-                            <span class="form__radio-custom"></span>
-                            Я исполнитель
-                        </label>
-                        <label class="form__radio-wrapper">
-                            <input type="radio" name="role" class="form__radio">
-                            <span class="form__radio-custom"></span>
-                            Я заказчик
-                        </label>
-                    </div>
-
-                    <a type="submit" class="form__btn-submit" href="profile.html">Зарегистрироваться</a>
-                </form>
-
-                <p class="auth__footer-text">
-                    У Вас есть аккаунт? <a href="login.html" class="auth__footer-link">Войдите</a>
-                </p>
+          <form class="auth__form form">
+            <div class="form__group">
+              <label for="reg-name" class="form__label">Ваше имя</label>
+              <input
+                type="text"
+                id="reg-name"
+                class="form__input"
+                placeholder="Имя"
+              />
             </div>
+
+            <div class="form__group">
+              <label for="reg-surname" class="form__label">Ваша фамилия</label>
+              <input
+                type="text"
+                id="reg-surname"
+                class="form__input"
+                placeholder="Фамилия"
+              />
+            </div>
+
+            <div class="form__group">
+              <label for="reg-email" class="form__label">E-mail</label>
+              <input
+                type="email"
+                id="reg-email"
+                class="form__input"
+                placeholder="E-mail"
+              />
+            </div>
+
+            <div class="form__group">
+              <label for="reg-phone" class="form__label">Телефон номер</label>
+              <input
+                type="tel"
+                id="reg-phone"
+                class="form__input"
+                placeholder="Телефон"
+              />
+            </div>
+
+            <div class="form__group">
+              <label for="reg-pass" class="form__label">Пароль</label>
+              <input
+                type="password"
+                id="reg-pass"
+                class="form__input"
+                placeholder="Пароль"
+              />
+            </div>
+
+            <div class="form__group">
+              <label for="reg-pass-repeat" class="form__label"
+                >Повторите пароль</label
+              >
+              <input
+                type="password"
+                id="reg-pass-repeat"
+                class="form__input"
+                placeholder="Пароль"
+              />
+            </div>
+
+            <div class="form__roles">
+              <label class="form__radio-wrapper">
+                <input type="radio" name="role" class="form__radio" checked />
+                <span class="form__radio-custom"></span>
+                Я исполнитель
+              </label>
+              <label class="form__radio-wrapper">
+                <input type="radio" name="role" class="form__radio" />
+                <span class="form__radio-custom"></span>
+                Я заказчик
+              </label>
+            </div>
+
+            <a type="submit" class="form__btn-submit" href="profile.html"
+              >Зарегистрироваться</a
+            >
+          </form>
+
+          <p class="auth__footer-text">
+            У Вас есть аккаунт?
+            <a href="login.html" class="auth__footer-link">Войдите</a>
+          </p>
         </div>
+      </div>
 
-        <div class="auth__right">
-            <img src="images/registration-img.jpg" alt="" class="auth__main-img">
-        </div>
+      <div class="auth__right">
+        <img src="images/registration-img.jpg" alt="" class="auth__main-img" />
+      </div>
+    </main>
 
-   
-</main>
-
-<script src="script.js"></script>  
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
