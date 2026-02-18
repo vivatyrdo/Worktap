@@ -1563,6 +1563,17 @@ img {
   gap: 20px;
 }
 
+.profile-meta__name{
+  margin-left: 15px;
+}
+
+
+@media (max-width: 500px) {
+  .profile-meta__name{
+    font-size: 15px;
+  }
+}
+
 @media (max-width: 768px) {
   .header--logged .profile-meta__name {
     display: none;
