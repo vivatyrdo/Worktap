@@ -1716,3 +1716,13 @@ img {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 400px) {
+  .hero__content{
+    margin-left: -20px;
+  }
+}
+
+.filters-status{
+  flex-wrap: wrap;
+}

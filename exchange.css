@@ -841,5 +841,18 @@
   .hero-exchange__container{
     display: none;
   }
+
+  .order-card__btn{
+    padding: 10px;
+  }
+
+  .order-card__offers{
+    font-size: 14px;
+  }
+
+  .author__avatar{
+    width: 50%;
+    height: 50%;
+  }
 } 
   

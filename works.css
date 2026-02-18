@@ -183,3 +183,13 @@
 .search {
   max-width: 100% !important;
 }
+
+@media (max-width: 1024px) {
+  .search__btn{
+    padding: 10px 20px;
+  }
+
+  .search__input{
+    padding: 10px;
+  }
+}
